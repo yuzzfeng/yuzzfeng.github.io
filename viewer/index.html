@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>Twitter Event Detector</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+  <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+  <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+  <!-- <link rel="import" href="bower_components/font-roboto/roboto.html"> -->
+  <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+  <link rel="import" href="bower_components/paper-slider/paper-slider.html">
+
+  <link rel="import" href="bower_components/polymer/polymer.html">
+  <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+  <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+  <link rel="import" href="bower_components/iron-list/iron-list.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+  <link rel="import" href="bower_components/iron-image/iron-image.html">
+  
+  <link rel="import" href="bower_components/iron-scroll-target-behavior/iron-scroll-target-behavior.html">
+  <link rel="import" href="x-scrollable.html">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="http://openlayers.org/en/v3.15.1/css/ol.css" type="text/css">
+  
+  <script src="http://openlayers.org/en/v3.15.1/build/ol.js"></script>
+</head>
+
+<body unresolved>
+  <paper-toolbar>
+    <paper-icon-button icon="menu"></paper-icon-button>
+    <span class="flex">Twitter Event Detector</span>
+    <paper-fab icon="add"></paper-fab>
+  </paper-toolbar>
+  
+  <section>
+    <div class="row-fluid">
+      <div class="span1" style="width:60%; height:60%; float:left;">
+        <div id="map" class="map"></div>
+        <template id="mGroup" is="dom-bind">
+          <paper-button raised noink on-click="loadj">loadJSON</paper-button>
+        </template>
+        <form>
+          <div class="span6" style="width:50%; height:50%; float:left;">
+            <label>radius size</label>
+            <paper-slider pin max="20" max-markers="20" step="1" value="5"  id="radius" ></paper-slider>
+          </div>
+          <div class="span6" style="width:50%; height:50%; float:right;">
+            <label>blur size</label>
+            <paper-slider pin max="20" max-markers="20" step="1" value="15"  id="blur" ></paper-slider>
+          </div>
+        </form>
+        <form>
+          <div class="span6" style="width:50%; height:50%; float:left;">
+            <label>time interval</label>
+            <paper-slider pin max="3000" max-markers="3000" step="1" value="5"  id="time_interval" ></paper-slider>
+          </div>
+          <div class="span6" style="width:50%; height:50%; float:right;">
+            <label>max feature</label>
+            <paper-slider pin max="1000" max-markers="1000" step="1" value="15"  id="max_feature" ></paper-slider>
+          </div>
+        </form>
+        <template id="cGroup" is="dom-bind">
+          <div>UTC: <span id="utcLabel" class="caption"></span></div><br>
+          
+          <div>Epoch: <span id="epochLabel" class="caption"></span></div><br>
+          
+          <paper-slider pin max="500" max-markers="500" step="1" value="1" id="OneBar" ></paper-slider>
+    
+          <paper-button raised noink on-click="minusOne">-1</paper-button>
+          <paper-button raised noink on-click="addOne">+1</paper-button>
+        </template>
+      </div>
+      
+      <div class="span2" style="width:40%; height:40%; float:right;">
+        
+        <x-scrollable scroll-target="document"></x-scrollable>
+        
+        <div class="span4">
+          <template id="toastGroup" is="dom-bind">
+            <paper-button raised right on-click="showToast">Show Toast</paper-button>
+            <paper-toast id="toast" text="all right reserved ikg 2016"></paper-toast>
+          </template>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <script src="main.js"></script>
+  <script src="showHeatmaps.js"></script>
+
+</body>
+
+</html>
