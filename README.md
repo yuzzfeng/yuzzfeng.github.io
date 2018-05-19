@@ -1,8 +1,8 @@
 # Home Page 
 
-[Link](https://yuzzfeng.github.io/)
+Copy the jekyell themes under MIT License [Link](https://yuzzfeng.github.io/)
 
-Copy the jekyell themes
+
 
 # Hyde
 
