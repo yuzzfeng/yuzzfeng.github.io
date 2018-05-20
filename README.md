@@ -1,5 +1,5 @@
-# A GitPage
-[My Page](https://yuzzfeng.github.io/)
+# GitPage
+Created under the [MIT license](LICENSE.md) - [My Page](https://yuzzfeng.github.io/)
 
 # Lanyon
 
