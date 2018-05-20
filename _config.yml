@@ -4,9 +4,9 @@
 permalink:           pretty
 
 # Setup
-title:               Page from Yu Feng
-tagline:             'Personal Page'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+title:               A personal page
+tagline:             'Yu Feng'
+description:         'A place to save something remarkable'
 url:                 https://yuzzfeng.github.io/
 baseurl:             ''
 paginate:            5
@@ -14,7 +14,7 @@ paginate:            5
 # About/contact
 author:
   name:              Yu Feng
-  url:               https://twitter.com/mdo
+  url:               https://twitter.com/YuFeng10
   email:             yuzz.feng@gmail.com
 
 # Custom vars
