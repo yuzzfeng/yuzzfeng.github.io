@@ -1,3 +1,3 @@
-My name is Yu Feng, a student of Geoinformatics.
+My name is Yu Feng, a student in Geoinformatics.
 
 Thanks for reading!
