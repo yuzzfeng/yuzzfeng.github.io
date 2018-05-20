@@ -1,5 +1,4 @@
 # Permalinks
-<<<<<<< HEAD
 permalink:           pretty
 
 # Setup
@@ -8,16 +7,6 @@ tagline:             The Jekyll Butler
 url:                 http://getpoole.com
 paginate:            1
 baseurl:             ""
-=======
-permalink:        pretty
-
-# Setup
-title:            Yu Feng
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              https://yuzzfeng.github.io
-baseurl:          /
->>>>>>> 4b90f1e3bde494f6bed006f495cbcaee0de9c8d9
 
 # Assets
 #
