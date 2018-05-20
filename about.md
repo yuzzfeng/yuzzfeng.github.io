@@ -1,7 +1,7 @@
-----
--layout: page
--title: About
-----
+---
+layout: page
+title: About
+---
 
 My name is Yu Feng, a student in Geoinformatics.
 
