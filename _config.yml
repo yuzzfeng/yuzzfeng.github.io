@@ -10,13 +10,13 @@ description:         'A place to save something remarkable'
 url:                 https://yuzzfeng.github.io/
 baseurl:             ''
 paginate:            5
+github:              https://github.com/yuzzfeng
 
 # About/contact
 author:
   name:              Yu Feng
   url:               https://twitter.com/YuFeng10
   email:             yuzz.feng@gmail.com
-  github:            https://github.com/yuzzfeng
 
 # Custom vars
 version:             1.0.0
