@@ -26,7 +26,9 @@ Crowdsourcing often used for disaster monitoring such as earthquake, flood, or f
 
 ## Other VGI Applications
 
-- Tracking the migration patterns of refugee in 2015
+### Tracking the migration patterns of refugee in 2015
+
+- hashtag based topical clusering, density based st-event clustering (OPTICS + distance function) and distance bounded st-event clustering
 
 *Hübl, F., Cvetojevic, S., Hochmair, H., & Paulus, G. (2017). Analyzing Refugee Migration Patterns Using Geo-tagged Tweets. ISPRS International Journal of Geo-Information, 6(10), 302.*
 
