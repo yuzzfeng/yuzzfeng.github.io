@@ -45,3 +45,11 @@ Crowdsourcing often used for disaster monitoring such as earthquake, flood, or f
 *Cvetojevic, S., & Hochmair, H. H. (2018). Analyzing the spread of tweets in response to Paris attacks. Computers, Environment and Urban Systems.*
 
 
+## Thinkings:
+
+Most of the research has generally three steps:
+
+1. Data Acqusition (Tweepy, Mobile App)
+2. Filtering (Hashtag, IR, Multi IR)
+3. Analyses (ST-Clustering)
+
