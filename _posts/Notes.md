@@ -1,19 +1,12 @@
-# Volunteered Geographic Information}
+# Volunteered Geographic Information
 
 Proposed by Goodchild
 
-
 ## OSM Mapping
-
-
 
 ### OSM Disaster Mapping
 
 Humanitarian OpenStreetMap Team (HOT) involved in mapping activities after the earthquakes in Haiti 2010, Haiyan 2013 and Nepal 2015, which provided a large amount of data within a short time. A system has been developed to monitor and understand the OSM disaster mapping and data quality by analyzing the edit history \cite{Auer2018}.
-
-
-
-
 
 ## Disaster Monitoring - Analysis
 
@@ -27,13 +20,11 @@ Good argument: Public organizations that monitoring flooding areas unusually hav
 2. Spatial Clustering(KDE)
 3. analyze and validate using weather radar (rainfall)
 
-
-
 ## Disaster Monitoring - Retrieval
 
 2017 MediaEval test.
 
-
 ## Other VGI Applications
 
 Tracking the migration patterns of refugee \cite{ijgi6100302}.
+Paris attack 
