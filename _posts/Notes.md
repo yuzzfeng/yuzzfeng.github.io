@@ -32,9 +32,15 @@ Crowdsourcing often used for disaster monitoring such as earthquake, flood, or f
 
 *Hübl, F., Cvetojevic, S., Hochmair, H., & Paulus, G. (2017). Analyzing Refugee Migration Patterns Using Geo-tagged Tweets. ISPRS International Journal of Geo-Information, 6(10), 302.*
 
-**Distance bounded st-event clustering**: *Gennady Andrienko, Natalia Andrienko, Wei Chen, Ross Maciejewski, Ye Zhao, "Visual Analytics of Mobility and Transportation: State of the Art and Further Research Directions", Intelligent Transportation Systems IEEE Transactions on, vol. 18, pp. 2232-2249, 2017, ISSN 1524-9050.*
+**Distance bounded st-event clustering**: 
 
-- Paris attack in November 2015: Kernel-density, using exploratory methods and regression models
+*Andrienko, N., Andrienko, G., Fuchs, G., Rinzivillo, S., & Betz, H. D. (2015, October). Detection, tracking, and visualization of spatial event clusters for real time monitoring. In Data Science and Advanced Analytics (DSAA), 2015. 36678 2015. IEEE International Conference on (pp. 1-10). IEEE.* 
+
+*Gennady Andrienko, Natalia Andrienko, Wei Chen, Ross Maciejewski, Ye Zhao, "Visual Analytics of Mobility and Transportation: State of the Art and Further Research Directions", Intelligent Transportation Systems IEEE Transactions on, vol. 18, pp. 2232-2249, 2017, ISSN 1524-9050.*
+
+### Paris attack in November 2015
+
+- Kernel-density, using exploratory methods and regression models
 
 *Cvetojevic, S., & Hochmair, H. H. (2018). Analyzing the spread of tweets in response to Paris attacks. Computers, Environment and Urban Systems.*
 
