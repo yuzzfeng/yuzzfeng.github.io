@@ -30,7 +30,7 @@ Crowdsourcing often used for disaster monitoring such as earthquake, flood, or f
 
 *Hübl, F., Cvetojevic, S., Hochmair, H., & Paulus, G. (2017). Analyzing Refugee Migration Patterns Using Geo-tagged Tweets. ISPRS International Journal of Geo-Information, 6(10), 302.*
 
-- Paris attack in November 2015
+- Paris attack in November 2015: Kernel-density, using exploratory methods and regression models
 
 *Cvetojevic, S., & Hochmair, H. H. (2018). Analyzing the spread of tweets in response to Paris attacks. Computers, Environment and Urban Systems.*
 
