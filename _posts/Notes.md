@@ -8,17 +8,17 @@ Proposed by Goodchild
 
 Humanitarian OpenStreetMap Team (HOT) involved in mapping activities after the earthquakes in Haiti 2010, Haiyan 2013 and Nepal 2015, which provided a large amount of data within a short time. A system has been developed to monitor and understand the OSM disaster mapping and data quality by analyzing the edit history \cite{Auer2018}.
 
+*Auer, M., Eckle, M., Fendrich, S., Griesbaum, L., Kowatsch, F.,Marx, S., Raifer, M., Schott, M. and Troilo, R., 2018.  TowardsUsing the Potential of OpenStreetMap History for Disaster Acti-vation Monitoring. In:Proceedings of the 15th ISCRAM Confer-ence Rochester, NY, USA May 2018, pp. 317–325.*
+
 ## Disaster Monitoring - Analysis
 
 Crowdsourcing often used for disaster monitoring such as earthquake, flood, or forest fires.
 
 ### Flood in Brazil : Crowdsensing + weather radar precipitation
 
-Good argument: Public organizations that monitoring flooding areas unusually have limited capability of reach and resource to be in all places needed. Application: validate flood area identified by VGI. \cite{Horita2018} Approach: 
+Good argument: Public organizations that monitoring flooding areas unusually have limited capability of reach and resource to be in all places needed. Application: validate flood area identified by VGI. Approach: 1. Filtering with collaborative platform (mobile app, 735 georeferenced reports) 2. Spatial Clustering(KDE) 3. analyze and validate using weather radar (rainfall)
 
-1. Filtering with collaborative platform (mobile app, 735 georeferenced reports)
-2. Spatial Clustering(KDE)
-3. analyze and validate using weather radar (rainfall)
+*Horita, F. E. A., Vilela, R. B., Martins, R. G., Bressiani, D. A.,Palma, G. and de Albuquerque, J. P., 2018.  Determining floodedareas using crowd sensing data and weather radar precipitation:  a case study in Brazil.   In:Proceedings of the 15th ISCRAMConference Rochester, NY, USA May 2018, pp. 1040–1050.*
 
 ## Disaster Monitoring - Retrieval
 
@@ -26,9 +26,10 @@ Good argument: Public organizations that monitoring flooding areas unusually hav
 
 ## Other VGI Applications
 
-Tracking the migration patterns of refugee \cite{ijgi6100302}.
-Paris attack <cite>[1]</cite>
+Tracking the migration patterns of refugee in 2015
+*Hübl, F., Cvetojevic, S., Hochmair, H., & Paulus, G. (2017). Analyzing Refugee Migration Patterns Using Geo-tagged Tweets. ISPRS International Journal of Geo-Information, 6(10), 302.*
+
+Paris attack in November 2015
+*Cvetojevic, S., & Hochmair, H. H. (2018). Analyzing the spread of tweets in response to Paris attacks. Computers, Environment and Urban Systems.*
 
 
-
-[1]:Cvetojevic, S., & Hochmair, H. H. (2018). Analyzing the spread of tweets in response to Paris attacks. Computers, Environment and Urban Systems.
