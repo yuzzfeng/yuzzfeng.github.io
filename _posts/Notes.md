@@ -27,7 +27,7 @@ Good argument: Public organizations that monitoring flooding areas unusually hav
 ## Other VGI Applications
 
 Tracking the migration patterns of refugee \cite{ijgi6100302}.
-Paris attack <cite>[Cvetojevic et. al][1]</cite>
+Paris attack <cite>[1]</cite>
 
 
 
