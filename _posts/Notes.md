@@ -28,9 +28,11 @@ Crowdsourcing often used for disaster monitoring such as earthquake, flood, or f
 
 ### Tracking the migration patterns of refugee in 2015
 
-- hashtag based topical clusering, density based st-event clustering (OPTICS + distance function) and distance bounded st-event clustering
+- hashtag based topical clusering, density based st-event clustering (OPTICS 10km + one day + 3 pts + distance function) and distance bounded st-event clustering (10km + max 5 pts)
 
 *Hübl, F., Cvetojevic, S., Hochmair, H., & Paulus, G. (2017). Analyzing Refugee Migration Patterns Using Geo-tagged Tweets. ISPRS International Journal of Geo-Information, 6(10), 302.*
+
+Distance bounded st-event clustering: *Gennady Andrienko, Natalia Andrienko, Wei Chen, Ross Maciejewski, Ye Zhao, "Visual Analytics of Mobility and Transportation: State of the Art and Further Research Directions", Intelligent Transportation Systems IEEE Transactions on, vol. 18, pp. 2232-2249, 2017, ISSN 1524-9050.*
 
 - Paris attack in November 2015: Kernel-density, using exploratory methods and regression models
 
