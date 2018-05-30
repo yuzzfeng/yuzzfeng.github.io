@@ -12,7 +12,7 @@ Humanitarian OpenStreetMap Team (HOT) involved in mapping activities after the e
 
 Crowdsourcing often used for disaster monitoring such as earthquake, flood, or forest fires.
 
-###Flood in Brazil : Crowdsensing + weather radar precipitation
+### Flood in Brazil : Crowdsensing + weather radar precipitation
 
 Good argument: Public organizations that monitoring flooding areas unusually have limited capability of reach and resource to be in all places needed. Application: validate flood area identified by VGI. \cite{Horita2018} Approach: 
 
