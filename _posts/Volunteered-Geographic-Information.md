@@ -30,6 +30,8 @@ Crowdsourcing often used for disaster monitoring such as earthquake, flood, or f
 ### Disaster Hashtags (2017)
  
 Compare keyword based method and their own approach. SVM (rbf) and sLDA (supervised, k=100) were used for training a binary classifier based on balanced dataset (2x36k) with R packages.
+
+Dataset: ![crisislex](http://crisislex.org/) 
  
 *Murzintcev, N., & Cheng, C. (2017). Disaster Hashtags in Social Media. ISPRS International Journal of Geo-Information, 6(7), 204.*
 
