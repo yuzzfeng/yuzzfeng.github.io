@@ -10,11 +10,11 @@ Proposed by Goodchild
 
 *Auer, M., Eckle, M., Fendrich, S., Griesbaum, L., Kowatsch, F.,Marx, S., Raifer, M., Schott, M. and Troilo, R., 2018.  TowardsUsing the Potential of OpenStreetMap History for Disaster Acti-vation Monitoring. In:Proceedings of the 15th ISCRAM Confer-ence Rochester, NY, USA May 2018, pp. 317–325.*
 
-## Disaster Monitoring - Analysis
+## Flood Monitoring - Analysis
 
 Crowdsourcing often used for disaster monitoring such as earthquake, flood, or forest fires.
 
-### Flood in Brazil : Crowdsensing + weather radar precipitation
+### Flood in Brazil : Crowdsensing + weather radar precipitation (2018)
 
 - Good argument: Public organizations that monitoring flooding areas unusually have limited capability of reach and resource to be in all places needed. Application: validate flood area identified by VGI. Approach: 1. Filtering with collaborative platform (mobile app, 735 georeferenced reports) 2. Spatial Clustering(KDE) 3. analyze and validate using weather radar (rainfall)
 
@@ -23,6 +23,16 @@ Crowdsourcing often used for disaster monitoring such as earthquake, flood, or f
 ## Disaster Monitoring - Retrieval
 
 2017 MediaEval test.
+
+
+## General Disaster Monitoring 
+
+### Disaster Hashtags (2017)
+ 
+Compare keyword based method and their own approach. 
+ 
+*Murzintcev, N., & Cheng, C. (2017). Disaster Hashtags in Social Media. ISPRS International Journal of Geo-Information, 6(7), 204.*
+
 
 ## Other VGI Applications
 
