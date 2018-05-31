@@ -25,7 +25,7 @@ Crowdsourcing often used for disaster monitoring such as earthquake, flood, or f
 2017 MediaEval test.
 
 
-## General Disaster Monitoring 
+## General Disaster Monitoring - NLP Methods
 
 ### Disaster Hashtags (2017)
  
