@@ -1,5 +1,3 @@
-# Tutorial for DCOS
-
 ### Introduction
 
 
