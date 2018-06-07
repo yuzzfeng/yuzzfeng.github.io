@@ -48,9 +48,9 @@
 
 ### Connect to DCOS instance via Windows
 
-1. Install Docker (https://www.docker.com/get-docker ) under Windows.
+1. Install Docker (https://www.docker.com/get-docker ) under Windows. (Skip this step for linux user!)
 
-2. Dowload a docker image and start an instance according to this image (z.B. tensorflow/tensorflow:1.5.0-gpu ).
+2. Dowload a docker image and start an instance according to this image (e.g. tensorflow/tensorflow:1.5.0-gpu ). (Skip this step for linux user!)
 
 - First time run it
 ```
@@ -111,5 +111,7 @@ curl -X DELETE http://130.75.51.24/marathon/v2/apps/yourinstancename
 ### Git Commands
 
 ```
+git pull
 git add -A && git commit -m "Your Message"
+git push
 ```
