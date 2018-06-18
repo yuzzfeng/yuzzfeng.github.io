@@ -71,9 +71,8 @@ Most of the research has generally three steps:
 
 11 Methods were summarized
 
-| ID | Method | Description | Primary Studies |
-| :--- | :----- | :-------- | :-------- |
-
+| ID   | Method | Description | Primary Studies |
+| :--- | :----- | :---------- | :-------------- |
 | M1 | Geographic context | Investigating the area surrounding the location of CGI <br> to determine its geographical features and employ <br> them to assess the quality of CGI. | Senaratne et al. (2013); Zielstra & Hochmair (2013) |
 
 
