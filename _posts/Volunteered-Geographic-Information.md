@@ -71,19 +71,19 @@ Most of the research has generally three steps:
 
 11 Methods were summarized
 
-| ID   | Method | Description | Primary Studies |
-| :--- | :----- | :---------- | :-------------- |
-| M1 | Geographic context | Investigating the area surrounding the location of CGI to determine its geographical features and employ them to assess the quality of CGI. | Senaratne et al. (2013); Zielstra & Hochmair (2013) |
-| M2	| Redundancy of volunteers' contribution	|Requesting several volunteers to provide information about the same geographic feature to find out if or not there is a convergence of the information produced by different volunteers.	|Comber et al. (2013); Foody (2014); See et al. (2013)| 
-| M3	| Scoring volunteered contribution	|Asking volunteers to rate every piece of CGI that is contributed by other volunteers.	|Lertnattee et al. (2010)| 
-| M4	| Expert assessment	|Submitting CGI to experts who are responsible for checking the information content and correcting it if necessary.	|Foody et al. (2013); Karam & Melchiori (2013)| 
-| M5	| Automatic location checking	|Estimating the quality of CGI by the distance between geocoded coordinates, obtained from multiple geocoding services, and the location (i.e., an address) provided by the volunteer.	|Cui (2013)| 
-| M6	| Spatiotemporal clustering	|Creating spatiotemporal clusters of CGI elements using prior information about a phenomenon of interest and, later, evaluating the significance of the resulting clusters for a specific purpose.	|Longueville et al. (2010)| 
-| M7	|Volunteer's profile; reputation	|Analyzing volunteer's profile or reputation and using it to estimate the quality of CGI.	|Bishr & Janowicz (2010); Bishr & Kuhn (2013); Bodnar et al. (2014)| 
-| M8	|Error detection /correct by crowd	|Several volunteers acting as gatekeepers and, thus, correcting errors introduced by other volunteers.	|Haklay et al. (2010)| 
-| M9	|Extracting/learning of characteristics	|Extracting characteristics from each type of geographic feature, learning the information implicit in them and, later, using the information to estimate the quality of CGI.	|Ali & Schmid (2014); Jilani & Corcoran (2014); Mohammadi & Malek (2015)| 
-| M10	|Ranking/filtering by linguistic terms	|Evaluate CGI items based on different criteria that are expressed linguistically, rank them in degrees of criteria satisfaction and, later, filter them based on the constraints of the application domain.	|Bordogna et al. (2014)| 
-| M11	|Historical data analysis	|Deriving (intrinsic) indicators from the history of the data and, later, using them to make statements regarding the quality of CGI.	|Keßler & de Groot (2013)| 
+| ID   | Method | Description | Primary Studies | Remarks |
+| :--- | :----- | :---------- | :-------------- | :------ |
+| M1 | Geographic context | Investigating the area surrounding the location of CGI to determine its geographical features and employ them to assess the quality of CGI. | Senaratne et al. (2013); Zielstra & Hochmair (2013) |  |
+| M2	| Redundancy of volunteers' contribution	|Requesting several volunteers to provide information about the same geographic feature to find out if or not there is a convergence of the information produced by different volunteers.	|Comber et al. (2013); Foody (2014); See et al. (2013)|  |
+| M3	| Scoring volunteered contribution	|Asking volunteers to rate every piece of CGI that is contributed by other volunteers.	|Lertnattee et al. (2010)|  |
+| M4	| Expert assessment	|Submitting CGI to experts who are responsible for checking the information content and correcting it if necessary.	|Foody et al. (2013); Karam & Melchiori (2013)|  |
+| M5	| Automatic location checking	|Estimating the quality of CGI by the distance between geocoded coordinates, obtained from multiple geocoding services, and the location (i.e., an address) provided by the volunteer.	|Cui (2013)|  |
+| M6	| Spatiotemporal clustering	|Creating spatiotemporal clusters of CGI elements using prior information about a phenomenon of interest and, later, evaluating the significance of the resulting clusters for a specific purpose.	|Longueville et al. (2010)|  |
+| M7	| Volunteer's profile; reputation	|Analyzing volunteer's profile or reputation and using it to estimate the quality of CGI.	|Bishr & Janowicz (2010); Bishr & Kuhn (2013); Bodnar et al. (2014)| The profile of the users hardly provide enough information about users' reputation to the desired problem |
+| M8	|Error detection /correct by crowd	|Several volunteers acting as gatekeepers and, thus, correcting errors introduced by other volunteers.	|Haklay et al. (2010)|  |
+| M9	|Extracting/learning of characteristics	|Extracting characteristics from each type of geographic feature, learning the information implicit in them and, later, using the information to estimate the quality of CGI.	|Ali & Schmid (2014); Jilani & Corcoran (2014); Mohammadi & Malek (2015)|  |
+| M10	|Ranking/filtering by linguistic terms	|Evaluate CGI items based on different criteria that are expressed linguistically, rank them in degrees of criteria satisfaction and, later, filter them based on the constraints of the application domain.	|Bordogna et al. (2014)|  |
+| M11	|Historical data analysis	|Deriving (intrinsic) indicators from the history of the data and, later, using them to make statements regarding the quality of CGI.	|Keßler & de Groot (2013)|  |
 
 
 *Degrossi, L. C., Porto de Albuquerque, J., Santos Rocha, R. D., & Zipf, A. (2018). A taxonomy of quality assessment methods for volunteered and crowdsourced geographic information. Transactions in GIS, 22(2), 542-560.*
