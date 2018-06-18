@@ -71,8 +71,8 @@ Most of the research has generally three steps:
 
 11 Methods were summarized
 
-| ID   | Method | Description | Primary Studies | Remarks |
-| :--- | :----- | :---------- | :-------------- | :------ |
+| ID   | Method | Description | Primary Studies | Remarks for social media VGI |
+| :--- | :----- | :---------- | :-------------- | :------- |
 | M1 | Geographic context | Investigating the area surrounding the location of CGI to determine its geographical features and employ them to assess the quality of CGI. | Senaratne et al. (2013); Zielstra & Hochmair (2013) |  |
 | M2	| Redundancy of volunteers' contribution	|Requesting several volunteers to provide information about the same geographic feature to find out if or not there is a convergence of the information produced by different volunteers.	|Comber et al. (2013); Foody (2014); See et al. (2013)|  |
 | M3	| Scoring volunteered contribution	|Asking volunteers to rate every piece of CGI that is contributed by other volunteers.	|Lertnattee et al. (2010)|  |
