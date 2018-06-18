@@ -69,6 +69,12 @@ Most of the research has generally three steps:
 
 ### Quality Assessment for VGI/CGI
 
+3 Types:
+
+- Social Media (passive)
+- Crowd sensing (parcipitary approach)
+- Collaborative mapping (OSM)
+
 11 Methods were summarized
 
 | ID   | Method | Description | Primary Studies | Remarks for social media VGI |
