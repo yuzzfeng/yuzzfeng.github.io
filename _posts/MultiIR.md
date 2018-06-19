@@ -7,4 +7,4 @@
 
  ## Applications
  
- [TweetMap] (https://mapd.com/demos/tweetmap/) is an application for searching Tweets based on keywords. Visualization include map, timeseries and language.
+ [TweetMap](https://mapd.com/demos/tweetmap/) is an application for searching Tweets based on keywords. Visualization include map, timeseries and language.
