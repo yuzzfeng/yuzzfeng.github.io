@@ -2,3 +2,9 @@
 1. Face recognition with sliding window: 1.Classifier - low capacity and high recall, 2.Classifier - high precision
 2. StreetView Number Transcription: 1.Classifier - locate address number, 2.Classifier - transcribe number
 3. Use decision trees - each node uses a NN to make splitting decision
+
+
+
+ ## Applications
+ 
+ [TweetMap] (https://mapd.com/demos/tweetmap/) is an application for searching Tweets based on keywords. Visualization include map, timeseries and language.
