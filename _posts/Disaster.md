@@ -1,15 +1,15 @@
 # VGI Applications for Disaster Events
 
 Three steps for building such platforms:
-- Sensing
- - Apps collection - only relevant infomation
- - LDA - Find  corresponding topics
- - IR/MultiIR - Deep learning models, tf-idf, word vectors
-- Analysis 
- - ST Clustering (ST DBSCAN, OPTICS)
- - ST Analysis (Moran I, Getis-Ord, )
-- Correlation to the real world
- - ?
+* Sensing
+  * Apps collection - only relevant infomation
+  * LDA - Find  corresponding topics
+  * IR/MultiIR - Deep learning models, tf-idf, word vectors
+* Analysis 
+  * ST Clustering (ST DBSCAN, OPTICS)
+  * ST Analysis (Moran I, Getis-Ord, )
+* Correlation to the real world
+  * ?
  
 
 
