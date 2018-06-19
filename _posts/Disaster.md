@@ -1,8 +1,8 @@
-# VGI Applications for Disaster
+# VGI Applications for Disaster Events
 
-### Beijing Rainstorm on July 21, 2012
+### Beijing Rainstorm on July 21-22, 2012
 
-Heavy storm leads to death and huge loss, analysis are based on Sina Weibo 
+Heavy storm leads to death and huge loss, analysis are based on Sina Weibo. 20-h period, 170mm (City) - 215mm (Town), 86% of city > 100mm, 
 
 #### Observation:
 *Wang, K., Wang, L., Wei, Y. M., & Ye, M. (2013). Beijing storm of July 21, 2012: observations and reflections. Natural hazards, 67(2), 969-974.*
