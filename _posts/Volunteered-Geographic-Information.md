@@ -27,6 +27,14 @@ Crowdsourcing often used for disaster monitoring such as earthquake, flood, or f
 
 ## General Disaster Monitoring - NLP Methods
 
+### Earthquake Monitoring (2018)
+
+LDA for text classification + Getis-Ord for hot spot detection
+Correlation analysis with usgs data/records
+
+*Resch, B., Usländer, F., & Havas, C. (2018). Combining machine-learning topic models and spatiotemporal analysis of social media data for disaster footprint and damage assessment. Cartography and Geographic Information Science, 45(4), 362-376.*
+
+
 ### Disaster Hashtags (2017)
  
 Compare keyword based method and their own approach. SVM (rbf) and sLDA (supervised, k=100) were used for training a binary classifier based on balanced dataset (2x36k) with R packages.
