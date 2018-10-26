@@ -1,0 +1,8 @@
+## Visualization
+- [beijingcitylab](https://beijingcitylab.com) has presented on this site some nice visualization of GIS data
+
+## Slides
+- The slides for the popular book [Deep Learning](https://cedar.buffalo.edu/~srihari/CSE676/) from Ian Goodfellow
+
+## Activities
+- VGI Activities - [VGIscience](https://www.vgiscience.org/activities.html)
