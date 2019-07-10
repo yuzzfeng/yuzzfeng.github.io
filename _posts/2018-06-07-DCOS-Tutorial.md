@@ -1,6 +1,70 @@
-### DCOS Introduction for beginners
+## A DCOS Introduction for Beginners
 
+### Install Dependencies for DCOS instance
 
+Install the dependcies and set up connecting folder
+
+#### initialize enviroment
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/nvidia/lib64 &&
+export PATH=$PATH:/usr/local/nvidia/bin:/usr/local/sbin:/usr/sbin:/sbin &&
+apt-get update &&
+apt-get install cifs-utils -y &&
+apt-get install git -y
+```
+#### install keras & image proc tools
+```
+pip3 install keras &&
+apt-get install python3-tk -y &&
+apt-get install python3-skimage -y &&
+apt install gdal-bin python-gdal python3-gdal -y &&
+apt install gdal-bin python-gdal python3-gdal -y
+```
+#### install keras-contrib
+```
+git clone https://www.github.com/keras-team/keras-contrib.git &&
+cd keras-contrib &&
+python3 setup.py install &&
+cd ../
+```
+#### connect to local disk
+```
+mkdir tmp &&
+mount -t cifs -o user=,password= //130.75.51.38/tmp/yu tmp &&
+cd tmp 
+```
+
+#### pip3 main error:
+```
+$ python3 -m pip uninstall pip && apt install python3-pip --reinstall
+```
+#### cryptography build error:
+```
+$ apt-get install build-essential libssl-dev libffi-dev python3-dev
+```
+
+#### example of whole script:
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/nvidia/lib64 &&
+export PATH=$PATH:/usr/local/nvidia/bin:/usr/local/sbin:/usr/sbin:/sbin &&
+apt-get update &&
+apt-get install cifs-utils -y &&
+apt-get install git -y &&
+apt-get install python3-pip -y &&
+pip3 install keras &&
+pip3 install gensim &&
+apt-get install python3-tk -y &&
+apt-get install python3-skimage -y &&
+apt install gdal-bin python-gdal python3-gdal -y &&
+mkdir tmp &&
+mount -t cifs -o user=,password= //130.75.51.38/tmp/yourname tmp &&
+cd tmp 
+```
+Run a python script and delete the DCOS instance after it finished (Optional)
+```
+python3 simply.py
+curl -X DELETE http://130.75.51.24/marathon/v2/apps/yourinstancename
+```
 
 ### Setting for DCOS instance
 ```
@@ -79,61 +143,6 @@ dcos
 4.  Open the GPU instance at DCOS
 ```
 dcos task exec -it myname-2gpu bash
-```
-
-
-
-### Dependencies and Settings
-
-Install the dependcies and set up connecting folder
-
-#### initialize enviroment
-```
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/nvidia/lib64 &&
-export PATH=$PATH:/usr/local/nvidia/bin:/usr/local/sbin:/usr/sbin:/sbin &&
-apt-get update &&
-apt-get install cifs-utils -y &&
-apt-get install git -y
-```
-
-#### connect to local
-```
-mkdir tmp &&
-mount -t cifs -o user=,password= //130.75.51.38/tmp/yu tmp &&
-cd tmp 
-```
-
-#### pip3 main error:
-```
-$ python3 -m pip uninstall pip && apt install python3-pip --reinstall
-```
-
-#### cryptography build error:
-```
-$ apt-get install build-essential libssl-dev libffi-dev python3-dev
-```
-
-#### whole script:
-```
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/nvidia/lib64 &&
-export PATH=$PATH:/usr/local/nvidia/bin:/usr/local/sbin:/usr/sbin:/sbin &&
-apt-get update &&
-apt-get install cifs-utils -y &&
-apt-get install git -y &&
-apt-get install python3-pip -y &&
-pip3 install keras &&
-pip3 install gensim &&
-apt-get install python3-tk -y &&
-apt-get install python3-skimage -y &&
-apt install gdal-bin python-gdal python3-gdal -y &&
-mkdir tmp &&
-mount -t cifs -o user=,password= //130.75.51.38/tmp/yourname tmp &&
-cd tmp 
-```
-Run a python script and delete the DCOS instance after it finished (Optional)
-```
-python3 simply.py
-curl -X DELETE http://130.75.51.24/marathon/v2/apps/yourinstancename
 ```
 
 ### Git Commands
