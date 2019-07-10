@@ -86,6 +86,34 @@ dcos task exec -it myname-2gpu bash
 ### Dependencies and Settings
 
 Install the dependcies and set up connecting folder
+
+#### initialize enviroment
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/nvidia/lib64 &&
+export PATH=$PATH:/usr/local/nvidia/bin:/usr/local/sbin:/usr/sbin:/sbin &&
+apt-get update &&
+apt-get install cifs-utils -y &&
+apt-get install git -y
+```
+
+#### connect to local
+```
+mkdir tmp &&
+mount -t cifs -o user=,password= //130.75.51.38/tmp/yu tmp &&
+cd tmp 
+```
+
+#### pip3 main error:
+```
+$ python3 -m pip uninstall pip && apt install python3-pip --reinstall
+```
+
+#### cryptography build error:
+```
+$ apt-get install build-essential libssl-dev libffi-dev python3-dev
+```
+
+#### whole script:
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/nvidia/lib64 &&
 export PATH=$PATH:/usr/local/nvidia/bin:/usr/local/sbin:/usr/sbin:/sbin &&
