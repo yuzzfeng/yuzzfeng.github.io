@@ -1,8 +1,8 @@
-### Introduction
+### DCOS Introduction for beginners
 
 
 
-### Setting for DCOS
+### Setting for DCOS instance
 ```
 {
   "id": "/yourname-1gpu",
