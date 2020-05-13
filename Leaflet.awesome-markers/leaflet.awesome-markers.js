@@ -43,9 +43,9 @@
             var div = document.createElement('div'),
                 options = this.options;
 
-            if (options.icon) {
+            //if (options.icon) {
                 div.innerHTML = this._createInner();
-            }
+            //}
 
             if (options.bgPos) {
                 div.style.backgroundPosition =
@@ -113,7 +113,7 @@
 
             this._setIconStyles(div, 'shadow');
             return div;
-      }
+      },
     });
         
     L.AwesomeMarkers.icon = function (options) {
