@@ -32,7 +32,7 @@
             icon: 'home',
             markerColor: 'blue',
             iconColor: 'white',
-			html : ""
+            html : ""
         },
 
         initialize: function (options) {
