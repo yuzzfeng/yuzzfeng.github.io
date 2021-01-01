@@ -1,5 +1,8 @@
-# GitPage
-Created under the [MIT license](LICENSE.md) - [My Page](https://yuzzfeng.github.io/)
+# Yu Feng's GitPage
+
+[Open](https://yuzzfeng.github.io/)
+
+Reference: [Lanyon](https://github.com/poole/lanyon) under the [MIT license](LICENSE.md)
 
 # Lanyon
 
