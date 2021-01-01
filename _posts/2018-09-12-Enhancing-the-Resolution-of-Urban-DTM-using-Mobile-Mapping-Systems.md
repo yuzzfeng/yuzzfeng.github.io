@@ -6,7 +6,7 @@
     <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Correction_before.PNG' height = '150px'></th>
   </tr>
   <tr>
-    <td><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Curb_after.PNG' height = '150px'></th>
+    <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Curb_after.PNG' height = '150px'></th>
     <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Circle_after.PNG' height = '150px'></th>
     <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/bridge_after.PNG' height = '150px'></th>
     <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Correction_after.PNG' height = '150px'></th>
