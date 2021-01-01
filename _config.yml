@@ -4,8 +4,8 @@
 permalink:           pretty
 
 # Setup
-title:               Yu Feng @ ikg
-tagline:             ''
+title:               Yu Feng
+tagline:             '@ LUH ikg'
 description:         'The best is yet to come'
 url:                 https://yuzzfeng.github.io/
 baseurl:             ''
@@ -19,4 +19,4 @@ author:
   email:             yuzz.feng@gmail.com
 
 # Custom vars
-version:             1.0.0
+version:             1.0.1
