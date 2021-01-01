@@ -8,7 +8,7 @@ title:               Yu Feng
 tagline:             '@ LUH ikg'
 description:         'The best is yet to come'
 url:                 https://yuzzfeng.github.io/
-baseurl:             ''
+baseurl:             https://yuzzfeng.github.io/
 paginate:            5
 github:              https://github.com/yuzzfeng
 
