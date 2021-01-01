@@ -1,8 +1,1 @@
----
-layout: page
-title: About
----
-
-My name is Yu Feng, a student in Geoinformatics in Hannover, Germany.
-
-Thanks for reading!
+I am currently a research staff at the Institute of Cartography and Geoinformatics (ikg), Leibniz University Hannover. My research interests include social media VGI analysis, LiDAR data processing, map generalization, and deep learning.
