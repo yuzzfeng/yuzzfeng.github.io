@@ -1,3 +1,4 @@
-User-Agent: *
+User-agent: *
 Allow: /
-
+Allow: /sitemap.htm
+Sitemap: https://yuzzfeng.github.io/sitemap.xml
