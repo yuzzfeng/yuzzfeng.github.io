@@ -1,9 +1,9 @@
 <table style="width:100%">
   <tr>
-    <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Curb_before.PNG' height = '165px' width = '165px'></th>
-    <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Circle_before.PNG' height = '165px' width = '165px'></th>
-    <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/bridge_before.PNG' height = '165px' width = '165px'></th>
-    <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Correction_before.PNG' height = '165px' width = '165px'></th>
+    <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Curb_before.PNG' height = 'auto' width = '25%'></th>
+    <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Circle_before.PNG' height = 'auto' width = '25%'></th>
+    <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/bridge_before.PNG' height = 'auto' width = '25%'></th>
+    <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Correction_before.PNG' height = 'auto' width = '25%'></th>
   </tr>
   <tr>
     <th><img src = 'https://raw.githubusercontent.com/yuzzfeng/pydtm/master/img/Curb_after.PNG' height = '165px' width = '165px'></th>
