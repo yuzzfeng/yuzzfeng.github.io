@@ -9,7 +9,7 @@ tagline:             ''
 description:         ''
 url:                 https://yuzzfeng.github.io/
 baseurl:             https://yuzzfeng.github.io
-paginate:            5
+paginate:            6
 github:              https://github.com/yuzzfeng
 
 # About/contact
