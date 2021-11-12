@@ -5,8 +5,8 @@ permalink:           pretty
 
 # Setup
 title:               Yu Feng
-tagline:             '@ ikg'
-description:         'The best is yet to come'
+tagline:             ''
+description:         ''
 url:                 https://yuzzfeng.github.io/
 baseurl:             https://yuzzfeng.github.io
 paginate:            5
