@@ -34,6 +34,12 @@ mount -t cifs -o user=,password= //130.75.51.38/tmp/yu tmp &&
 cd tmp 
 ```
 
+#### run jupyternotebook
+```
+jupyter notebook --ip=0.0.0.0 --port=8891 --no-browser --allow-root
+```
+Copy the link to browser and use address http://http://130.75.51.22:8891/ with the same port
+
 #### pip3 main error:
 ```
 $ python3 -m pip uninstall pip && apt install python3-pip --reinstall
