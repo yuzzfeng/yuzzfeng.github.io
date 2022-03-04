@@ -67,6 +67,10 @@ For example, here "tensorflow/tensorflow:1.5.0-gpu-py3" is used.
 }
 ```
 
+```
+tail -f /dev/null
+```
+
 ## 5. Run your instance
 
 ```
@@ -83,6 +87,7 @@ my setting
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/nvidia/lib64 &&
 export PATH=$PATH:/usr/local/nvidia/bin:/usr/local/sbin:/usr/sbin:/sbin &&
+export PATH=$PATH:/opt/conda/bin &&
 apt-get update &&
 apt-get install cifs-utils -y &&
 apt-get install git -y
@@ -92,6 +97,13 @@ apt-get install git -y
 
 ```
 apt-get install python3-pip -y
+```
+
+## 8. Install Pytorch
+
+pytorch/pytorch:1.6.0-cuda10.1-cudnn7-devel
+```
+pip3 install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 ## 8. Connect to local disk at your computer
@@ -136,6 +148,7 @@ You will see
 
 ## 10. Connect jupyter notebook to your local browser
 ```
+pip3 install jupyterlab
 jupyter notebook --ip=0.0.0.0 --port=8891 --no-browser --allow-root
 ```
 Copy the link to browser and use address http://http://130.75.51.22:8891/ with the same port
@@ -148,12 +161,26 @@ Copy the link to browser and use address http://http://130.75.51.22:8891/ with t
 
 
 
+## Summary
 
+Run the following at once. Attention! this connect to yu's folder.
 
-
-
-
-
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/nvidia/lib64 &&
+export PATH=$PATH:/usr/local/nvidia/bin:/usr/local/sbin:/usr/sbin:/sbin &&
+export PATH=$PATH:/opt/conda/bin &&
+apt-get update &&
+apt-get install cifs-utils -y &&
+apt-get install git -y &&
+apt-get install python3-pip -y &&
+pip3 install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html &&
+conda install opencv -y &&
+conda install jupyterlab -y &&
+mkdir tmp &&
+mount -t cifs -o user=,password= //130.75.51.38/tmp/yu tmp &&
+cd tmp &&
+jupyter notebook --ip=0.0.0.0 --port=8891 --no-browser --allow-root
+```
 
 
 
