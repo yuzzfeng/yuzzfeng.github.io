@@ -174,7 +174,12 @@ apt-get install cifs-utils -y &&
 apt-get install git -y &&
 apt-get install python3-pip -y &&
 pip3 install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html &&
+conda install tensorflow-gpu -y &&
+conda install keras -y &&
+conda install imgaug -y &&
+conda install -c conda-forge pycocotools -y &&
 conda install opencv -y &&
+conda install scikit-image -y &&
 conda install jupyterlab -y &&
 mkdir tmp &&
 mount -t cifs -o user=,password= //130.75.51.38/tmp/yu tmp &&
