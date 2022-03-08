@@ -1,8 +1,14 @@
 # List of workable DCOS setting
 
-## matterport/Mask_RCNN
+## Setting for object detection
 
-Docker container Image: pytorch/pytorch:1.2-cuda10.0-cudnn7-devel
+Workable for:
+
+- matterport/Mask_RCNN
+
+Docker container Image: 
+
+- pytorch/pytorch:1.2-cuda10.0-cudnn7-devel
 
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/nvidia/lib64 &&
