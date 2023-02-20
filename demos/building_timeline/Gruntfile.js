@@ -3,16 +3,16 @@ module.exports = function( grunt ) {
         uglify: {
             dist: {
                 files: {
-                    'dist/leaflet.SliderControl.min.js': 'dist/leaflet.SliderControl.min.js'
+                    'https://yuzzfeng.github.io/demos/building_timeline/dist/leaflet.SliderControl.min.js': 'https://yuzzfeng.github.io/demos/building_timeline/dist/leaflet.SliderControl.min.js'
                 }
             }
         },
         concat: {
             dist: {
                 src: [
-                    'SliderControl.js'
+                    'https://yuzzfeng.github.io/demos/building_timeline/SliderControl.js'
                 ],
-                dest: 'dist/leaflet.SliderControl.min.js'
+                dest: 'https://yuzzfeng.github.io/demos/building_timeline/dist/leaflet.SliderControl.min.js'
             }
         }
     });
