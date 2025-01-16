@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Dr. Yu Feng 冯煜</title>
+    <link>https://yuzzfeng.github.io/projects/</link>
+    <description>Recent content in Projects on Dr. Yu Feng 冯煜</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://yuzzfeng.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BeBaOI: Benchmark and Baseline Methods for determining Overlapping Images, 02.2023 - 01.2024 (finished project)</title>
+      <link>https://yuzzfeng.github.io/projects/2024_si_feng/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuzzfeng.github.io/projects/2024_si_feng/</guid>
+      <description>&lt;p&gt;PI, funded by &lt;a href=&#34;https://www.isprs.org/society/si/SI-2023/default.aspx&#34;&gt;ISPRS Scientific Initiatives&lt;/a&gt; and collaborated with Assistant Professor, &lt;a href=&#34;https://xwangsgg.github.io/&#34;&gt;Dr.-Ing. Xin Wang&lt;/a&gt;, School of Geodesy and Geomatics, Wuhan University. [&lt;a href=&#34;https://www.isprs.org/society/si/SI-2023/TC21_Application_(Xin_Wang)_Report.pdf&#34;&gt;report&lt;/a&gt;]&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Knowledge discovery and visual analysis for urban mobility data in Munich and Helsinki, 02.2023 - 01.2024 (finished project)</title>
+      <link>https://yuzzfeng.github.io/projects/2024_gif_feng/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuzzfeng.github.io/projects/2024_gif_feng/</guid>
+      <description>&lt;p&gt;co-PI, funded by &lt;a href=&#34;https://www.international.tum.de/en/global/gif/&#34;&gt;TUM Global Incentive Fund&lt;/a&gt; and collaborated with Assistant Professor, &lt;a href=&#34;https://gistlab.science/rushmore_teams/henrikki-tenkanen/&#34;&gt;Dr. Henrikki Tenkanen&lt;/a&gt;, Department of Built Environment, Aalto University.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
