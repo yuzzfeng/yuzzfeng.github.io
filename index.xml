@@ -6,7 +6,26 @@
     <description>Recent content on Dr. Yu Feng 冯煜</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 12 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://yuzzfeng.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuzzfeng.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interpreting core forms of urban morphology linked to urban functions with explainable graph neural network</title>
+      <link>https://yuzzfeng.github.io/publications/2025_ceus_chen/</link>
+      <pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuzzfeng.github.io/publications/2025_ceus_chen/</guid>
+      <description>Chen, D., Feng, Y., Li, X., Qu, M., Luo, P., &amp;amp; Meng, L. (2025). Interpreting core forms of urban morphology linked to urban functions with explainable graph neural network. Computers, Environment and Urban Systems, 118, 102267.
+Abstract Understanding the high-order relationship between urban form and function is essential for modeling the underlying mechanisms of sustainable urban systems. Nevertheless, it is challenging to establish an accurate data representation for complex urban forms that are readily explicable in human terms.</description>
+    </item>
+    
+    <item>
+      <title>🎯 Funding received from NFDI4Earth collaborating with the archives of the Bavarian State (GDA)</title>
+      <link>https://yuzzfeng.github.io/news/2025_n4e_incubator/</link>
+      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuzzfeng.github.io/news/2025_n4e_incubator/</guid>
+      <description>&lt;p&gt;PhenoMapping: A participatory visual tool for curation and verification of historical phenological data&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>About</title>
       <link>https://yuzzfeng.github.io/about/</link>
@@ -23,6 +42,16 @@
       
       <guid>https://yuzzfeng.github.io/news/2024_daad_ppp/</guid>
       <description>&lt;p&gt;A real-world data-driven simulator for interaction-aware autonomous driving benchmarking&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Walking in the Shade: Shadow-oriented Navigation for Pedestrians</title>
+      <link>https://yuzzfeng.github.io/publications/2024_acm_feng/</link>
+      <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuzzfeng.github.io/publications/2024_acm_feng/</guid>
+      <description>Feng, Y., Zhang, P., Xue, J., Chen, Z., &amp;amp; Meng, L. (2024, October). Walking in the Shade: Shadow-oriented Navigation for Pedestrians. In Proceedings of the 32nd ACM International Conference on Advances in Geographic Information Systems (pp. 677-680).
+Abstract Excessive exposure to the sun and the resulting heat poses health risks to pedestrians in hot weather. To mitigate these risks, we propose a shadow-oriented navigation system that offers cooler and more convenient walking routes by simulating shadows.</description>
     </item>
     
     <item>
@@ -72,6 +101,26 @@ Abstract Recent advances in mobile mapping systems have greatly enhanced the eff
     </item>
     
     <item>
+      <title>Extraction and analysis of natural disaster-related VGI from social media: review, opportunities and challenges</title>
+      <link>https://yuzzfeng.github.io/publications/2022_ijgis_feng/</link>
+      <pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuzzfeng.github.io/publications/2022_ijgis_feng/</guid>
+      <description>Feng, Y., Huang, X., &amp;amp; Sester, M. (2022). Extraction and analysis of natural disaster-related VGI from social media: review, opportunities and challenges. International Journal of Geographical Information Science, 36(7), 1275-1316.
+Abstract The idea of ‘citizen as sensors’ has gradually become a reality over the past decade. Today, Volunteered Geographic Information (VGI) from citizens is highly involved in acquiring information on natural disasters. In particular, the rapid development of deep learning techniques in computer vision and natural language processing in recent years has allowed more information related to natural disasters to be extracted from social media, such as the severity of building damage and flood water levels.</description>
+    </item>
+    
+    <item>
+      <title>Determination of building flood risk maps from LiDAR mobile mapping data</title>
+      <link>https://yuzzfeng.github.io/publications/2022_ceus_feng/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuzzfeng.github.io/publications/2022_ceus_feng/</guid>
+      <description>Feng, Y., Xiao, Q., Brenner, C., Peche, A., Yang, J., Feuerhake, U., &amp;amp; Sester, M. (2022). Determination of building flood risk maps from LiDAR mobile mapping data. Computers, Environment and Urban Systems, 93, 101759.
+Abstract With increasing urbanization, flooding is a major challenge for many cities today. Based on forecast precipitation, topography, and pipe networks, flood simulations can provide early warnings for areas and buildings at risk of flooding. Basement windows, doors, and underground garage entrances are common places where floodwater can flow into a building.</description>
+    </item>
+    
+    <item>
       <title>Flood severity mapping from Volunteered Geographic Information by interpreting water level from images containing people: A case study of Hurricane Harvey</title>
       <link>https://yuzzfeng.github.io/publications/2020_isprs_feng/</link>
       <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
@@ -79,15 +128,6 @@ Abstract Recent advances in mobile mapping systems have greatly enhanced the eff
       <guid>https://yuzzfeng.github.io/publications/2020_isprs_feng/</guid>
       <description>Feng, Y., Xu, Y., Xia, Y., Brenner, C., &amp;amp; Sester, M. (2024). Gap completion in point cloud scene occluded by vehicles using SGC-Net. ISPRS Journal of Photogrammetry and Remote Sensing, 215, 331-350.
 Abstract With increasing urbanization, in recent years there has been a growing interest and need in monitoring and analyzing urban flood events. Social media, as a new data source, can provide real-time information for flood monitoring. The social media posts with locations are often referred to as Volunteered Geographic Information (VGI), which can reveal the spatial pattern of such events.</description>
-    </item>
-    
-    <item>
-      <title>Arizona, US</title>
-      <link>https://yuzzfeng.github.io/publications/arizona-us/</link>
-      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuzzfeng.github.io/publications/arizona-us/</guid>
-      <description>The Grand Canyon is a steep-sided canyon carved by the Colorado River in Arizona, United States. The canyon is 277 miles (446 km) long, up to 18 miles (29 km) wide and attains a depth of over a mile (6,093 feet or 1,857 meters).</description>
     </item>
     
   </channel>
