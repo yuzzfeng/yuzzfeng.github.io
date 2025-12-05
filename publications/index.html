@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dr. Yu Feng 冯煜/publications/</title>
+    <title>Prof. Dr. Yu Feng — Publications</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -11,13 +11,86 @@
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/terminal-0.7.4.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/console.css">
+    <style>
+      /* Horizontal list layout: image | text | logo */
+      #pub-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      #pub-grid a::after { display: none !important; }
+      #pub-grid a:hover { transform: none; box-shadow: none; }
+
+      #pub-grid .pub-tile {
+        display: grid;
+        grid-template-columns: 24% 1fr 10%;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        background: var(--background-color);
+        border: 1px solid var(--secondary-color);
+        border-radius: 8px;
+        text-decoration: none;
+        color: inherit;
+      }
+      #pub-grid .pub-tile-row { display: contents; }
+      #pub-grid .pub-thumb {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 6px;
+        overflow: hidden;
+        background: var(--code-bg-color);
+      }
+      #pub-grid .pub-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      #pub-grid .pub-tile-meta { min-width: 0; }
+      #pub-grid .pub-tile-title {
+        font-size: 16px;
+        line-height: 1.4;
+        margin: 0;
+        color: var(--font-color);
+        overflow: hidden;
+      }
+      #pub-grid .pub-tile-authors {
+        font-size: 13px;
+        margin-top: 8px;
+        color: var(--secondary-color);
+        line-height: 1.35;
+      }
+      #pub-grid .pub-tile-publine {
+        font-size: 13px;
+        margin-top: 4px;
+        color: var(--secondary-color);
+        line-height: 1.35;
+      }
+      #pub-grid .pub-tile-logo {
+        width: 100%;
+        aspect-ratio: 2 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        background: #fff;
+        padding: 3px;
+      }
+      #pub-grid .pub-tile-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+    </style>
     
       <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
        
-      <link href="https://yuzzfeng.github.io/publications/index.xml" rel="alternate" type="application/rss+xml" title="Dr. Yu Feng 冯煜" />
+      <link href="https://yuzzfeng.github.io/publications/index.xml" rel="alternate" type="application/rss+xml" title="Prof. Dr. Yu Feng" />
     <meta property="og:title" content="Selected Publication" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -35,19 +108,18 @@
             <div class="logo terminal-prompt">
               
               
-              <a href="https://yuzzfeng.github.io/" class="no-style ">Dr. Yu Feng 冯煜</a>:~# 
+              <a href="https://yuzzfeng.github.io/" class="no-style ">Prof. Dr. Yu Feng</a>:~# 
               <a href='https://yuzzfeng.github.io/publications'>publications</a>/</div></header>
           <nav class="terminal-menu">
             <ul vocab="https://schema.org/" typeof="BreadcrumbList">
                 
                 <li><a href="https://yuzzfeng.github.io/about/" typeof="ListItem">about/</a></li>
                 
-                <li><a href="https://yuzzfeng.github.io/news/" typeof="ListItem">news/</a></li>
-                
                 <li><a href="https://yuzzfeng.github.io/projects/" typeof="ListItem">projects/</a></li>
                 
                 <li><a href="https://yuzzfeng.github.io/publications/" typeof="ListItem">publications/</a></li>
                 
+                <li><a href="https://yuzzfeng.github.io/thesis-topics/" typeof="ListItem">thesis-topics/</a></li>
             </ul>
           </nav>
         </div>
@@ -57,69 +129,103 @@
         
 <h1>Selected Publication</h1>
 
-<div class="image-grid">
-    
-        
-            <a href="https://yuzzfeng.github.io/publications/2025_ceus_chen/" title="Interpreting core forms of urban morphology linked to urban functions with explainable graph neural network">
-            
-            
-                
-                <img src="/publications/2025_ceus_chen/2025_ceus_chen_hub664db201df0b73abd2e80f4ec2cea21_370853_400x0_resize_q75_box.jpeg" alt="2025_ceus_chen.jpeg" class="img-responsive">
-            
-            </a>
-        
-    
-        
-            <a href="https://yuzzfeng.github.io/publications/2024_acm_feng/" title="Walking in the Shade: Shadow-oriented Navigation for Pedestrians">
-            
-            
-                
-                <img src="/publications/2024_acm_feng/2024_acm_feng_hu36c2baaadd810e567fd1622ad8af87d8_446945_400x0_resize_q75_box.jpg" alt="2024_acm_feng.jpg" class="img-responsive">
-            
-            </a>
-        
-    
-        
-            <a href="https://yuzzfeng.github.io/publications/2024_isprs_feng/" title="Gap completion in point cloud scene occluded by vehicles using SGC-Net">
-            
-            
-                
-                <img src="/publications/2024_isprs_feng/2024_isprs_feng_hub03ec0d3853ddb3126b47b1a636545e7_449700_400x0_resize_q75_box.jpeg" alt="2024_isprs_feng.jpeg" class="img-responsive">
-            
-            </a>
-        
-    
-        
-            <a href="https://yuzzfeng.github.io/publications/2022_ijgis_feng/" title="Extraction and analysis of natural disaster-related VGI from social media: review, opportunities and challenges">
-            
-            
-                
-                <img src="/publications/2022_ijgis_feng/2022_ijgis_feng_hu52fd02e9bc0b4d278aa1880cd188aad2_315551_400x0_resize_q75_box.jpeg" alt="2022_ijgis_feng.jpeg" class="img-responsive">
-            
-            </a>
-        
-    
-        
-            <a href="https://yuzzfeng.github.io/publications/2022_ceus_feng/" title="Determination of building flood risk maps from LiDAR mobile mapping data">
-            
-            
-                
-                <img src="/publications/2022_ceus_feng/2022_ceus_feng_hu2662d39a2e20ef422524385e1d8b41f7_462372_400x0_resize_q75_box.jpeg" alt="2022_ceus_feng.jpeg" class="img-responsive">
-            
-            </a>
-        
-    
-        
-            <a href="https://yuzzfeng.github.io/publications/2020_isprs_feng/" title="Flood severity mapping from Volunteered Geographic Information by interpreting water level from images containing people: A case study of Hurricane Harvey">
-            
-            
-                
-                <img src="/publications/2020_isprs_feng/2020_isprs_feng_hu2858b7076276e7ee37904894473b9c43_413371_400x0_resize_q75_box.jpeg" alt="2020_isprs_feng.jpeg" class="img-responsive">
-            
-            </a>
-        
-    
+<div class="image-grid" id="pub-grid">
+    <!-- Publication tiles will be auto-generated by publications.json + JS -->
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var grid = document.getElementById('pub-grid');
+  if (!grid) return;
+
+  fetch('/publications.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('Failed to load publications.json');
+      return res.json();
+    })
+    .then(function (items) {
+      if (!Array.isArray(items)) return;
+
+      items.sort(function (a, b) {
+        var da = Date.parse(a && a.date) || 0;
+        var db = Date.parse(b && b.date) || 0;
+        if (db !== da) return db - da;
+        var ya = parseInt(a && a.year, 10) || 0;
+        var yb = parseInt(b && b.year, 10) || 0;
+        return yb - ya;
+      });
+
+      items.forEach(function (item) {
+        if (!item || (!item.link && !item.doi) || !item.image) return;
+
+        var targetHref = item.doi || item.link;
+
+        var a = document.createElement('a');
+        a.href = targetHref;
+        a.className = 'pub-tile';
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.title = item.title || '';
+
+        // special layout class for highlighted papers
+        // row layout: image | text | logo
+        var row = document.createElement('div');
+        row.className = 'pub-tile-row';
+
+        var imgWrapper = document.createElement('div');
+        imgWrapper.className = 'pub-thumb';
+        var img = document.createElement('img');
+        img.src = item.image;
+        img.alt = item.title || '';
+        imgWrapper.appendChild(img);
+        row.appendChild(imgWrapper);
+
+        var meta = document.createElement('div');
+        meta.className = 'pub-tile-meta';
+
+        var title = document.createElement('div');
+        title.className = 'pub-tile-title';
+        title.textContent = item.title || '';
+        meta.appendChild(title);
+
+        if (item.authors) {
+          var authors = document.createElement('div');
+          authors.className = 'pub-tile-authors';
+          authors.textContent = item.authors;
+          meta.appendChild(authors);
+        }
+
+        if (item.year || item.publication) {
+          var publine = document.createElement('div');
+          publine.className = 'pub-tile-publine';
+          var parts = [];
+          if (item.year) parts.push(item.year);
+          if (item.publication) parts.push(item.publication);
+          publine.textContent = parts.join(' · ');
+          meta.appendChild(publine);
+        }
+
+        row.appendChild(meta);
+
+        var logoWrapper = document.createElement('div');
+        logoWrapper.className = 'pub-tile-logo';
+        if (item.logo) {
+          var logoImg = document.createElement('img');
+          logoImg.src = item.logo;
+          logoImg.alt = (item.journal || 'Journal logo');
+          logoWrapper.appendChild(logoImg);
+        }
+        row.appendChild(logoWrapper);
+
+        a.appendChild(row);
+        grid.appendChild(a);
+      });
+    })
+    .catch(function (err) {
+      console.error(err);
+    });
+});
+</script>
 
         <div class="footer">
     Powered by <a href="https://gohugo.io/">Hugo</a> with
