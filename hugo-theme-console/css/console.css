@@ -202,8 +202,8 @@ figure {
 
 .image-grid {
     display: grid;
-    grid-gap: 1.2rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 0.8rem;
+    grid-template-columns: 1fr;
 }
 
 .image-grid a {
@@ -272,58 +272,43 @@ figure {
 }
 
 .pub-tile-content {
-    display: flex;
-    gap: 10px;
-    align-items: stretch;
-    padding: 8px;
-    background: var(--code-bg-color);
+    display: none;
 }
 
-.pub-tile-footer {
+.pub-tile-row {
     display: grid;
-    grid-template-columns: 4fr 1fr; /* text : logo = 3 : 1 */
+    grid-template-columns: 28% 1fr 15%;
     align-items: center;
-    column-gap: 12px;
-    padding: 0;
+    column-gap: 14px;
+    padding: 10px 12px;
     box-sizing: border-box;
 }
 
-.pub-tile-image {
+.pub-thumb {
     position: relative;
-    flex: 1 1 auto;
-    padding-bottom: 66.67%;
+    width: 100%;
+    border-radius: 6px;
     overflow: hidden;
     background: var(--code-bg-color);
-    min-width: 0;
-    border-radius: 4px;
 }
 
-.pub-tile-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.pub-thumb img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-}
-
-/* slightly taller image window for highlighted tiles */
-.pub-tile--highlight .pub-tile-image {
-    padding-bottom: 72%;
 }
 
 .pub-tile-logo {
-    width: 30%;
-    height: 32px;
-    flex: 0 0 32px;
+    width: 100%;
+    aspect-ratio: 2 / 3;
     border-radius: 4px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2px;
+    padding: 0;
 }
 
 .pub-tile-logo img {
@@ -342,7 +327,7 @@ figure {
 }
 
 .pub-tile-title {
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 500;
     margin: 0;
     line-height: 1.25;

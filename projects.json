@@ -1,0 +1,56 @@
+[
+  {
+    "title": "NFDI4Earth Incubator: PhenoMapping - A participatory visual tool for curation and verification of historical phenological data",
+    "date": "2025-02-04",
+    "displayDate": "Feb. 4, 2025",
+    "summary": "PI, 2025–2026, funded by NFDI4Earth Incubator, collaborating with the archives of the Bavarian State (GDA). ",
+    "link": "https://yuzzfeng.github.io/news/2025_n4e_incubator/",
+    "source": "project",
+    "status": "ongoing"
+  },
+  {
+    "title": "DAAD PPP: A real-world data-driven simulator for interaction-aware autonomous driving benchmarking.",
+    "date": "2024-12-12",
+    "displayDate": "Dec. 12, 2024",
+    "summary": "PI, 2024–2025, funded by DAAD PPP with the University of Glasgow. ",
+    "link": "https://yuzzfeng.github.io/news/2024_daad_ppp/",
+    "source": "project",
+    "status": "ongoing"
+  },
+  {
+    "title": "NFDI4Earth Incubator: Prompt-accessed GeoQAmap for Earth Data",
+    "date": "2024-03-01",
+    "displayDate": "Mar. 1, 2024",
+    "summary": "PI, 2023–2024, funded by NFDI4Earth Incubator. A multi-agent spatial data analysis framework for natural-language interaction with vector geospatial data across relational and graph databases; supports vector-store fuzzy searches and step-by-step exploratory analysis with rich visualization. [<a href=\"https://www.sciencedirect.com/science/article/pii/S1569843225004728\">article</a>]",
+    "link": "https://git.rwth-aachen.de/nfdi4earth/pilotsincubatorlab/incubator/prompt-accessed-geoqamap-for-earth-data",
+    "source": "project",
+    "status": "finished"
+  },
+  {
+    "title": "ISPRS SI: BeBaOI - Benchmark and Baseline Methods for determining Overlapping Images",
+    "date": "2024-02-01",
+    "displayDate": "Feb. 1, 2024",
+    "summary": "PI, 2023–2024, funded by <a href=\"https://www.isprs.org/society/si/SI-2023/default.aspx\">ISPRS Scientific Initiatives</a>; collaborated with <a href=\"https://xwangsgg.github.io/\">Dr.-Ing. Xin Wang</a>, School of Geodesy and Geomatics, Wuhan University. [<a href=\"https://www.isprs.org/society/si/SI-2023/TC21_Application_(Xin_Wang)_Report.pdf\">report</a>]",
+    "link": "https://yuzzfeng.github.io/projects/2024_si_feng/",
+    "source": "project",
+    "status": "finished"
+  },
+  {
+    "title": "TUM GIF: Knowledge discovery and visual analysis for urban mobility data in Munich and Helsinki",
+    "date": "2024-02-01",
+    "displayDate": "Feb. 1, 2024",
+    "summary": "co-PI, 2023–2024, funded by <a href=\"https://www.international.tum.de/en/global/gif/\">TUM Global Incentive Fund</a>; collaborated with <a href=\"https://gistlab.science/rushmore_teams/henrikki-tenkanen/\">Dr. Henrikki Tenkanen</a>, Department of Built Environment, Aalto University.",
+    "link": "https://yuzzfeng.github.io/projects/2024_gif_feng/",
+    "source": "project",
+    "status": "finished"
+  },
+  {
+    "title": "NFDI4Earth EduPilots: Coding4Geo - An interactive coding platform for e-learning in Geospatial Data Analysis",
+    "date": "2022-12-31",
+    "displayDate": "Dec. 31, 2022",
+    "summary": "PI, 2022–2023, funded by NFDI4Earth Educational Pilots. Coding4Geo provides an online interactive coding platform that auto-checks student submissions for geoinformatics courses at TUM, with a long-term goal to extend and deploy for broader ESS-related disciplines.",
+    "link": "https://github.com/yuzzfeng/Coding4Geo",
+    "source": "project",
+    "status": "finished"
+  }
+]

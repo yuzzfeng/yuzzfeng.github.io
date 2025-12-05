@@ -58,7 +58,7 @@
 <p>
   <a href="https://i3mainz.hs-mainz.de/team/yufeng/" target="_blank">i3mainz Homepage</a>
   &nbsp;/&nbsp;
-  <a href="https://www.asg.ed.tum.de/en/lfk/team/members/yu-feng/" target="_blank">TUM Homepage</a>
+  <a href="https://www.asg.ed.tum.de/en/lfk/team/yu-feng/" target="_blank">TUM Homepage</a>
   &nbsp;/&nbsp;
   <a href="https://scholar.google.com/citations?user=4Q6waYoAAAAJ&hl=en" target="_blank">Google Scholar</a>
   &nbsp;/&nbsp;
@@ -85,7 +85,7 @@ I am Professor of Applied Geoinformatics at Hochschule Mainz - University of App
 
 <div id="home-news-list" class="posts-list"></div>
 
-<h1>Latest publications</h1>
+<h1>Recent publications</h1>
 <div id="home-pub-grid" class="home-pub-grid"></div>
 <div class="home-pub-more">
   <a href="/publications/">View all publications</a>
@@ -183,7 +183,7 @@ I am Professor of Applied Geoinformatics at Hochschule Mainz - University of App
       #home-news-list {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 12px;
         margin: 0;
         padding: 0;
       }
@@ -287,7 +287,7 @@ I am Professor of Applied Geoinformatics at Hochschule Mainz - University of App
               var dateVal = item.date || '';
               combined.push({
                 title: item.title,
-                prefix: item.status ? ('🎯 ' + item.status) : '🎯 Funding received:',
+                prefix: '🎯 Funding received:',
                 link: item.link,
                 date: dateVal,
                 displayDate: formatDate(dateVal, item.displayDate),
@@ -316,67 +316,58 @@ I am Professor of Applied Geoinformatics at Hochschule Mainz - University of App
               return db - da;
             });
 
-            var cutoff = new Date();
-            cutoff.setFullYear(cutoff.getFullYear() - 1);
+            combined.slice(0, 5).forEach(function (item) {
+              if (!item || !item.link) return;
 
-            combined
-              .filter(function (item) {
-                var d = Date.parse(item && item.date);
-                if (isNaN(d)) return true;
-                return d >= cutoff.getTime();
-              })
-              .forEach(function (item) {
-                if (!item || !item.link) return;
+              var post = document.createElement('div');
+              post.className = 'post home-news-card';
 
-                var post = document.createElement('div');
-                post.className = 'post home-news-card';
+              var dateEl = document.createElement('div');
+              dateEl.className = 'home-news-date';
+              dateEl.textContent = item.displayDate || item.date || '';
+              post.appendChild(dateEl);
 
-                var dateEl = document.createElement('div');
-                dateEl.className = 'home-news-date';
-                dateEl.textContent = item.displayDate || item.date || '';
-                post.appendChild(dateEl);
+              var body = document.createElement('div');
+              body.className = 'home-news-body';
 
-                var body = document.createElement('div');
-                body.className = 'home-news-body';
+              var heading = document.createElement('div');
+              heading.className = 'home-news-heading';
 
-                var heading = document.createElement('div');
-                heading.className = 'home-news-heading';
+              var titleEl = document.createElement('div');
+              titleEl.className = 'home-news-title';
 
-                var titleEl = document.createElement('div');
-                titleEl.className = 'home-news-title';
+              if (item.prefix) {
+                var prefixSpan = document.createElement('span');
+                prefixSpan.textContent = item.prefix + ' ';
+                titleEl.appendChild(prefixSpan);
+              }
 
-                if (item.prefix) {
-                  var prefixSpan = document.createElement('span');
-                  prefixSpan.textContent = item.prefix + ' ';
-                  titleEl.appendChild(prefixSpan);
-                }
-
-                var a = document.createElement('a');
-                a.href = item.link;
-                a.title = item.title || '';
-                a.textContent = item.title || '';
-                titleEl.appendChild(a);
+              var a = document.createElement('a');
+              a.href = item.link;
+              a.title = item.title || '';
+              a.textContent = item.title || '';
+              titleEl.appendChild(a);
 
               if (item.source) {
                 var badge = document.createElement('span');
                 badge.className = 'home-news-badge ' + item.source;
-                badge.textContent = item.status || item.source;
+                badge.textContent = item.source;
                 titleEl.appendChild(badge);
               }
 
-                heading.appendChild(titleEl);
-                body.appendChild(heading);
+              heading.appendChild(titleEl);
+              body.appendChild(heading);
 
-                if (item.summary) {
-                  var summary = document.createElement('p');
-                  summary.className = 'home-news-summary';
-                  summary.innerHTML = item.summary;
-                  body.appendChild(summary);
-                }
+              if (item.summary) {
+                var summary = document.createElement('p');
+                summary.className = 'home-news-summary';
+                summary.innerHTML = item.summary;
+                body.appendChild(summary);
+              }
 
-                post.appendChild(body);
-                newsContainer.appendChild(post);
-              });
+              post.appendChild(body);
+              newsContainer.appendChild(post);
+            });
           })
           .catch(function (err) {
             console.error(err);

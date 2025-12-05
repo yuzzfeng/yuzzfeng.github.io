@@ -114,6 +114,15 @@
         var container = document.getElementById('project-list');
         if (!container) return;
 
+        var formatTitle = function (text) {
+          if (!text) return '';
+          var idx = text.indexOf(':');
+          if (idx === -1) return text;
+          var head = text.slice(0, idx);
+          var tail = text.slice(idx + 1);
+          return '<strong>' + head + ':</strong>' + tail;
+        };
+
         fetch('/projects.json')
           .then(function (res) {
             if (!res.ok) throw new Error('Failed to load projects.json');
@@ -147,7 +156,7 @@
               var a = document.createElement('a');
               a.href = item.link;
               a.title = item.title || '';
-              a.textContent = item.title || '';
+              a.innerHTML = formatTitle(item.title || '');
               titleEl.appendChild(a);
 
               if (item.source) {

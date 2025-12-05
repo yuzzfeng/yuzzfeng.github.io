@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dr. Yu Feng 冯煜/publications/</title>
+    <title>Prof. Dr. Yu Feng — Publications</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -12,17 +12,77 @@
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/console.css">
     <style>
-      /* Override logo sizing locally so it doesn't fill the tile */
-      .pub-tile-footer { align-items: center; gap: 12px; justify-content: flex-start; }
-      .pub-tile-meta { flex: 1 1 auto; min-width: 0; }
-      .pub-tile-logo {
-        width: 80px;
-        height: 80px;
-        flex: 0 0 80px;
-        padding: 0;
-        margin-left: 0;
+      /* Horizontal list layout: image | text | logo */
+      #pub-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
       }
-      .pub-tile-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+      #pub-grid a::after { display: none !important; }
+      #pub-grid a:hover { transform: none; box-shadow: none; }
+
+      #pub-grid .pub-tile {
+        display: grid;
+        grid-template-columns: 24% 1fr 10%;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        background: var(--background-color);
+        border: 1px solid var(--secondary-color);
+        border-radius: 8px;
+        text-decoration: none;
+        color: inherit;
+      }
+      #pub-grid .pub-tile-row { display: contents; }
+      #pub-grid .pub-thumb {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 6px;
+        overflow: hidden;
+        background: var(--code-bg-color);
+      }
+      #pub-grid .pub-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      #pub-grid .pub-tile-meta { min-width: 0; }
+      #pub-grid .pub-tile-title {
+        font-size: 16px;
+        line-height: 1.4;
+        margin: 0;
+        color: var(--font-color);
+        overflow: hidden;
+      }
+      #pub-grid .pub-tile-authors {
+        font-size: 13px;
+        margin-top: 8px;
+        color: var(--secondary-color);
+        line-height: 1.35;
+      }
+      #pub-grid .pub-tile-publine {
+        font-size: 13px;
+        margin-top: 4px;
+        color: var(--secondary-color);
+        line-height: 1.35;
+      }
+      #pub-grid .pub-tile-logo {
+        width: 100%;
+        aspect-ratio: 2 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        background: #fff;
+        padding: 3px;
+      }
+      #pub-grid .pub-tile-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        display: block;
+      }
     </style>
     
       <!--[if lt IE 9]>
@@ -30,7 +90,7 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
        
-      <link href="https://yuzzfeng.github.io/publications/index.xml" rel="alternate" type="application/rss+xml" title="Dr. Yu Feng 冯煜" />
+      <link href="https://yuzzfeng.github.io/publications/index.xml" rel="alternate" type="application/rss+xml" title="Prof. Dr. Yu Feng" />
     <meta property="og:title" content="Selected Publication" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -48,14 +108,12 @@
             <div class="logo terminal-prompt">
               
               
-              <a href="https://yuzzfeng.github.io/" class="no-style ">Dr. Yu Feng 冯煜</a>:~# 
+              <a href="https://yuzzfeng.github.io/" class="no-style ">Prof. Dr. Yu Feng</a>:~# 
               <a href='https://yuzzfeng.github.io/publications'>publications</a>/</div></header>
           <nav class="terminal-menu">
             <ul vocab="https://schema.org/" typeof="BreadcrumbList">
                 
                 <li><a href="https://yuzzfeng.github.io/about/" typeof="ListItem">about/</a></li>
-                
-                <li><a href="https://yuzzfeng.github.io/news/" typeof="ListItem">news/</a></li>
                 
                 <li><a href="https://yuzzfeng.github.io/projects/" typeof="ListItem">projects/</a></li>
                 
@@ -88,39 +146,39 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(function (items) {
       if (!Array.isArray(items)) return;
 
+      items.sort(function (a, b) {
+        var da = Date.parse(a && a.date) || 0;
+        var db = Date.parse(b && b.date) || 0;
+        if (db !== da) return db - da;
+        var ya = parseInt(a && a.year, 10) || 0;
+        var yb = parseInt(b && b.year, 10) || 0;
+        return yb - ya;
+      });
+
       items.forEach(function (item) {
-        if (!item || !item.link || !item.image) return;
+        if (!item || (!item.link && !item.doi) || !item.image) return;
+
+        var targetHref = item.doi || item.link;
 
         var a = document.createElement('a');
-        a.href = item.link;
+        a.href = targetHref;
         a.className = 'pub-tile';
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
         a.title = item.title || '';
 
         // special layout class for highlighted papers
-        var isCarto = item.title && item.title.indexOf('CartoAgent') === 0;
-        var isIJDE = item.title && item.title.indexOf('Maps as a double-edged trustworthiness elevator') === 0;
-
-        if (isCarto || isIJDE) {
-          a.classList.add('pub-tile--highlight');
-        }
+        // row layout: image | text | logo
+        var row = document.createElement('div');
+        row.className = 'pub-tile-row';
 
         var imgWrapper = document.createElement('div');
-        imgWrapper.className = 'pub-tile-image';
-
+        imgWrapper.className = 'pub-thumb';
         var img = document.createElement('img');
         img.src = item.image;
         img.alt = item.title || '';
-        img.className = 'img-responsive';
         imgWrapper.appendChild(img);
-
-        var contentWrapper = document.createElement('div');
-        contentWrapper.className = 'pub-tile-content';
-        contentWrapper.appendChild(imgWrapper);
-
-        var footerWrapper = document.createElement('div');
-        footerWrapper.className = 'pub-tile-footer';
+        row.appendChild(imgWrapper);
 
         var meta = document.createElement('div');
         meta.className = 'pub-tile-meta';
@@ -130,23 +188,36 @@ document.addEventListener('DOMContentLoaded', function () {
         title.textContent = item.title || '';
         meta.appendChild(title);
 
-        a.appendChild(contentWrapper);
-        footerWrapper.appendChild(meta);
+        if (item.authors) {
+          var authors = document.createElement('div');
+          authors.className = 'pub-tile-authors';
+          authors.textContent = item.authors;
+          meta.appendChild(authors);
+        }
 
+        if (item.year || item.publication) {
+          var publine = document.createElement('div');
+          publine.className = 'pub-tile-publine';
+          var parts = [];
+          if (item.year) parts.push(item.year);
+          if (item.publication) parts.push(item.publication);
+          publine.textContent = parts.join(' · ');
+          meta.appendChild(publine);
+        }
+
+        row.appendChild(meta);
+
+        var logoWrapper = document.createElement('div');
+        logoWrapper.className = 'pub-tile-logo';
         if (item.logo) {
-          var logoWrapper = document.createElement('div');
-          logoWrapper.className = 'pub-tile-logo';
-
           var logoImg = document.createElement('img');
           logoImg.src = item.logo;
           logoImg.alt = (item.journal || 'Journal logo');
           logoWrapper.appendChild(logoImg);
-
-          footerWrapper.appendChild(logoWrapper);
         }
+        row.appendChild(logoWrapper);
 
-        a.appendChild(footerWrapper);
-
+        a.appendChild(row);
         grid.appendChild(a);
       });
     })
