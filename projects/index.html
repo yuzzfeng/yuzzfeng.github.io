@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dr. Yu Feng 冯煜/projects/</title>
+    <title>Prof. Dr. Yu Feng — Projects</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -17,7 +17,7 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
        
-      <link href="https://yuzzfeng.github.io/projects/index.xml" rel="alternate" type="application/rss+xml" title="Dr. Yu Feng 冯煜" />
+      <link href="https://yuzzfeng.github.io/projects/index.xml" rel="alternate" type="application/rss+xml" title="Prof. Dr. Yu Feng" />
     <meta property="og:title" content="Projects" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -35,19 +35,18 @@
             <div class="logo terminal-prompt">
               
               
-              <a href="https://yuzzfeng.github.io/" class="no-style ">Dr. Yu Feng 冯煜</a>:~# 
+              <a href="https://yuzzfeng.github.io/" class="no-style ">Prof. Dr. Yu Feng</a>:~# 
               <a href='https://yuzzfeng.github.io/projects'>projects</a>/</div></header>
           <nav class="terminal-menu">
             <ul vocab="https://schema.org/" typeof="BreadcrumbList">
                 
                 <li><a href="https://yuzzfeng.github.io/about/" typeof="ListItem">about/</a></li>
                 
-                <li><a href="https://yuzzfeng.github.io/news/" typeof="ListItem">news/</a></li>
-                
                 <li><a href="https://yuzzfeng.github.io/projects/" typeof="ListItem">projects/</a></li>
                 
                 <li><a href="https://yuzzfeng.github.io/publications/" typeof="ListItem">publications/</a></li>
                 
+                <li><a href="https://yuzzfeng.github.io/thesis-topics/" typeof="ListItem">thesis-topics/</a></li>
             </ul>
           </nav>
         </div>
@@ -58,30 +57,7 @@
 <h1>Projects</h1>
 <br/>
 
-
-<div class="posts-list">
-
-    
-        <div class="post">
-            <p>
-                <div class="date">Feb. 1, 2024</div>    
-                <h1><a href="https://yuzzfeng.github.io/projects/2024_si_feng/" title="BeBaOI: Benchmark and Baseline Methods for determining Overlapping Images, 02.2023 - 01.2024 (finished project)">BeBaOI: Benchmark and Baseline Methods for determining Overlapping Images, 02.2023 - 01.2024 (finished project)</a></h1>
-                <p>PI, funded by <a href="https://www.isprs.org/society/si/SI-2023/default.aspx">ISPRS Scientific Initiatives</a> and collaborated with Assistant Professor, <a href="https://xwangsgg.github.io/">Dr.-Ing. Xin Wang</a>, School of Geodesy and Geomatics, Wuhan University. [<a href="https://www.isprs.org/society/si/SI-2023/TC21_Application_(Xin_Wang)_Report.pdf">report</a>]</p>
-            </p>
-        </div>
-    
-
-    
-        <div class="post">
-            <p>
-                <div class="date">Feb. 1, 2024</div>    
-                <h1><a href="https://yuzzfeng.github.io/projects/2024_gif_feng/" title="Knowledge discovery and visual analysis for urban mobility data in Munich and Helsinki, 02.2023 - 01.2024 (finished project)">Knowledge discovery and visual analysis for urban mobility data in Munich and Helsinki, 02.2023 - 01.2024 (finished project)</a></h1>
-                <p>co-PI, funded by <a href="https://www.international.tum.de/en/global/gif/">TUM Global Incentive Fund</a> and collaborated with Assistant Professor, <a href="https://gistlab.science/rushmore_teams/henrikki-tenkanen/">Dr. Henrikki Tenkanen</a>, Department of Built Environment, Aalto University.</p>
-            </p>
-        </div>
-    
-
-</div>
+<div id="project-list" class="project-list"></div>
 
 
         <div class="footer">
@@ -90,5 +66,114 @@
 </div>
 
     </div>
+    <style>
+      .project-badge {
+        display: inline-block;
+        margin-left: 6px;
+        padding: 2px 6px;
+        font-size: 11px;
+        border-radius: 4px;
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+      }
+      .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 0;
+        padding: 0;
+      }
+      .project-card {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        column-gap: 14px;
+        align-items: flex-start;
+      }
+      .project-date {
+        font-size: 13px;
+        color: var(--secondary-color);
+        margin: 4px 0 0 0;
+      }
+      .project-body { grid-column: 2; }
+      .project-title {
+        font-size: 16px;
+        line-height: 1.4;
+        margin: 0;
+        color: var(--primary-color);
+      }
+      .project-summary {
+        margin: 4px 0 0 0;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--font-color);
+      }
+      .project-card p { margin: 0; }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var container = document.getElementById('project-list');
+        if (!container) return;
+
+        fetch('/projects.json')
+          .then(function (res) {
+            if (!res.ok) throw new Error('Failed to load projects.json');
+            return res.json();
+          })
+          .then(function (items) {
+            if (!Array.isArray(items)) return;
+
+            items.sort(function (a, b) {
+              var da = Date.parse(a && a.date) || 0;
+              var db = Date.parse(b && b.date) || 0;
+              return db - da;
+            });
+
+            items.forEach(function (item) {
+              if (!item || !item.link) return;
+
+              var card = document.createElement('div');
+              card.className = 'post project-card';
+
+              var dateEl = document.createElement('div');
+              dateEl.className = 'project-date';
+              dateEl.textContent = item.displayDate || item.date || '';
+              card.appendChild(dateEl);
+
+              var body = document.createElement('div');
+              body.className = 'project-body';
+
+              var titleEl = document.createElement('div');
+              titleEl.className = 'project-title';
+              var a = document.createElement('a');
+              a.href = item.link;
+              a.title = item.title || '';
+              a.textContent = item.title || '';
+              titleEl.appendChild(a);
+
+              if (item.source) {
+                var badge = document.createElement('span');
+                badge.className = 'project-badge';
+                badge.textContent = item.status || item.source;
+                titleEl.appendChild(badge);
+              }
+
+              body.appendChild(titleEl);
+
+              if (item.summary) {
+                var summary = document.createElement('p');
+                summary.className = 'project-summary';
+                summary.innerHTML = item.summary;
+                body.appendChild(summary);
+              }
+
+              card.appendChild(body);
+              container.appendChild(card);
+            });
+          })
+          .catch(function (err) {
+            console.error(err);
+          });
+      });
+    </script>
   </body>
 </html>
