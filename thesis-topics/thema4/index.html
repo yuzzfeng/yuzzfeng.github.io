@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thema 4 — Geo2Vec für Building Simplification und Aggregation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/terminal-0.7.4.min.css">
+    <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/console.css">
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+            <header class="terminal-logo">
+                <div class="logo terminal-prompt">
+                    <a href="https://yuzzfeng.github.io/" class="no-style">Prof. Dr. Yu Feng</a>:~#
+                    <a href="https://yuzzfeng.github.io/thesis-topics/">thesis-topics</a>/thema4/
+                </div>
+            </header>
+            <nav class="terminal-menu">
+                <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                    <li><a href="https://yuzzfeng.github.io/about/" typeof="ListItem">about/</a></li>
+                    <li><a href="https://yuzzfeng.github.io/projects/" typeof="ListItem">projects/</a></li>
+                    <li><a href="https://yuzzfeng.github.io/publications/" typeof="ListItem">publications/</a></li>
+                    <li><a href="https://yuzzfeng.github.io/thesis-topics/" typeof="ListItem">thesis-topics/</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast">
+
+        <p style="margin-bottom: 6px;">
+            <a href="/thesis-topics/">← Zurück / Back to Thesis Topics</a>
+            &nbsp;·&nbsp;
+            <span style="color: red; font-weight: bold;">(neu)</span>
+            &nbsp;·&nbsp; Geometry Learning
+        </p>
+
+        <h1>Geo2Vec für Building Simplification und Aggregation</h1>
+
+        <p>
+            In diesem Thema untersuchen wir, wie <strong>Geo2Vec</strong>-Repräsentationen genutzt werden können,
+            um Vektorgebäudegeometrien robust zu vereinfachen (simplification) und zu aggregieren (aggregation).
+            Ziel ist ein datengetriebener Workflow, der geometrische Qualität und topologische Konsistenz berücksichtigt.
+        </p>
+
+        <p style="margin: 16px 0 6px;">
+            <img
+                src="/thesis-topics/thema4/visio144.png"
+                alt="Geo2Vec intuition"
+                style="width:72%;max-width:100%;border-radius:6px;display:block;">
+        </p>
+        <p style="margin: 0 0 14px 0; font-size: 12px; color: var(--secondary-color);">
+            Quelle / Source: GeoNeuralRepresentation Repository, Figure “Geo2Vec Intuition”
+            (<a href="https://github.com/chuchen2017/GeoNeuralRepresentation" target="_blank">GitHub</a>).
+        </p>
+
+        <h3>Datenbasis</h3>
+        <p>
+            Als zentrale Datengrundlage verwenden wir den Stuttgart-Datensatz,
+            d. h. den Stuttgart-Datensatz mit mehrmaßstäblichen Kartendaten
+            (multi-scale map data) für Gebäudedarstellungen.
+            Referenz: <a href="https://www.mdpi.com/2220-9964/8/6/258" target="_blank">Feng et al. (2019), ISPRS IJGI 8(6):258</a>.
+        </p>
+
+        <h3>Erwartete Ergebnisse</h3>
+        <ul>
+            <li><strong>Master-Niveau:</strong> Vollständige Pipeline für building simplification + aggregation, inklusive Evaluation (z. B. Formtreue, Topologie, Generalisierungsqualität).</li>
+            <li><strong>Bachelor-Niveau:</strong> Reproduktion und Erweiterung der Formrekonstruktion mit Geo2Vec-Embedding sowie prototypische Vereinfachung einzelner Gebäudeformen.</li>
+        </ul>
+
+        <h3>English Summary</h3>
+        <p>
+            This topic explores Geo2Vec-based representation learning for vector building simplification and aggregation.
+            The master-level target is an end-to-end pipeline for simplification plus aggregation with quantitative evaluation.
+            The bachelor-level target focuses on shape reconstruction and a prototype simplification workflow.
+            The main dataset is the Stuttgart multi-scale map dataset.
+        </p>
+
+        <h3>References</h3>
+        <ul>
+            <li>
+                Code repository:
+                <a href="https://github.com/chuchen2017/GeoNeuralRepresentation" target="_blank">GeoNeuralRepresentation (Geo2Vec)</a>
+            </li>
+            <li>
+                Paper/Method reference:
+                <a href="https://github.com/chuchen2017/GeoNeuralRepresentation#-geo2vec-shape--and-distance-aware-neural-representation-of-geospatial-entities" target="_blank">Geo2Vec: Shape- and Distance-Aware Neural Representation of Geospatial Entities</a>
+            </li>
+            <li>
+                Dataset reference:
+                Stuttgart multi-scale map data.
+            </li>
+            <li>
+                Paper reference:
+                <a href="https://www.mdpi.com/2220-9964/8/6/258" target="_blank">https://www.mdpi.com/2220-9964/8/6/258</a>
+            </li>
+        </ul>
+
+        <h3>Kontakt / Contact</h3>
+        <p>
+            <a href="mailto:yu.feng@hs-mainz.de">yu.feng@hs-mainz.de</a>
+        </p>
+
+        <div class="footer">
+            Powered by <a href="https://gohugo.io/">Hugo</a> with
+            <a href="https://github.com/mrmierzejewski/hugo-theme-console/">Console Theme</a>.
+        </div>
+
+    </div>
+</body>
+</html>

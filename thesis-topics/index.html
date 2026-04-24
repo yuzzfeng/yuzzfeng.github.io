@@ -11,7 +11,134 @@
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/terminal-0.7.4.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/console.css">
-    
+    <style>
+      #thesis-sections { display: flex; flex-direction: column; gap: 16px; margin: 20px 0 32px; }
+      .ts-card { border: 1px solid var(--secondary-color); border-radius: 8px; overflow: hidden; }
+      .ts-card-open { border-left: 6px solid #151515; }
+      .ts-hero {
+        position: relative; width: 100%; min-height: 160px;
+        display: block; text-align: left; cursor: pointer; padding: 0;
+        background-size: auto 90%; background-position: right center;
+        background-repeat: no-repeat; background-color: #ffffff;
+        border: none;
+      }
+      .ts-hero-third {
+        display: flex;
+        align-items: center;
+      }
+      .ts-hero-third .ts-hero-inner {
+        width: 100%;
+      }
+      .ts-hero::after { display: none !important; }
+      .ts-hero::before {
+        content: ""; position: absolute; inset: 0;
+        background: transparent;
+      }
+      .ts-hero-inner { position: relative; z-index: 1; padding: 20px 20px 16px; color: #151515; }
+      .ts-hero-inner h2 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.2;
+      }
+      .ts-hero-inner p  { margin: 7px 0 0; font-size: 13px; opacity: .85; max-width: 58%; line-height: 1.35; }
+      .ts-subtitle { margin: 9px 0 0; max-width: 58%; }
+      .ts-subtitle .ts-sub-en,
+      .ts-subtitle .ts-sub-de {
+        display: block;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+      .ts-subtitle .ts-sub-de {
+        color: #151515;
+        padding-top: 0;
+      }
+      .ts-subtitle .ts-sub-en {
+        color: #5a5a5a;
+        margin-top: 4px;
+        font-size: 0.94em;
+        font-style: italic;
+        font-weight: 400;
+        opacity: 0.88;
+      }
+      .ts-badge {
+        margin-top: 11px; display: inline-block; font-size: 12px;
+        border: 1px solid #151515; color: #ffffff; background: #151515;
+        border-radius: 999px; padding: 3px 11px; font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+      .ts-badge-empty {
+        color: #151515;
+        background: transparent;
+        font-weight: 600;
+      }
+      .ts-list { list-style: none; margin: 0; padding: 10px 18px 16px; }
+      .ts-list li { margin: 10px 0; line-height: 1.45; }
+      .ts-list .ts-meta { font-size: 12px; color: var(--secondary-color); margin-top: 3px; }
+      .thesis-intro { margin-bottom: 14px; }
+      .thesis-intro .intro-de,
+      .thesis-intro .intro-en {
+        display: block;
+        line-height: 1.45;
+      }
+      .thesis-intro .intro-de { color: #1f1f1f; }
+      .thesis-intro .intro-en {
+        color: #5a5a5a;
+        margin-top: 4px;
+        font-size: 0.92em;
+        font-style: italic;
+        font-weight: 400;
+      }
+      .thesis-caption {
+        margin: 0 0 12px;
+        font-size: 1.6em;
+      }
+      .thesis-caption .cap-de,
+      .thesis-caption .cap-en {
+        display: block;
+        line-height: 1.25;
+      }
+      .thesis-caption .cap-en {
+        display: block;
+        color: #5a5a5a;
+        margin-top: 6px;
+        padding-top: 7px;
+        border-top: 1px solid var(--secondary-color);
+        width: 33.333%;
+        font-size: 0.9em;
+        font-weight: 600;
+      }
+      @media (max-width: 850px) {
+        .ts-hero-inner h2 { font-size: 19px; }
+        .ts-hero {
+          min-height: 160px;
+          background-size: 42% auto;
+          background-position: right 8px center;
+        }
+        .ts-hero-inner p,
+        .ts-subtitle {
+          max-width: 54%;
+        }
+        .thesis-caption { font-size: 1.35em; }
+      }
+
+      @media (max-width: 600px) {
+        .ts-hero {
+          min-height: 170px;
+          background-size: 40% auto;
+          background-position: right 6px center;
+        }
+        .ts-hero-inner { padding: 16px 14px 14px; }
+        .ts-hero-inner p,
+        .ts-subtitle {
+          max-width: 56%;
+        }
+        .ts-hero-third img {
+          right: -70px !important;
+          width: 66% !important;
+          clip-path: inset(20% 14% 20% 34%) !important;
+        }
+      }
+    </style>
 </head>
 <body class="terminal">
     <div class="container">
@@ -33,32 +160,93 @@
 
     <div class="container animated zoomIn fast" >
         
-    <h1>Thesis topics</h1>
-    <p>Below is a (growing) list of Bachelor and Master thesis topics. If you are interested, please contact me at <a href="mailto:yu.feng@hs-mainz.de">yu.feng@hs-mainz.de</a> or <a href="mailto:y.feng@tum.de">y.feng@tum.de</a>.</p>
+    <h2 class="thesis-caption"><span class="cap-de">Abschlussarbeitsthemen</span><span class="cap-en">Thesis Topics</span></h2>
+    <p class="thesis-intro"><span class="intro-de">Nachfolgend finden Sie eine (fortlaufend wachsende) Liste von Bachelor- und Masterarbeitsthemen. Bei Interesse kontaktieren Sie mich bitte unter <a href="mailto:yu.feng@hs-mainz.de">yu.feng@hs-mainz.de</a>.</span><span class="intro-en">Below is a (growing) list of Bachelor and Master thesis topics. If you are interested, please contact me at <a href="mailto:yu.feng@hs-mainz.de">yu.feng@hs-mainz.de</a>.</span></p>
 
-    <ul>
-    <li>
-      <strong><span style="color: red;">(neu)</span> Thema 1 — Konversationsbasierte Komfort-Navigation</strong> — mehrere Komfortindikatoren und eine Echtzeit-Schattensimulation werden kombiniert, um fußgängerfreundliche Routen zu identifizieren. Das Projekt integriert bestehende Arbeiten und bietet ein LLM-gestütztes Chatbot-Interface (konversationelle Abfragen, Präferenzen erfassen, interaktive Routenanpassung). Relevante Vorarbeiten:
-      <ul>
-        <li><a href="https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf" target="_blank">Beyond Distance: Integrating Walkability Indicators for User-Centered Pedestrian Navigation</a></li>
-        <li><a href="https://doi.org/10.1145/3678717.3691287" target="_blank">Walking in the Shade: Shadow-oriented Navigation for Pedestrians</a></li>
-      </ul>
-    </li>
-    </ul>
+    <div id="thesis-sections">
 
-    <ul>
-    <li>
-      <strong><span style="color: red;">(neu)</span> Thema 2 — Topologische Qualitätsprüfung von OSM-Daten mit LLM-Unterstützung</strong> — Analyse und Reparatur von OSM-Topologiefehlern (z. B. unverbundene Wege, Überlappungen, fehlerhafte Relationen) mit Hilfe von Tools wie <a href="https://osmose.openstreetmap.fr/en/map/#loc=16/50.003121/8.248233" target="_blank">OSMose</a>. Ziel ist eine Pipeline, die Issues automatisiert abruft, priorisiert und mit LLM-Hilfestellung (Vorschläge, Erläuterungen, Skripte für Korrekturen) behebt, inklusive Validierungsschritten und Dokumentation der Änderungen.
-    </li>
-    </ul>
+      <!-- Geometry Learning -->
+      <div class="ts-card ts-card-open">
+        <button class="ts-hero" type="button" aria-expanded="false"
+          style="background-image:url('/thesis-topics/geometry/geometry_learning.png');">
+          <div class="ts-hero-inner">
+            <h2>Geometry Learning</h2>
+            <p class="ts-subtitle">
+              <span class="ts-sub-de">Kartographische Generalisierung, geometriesensitives Deep Learning und Analyse räumlicher Muster.</span>
+              <span class="ts-sub-en">Cartographic generalization, geometry-aware deep learning, and spatial pattern analysis.</span>
+            </p>
+            <span class="ts-badge">1 open topic</span>
+          </div>
+        </button>
+        <ul class="ts-list" hidden>
+          <li>
+            <a href="/thesis-topics/thema4/"><strong><span style="color:red">(neu)</span> Geo2Vec-gestützte Simplification und Aggregation von Vektor-Gebäuden</strong></a>
+            <div class="ts-meta">Master: vollständige Simplification + Aggregation Pipeline. Bachelor: Formrekonstruktion mit Geo2Vec.</div>
+          </li>
+        </ul>
+      </div>
 
-    <ul>
-      <li>
-      <strong><span style="color: red;">(neu)</span> Thema 3 — Ableitung und Genauigkeitsbewertung gebäuderelevanter Strukturmerkmale</strong> aus Landeshauptstadt Wiesbaden – Stadtplanungsamt – Leitung Digitalisierung, Geoinformation und IT-Services. Details finden Sie unter <a href="Aufgabenstellung%202%20-%20Fernerkundung.pdf" target="_blank">Aerial Imagery solution - PDF</a>
-      </li>
-    </ul>
+      <!-- LLM for Geodata -->
+      <div class="ts-card ts-card-open">
+        <button class="ts-hero" type="button" aria-expanded="false"
+          style="background-image:url('/thesis-topics/llm/llm.png')">
+          <div class="ts-hero-inner">
+            <h2>LLM for Geodata Access &amp; Interaction</h2>
+            <p class="ts-subtitle">
+              <span class="ts-sub-de">Große Sprachmodelle für den Zugang zu, die Fusion von und die Interaktion mit Geodaten — von Sprachschnittstellen bis zu agentenbasierten GIS-Workflows.</span>
+              <span class="ts-sub-en">Large language models for geospatial data access, fusion, and interaction — from natural language interfaces to agent-based GIS workflows.</span>
+            </p>
+            <span class="ts-badge">2 open topics</span>
+          </div>
+        </button>
+        <ul class="ts-list" hidden>
+          <li>
+            <a href="/thesis-topics/thema1/"><strong><span style="color:red">(neu)</span> Konversationsbasierte Komfort-Navigation</strong></a>
+            <div class="ts-meta">LLM-gestütztes Chatbot-Interface für fußgängerfreundliche Routen mit Komfortindikatoren und Schattensimulation.</div>
+          </li>
+          <li>
+            <a href="/thesis-topics/thema2/"><strong><span style="color:red">(neu)</span> Topologische Qualitätsprüfung von OSM-Daten mit LLM-Unterstützung</strong></a>
+            <div class="ts-meta">Analyse &amp; Reparatur von OSM-Topologiefehlern mit LLM-Hilfestellung.</div>
+          </li>
+        </ul>
+      </div>
 
-    <h1>Thesis Ongoing</h1>
+      <!-- 3D Data Modeling -->
+      <div class="ts-card ts-card-open">
+        <button class="ts-hero ts-hero-third" type="button" aria-expanded="false" style="background-image:none; overflow:hidden;">
+          <img src="/thesis-topics/3d/image1.gif" alt=""
+            style="position:absolute;right:-165px;top:50%;width:52%;height:auto;transform:translateY(-50%) rotate(90deg);clip-path:inset(20% 20% 20% 40%);pointer-events:none;border-radius:0;">
+          <div class="ts-hero-inner">
+            <h2>Urban Scene Understanding</h2>
+            <p class="ts-subtitle">
+              <span class="ts-sub-de">Punktwolkenverarbeitung, LiDAR-/Street-View-Analyse und Verständnis urbaner Szenen aus der Straßenperspektive.</span>
+              <span class="ts-sub-en">Point cloud processing, LiDAR/street-view analytics, and urban scene understanding from ground-level imagery.</span>
+            </p>
+            <span class="ts-badge">1 open topic</span>
+          </div>
+        </button>
+        <ul class="ts-list" hidden>
+          <li>
+            <a href="/thesis-topics/thema3/"><strong><span style="color:red">(neu)</span> Ableitung und Genauigkeitsbewertung gebäuderelevanter Strukturmerkmale</strong></a>
+            <div class="ts-meta">Kooperation: Landeshauptstadt Wiesbaden – Stadtplanungsamt. Aerial Imagery &amp; LiDAR.</div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <script>
+    document.querySelectorAll('#thesis-sections .ts-hero').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var list = btn.parentElement.querySelector('.ts-list');
+        var open = list.hidden;
+        list.hidden = !open;
+        btn.setAttribute('aria-expanded', String(open));
+      });
+    });
+    </script>
+
+    <h2 class="thesis-caption"><span class="cap-de">Laufende Abschlussarbeiten</span><span class="cap-en">Ongoing Theses</span></h2>
 
     <ul>
       <li>
@@ -66,7 +254,7 @@
       </li>
     </ul>
 
-    <h1>Thesis finished</h1>
+    <h2 class="thesis-caption"><span class="cap-de">Abgeschlossene Abschlussarbeiten</span><span class="cap-en">Completed Theses</span></h2>
     <ul>
       <li><strong>2025</strong> Keying Fan: Towards Text-conditioned Multi-scale Map Generalization using Diffusion Models (<strong>TU Munich</strong>, Master Cartography)</li>
       <li><strong>2025</strong> Nargiz Amralina: <a href="https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf" target="_blank">Beyond Distance: Integrating Walkability Indicators for User-Centered Pedestrian Navigation</a> (<strong>TU Munich</strong>, Master Cartography)</li>
