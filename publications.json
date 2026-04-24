@@ -2,13 +2,27 @@
   {
     "title": "Constructing coherent spatial memory in LLM agents through graph rectification",
     "year": "2026",
-    "date": "2026-04-06",
-    "displayDate": "Apr. 6, 2026",
+    "date": "2026-04-25",
+    "displayDate": "Apr. 25, 2026",
     "authors": "Puzhen Zhang, Xuyang Chen, Yu Feng, Yuhan Jiang, Liqiu Meng",
+    "image": "/images/acl_2026_spatial_memory.png",
     "publication": "Association for Computational Linguistics (ACL) 2026 Main Conference",
-    "logo": "🔥",
+    "logo": "/images/acl_2026_logo.png",
     "link": "https://arxiv.org/abs/2510.04195",
     "doi": "https://arxiv.org/abs/2510.04195"
+  },
+  {
+    "title": "GeoAI for map generalization in multi-scale cartography: foundations, a research agenda, and interdisciplinary perspectives",
+    "year": "2026",
+    "date": "2026-04-24",
+    "displayDate": "Apr. 24, 2026",
+    "authors": "Zhou, Z., Fu, C., Feng, Y., Touya, G., Sester, M., & Weibel, R.",
+    "image": "/images/tgis_a_2626935_f0002_c.jpg",
+    "logo": "/images/ijgis_logo_v39i09.jpg",
+    "publication": "International Journal of Geographical Information Science, 1-29.",
+    "reference": "Zhou, Z., Fu, C., Feng, Y., Touya, G., Sester, M., & Weibel, R. (2026). GeoAI for map generalization in multi-scale cartography: foundations, a research agenda, and interdisciplinary perspectives. International Journal of Geographical Information Science, 1-29.",
+    "link": "https://doi.org/10.1080/13658816.2026.2626935",
+    "doi": "https://doi.org/10.1080/13658816.2026.2626935"
   },
   {
     "title": "Interpreting core forms of urban morphology linked to urban functions with explainable graph neural network",

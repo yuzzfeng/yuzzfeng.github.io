@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/console.css">
     <style>
-      #thesis-sections { display: flex; flex-direction: column; gap: 16px; margin: 20px 0 32px; }
+      #thesis-sections { display: flex; flex-direction: column; gap: 16px; margin: 24px 0 44px; }
       .ts-card { border: 1px solid var(--secondary-color); border-radius: 8px; overflow: hidden; }
       .ts-card-open { border-left: 6px solid #151515; }
       .ts-hero {
@@ -88,9 +88,46 @@
         font-style: italic;
         font-weight: 400;
       }
+      .thesis-open-note {
+        margin: 24px 0 64px;
+        line-height: 1.5;
+        color: #1f1f1f;
+      }
+      .thesis-open-note-de,
+      .thesis-open-note-en {
+        display: block;
+      }
+      .thesis-open-note-block {
+        display: block;
+        margin-top: 14px;
+      }
+      .thesis-open-note-en {
+        margin-top: 4px;
+        color: #5a5a5a;
+        font-size: 0.92em;
+        font-style: italic;
+        font-weight: 400;
+      }
+      .thesis-open-note-highlight {
+        display: block;
+        margin-top: 28px;
+        font-weight: 700;
+        color: #1f1f1f;
+      }
+      .thesis-open-note-highlight-en {
+        display: block;
+        margin-top: 8px;
+        color: #1f1f1f;
+        font-size: 0.92em;
+        font-style: normal;
+        font-weight: 700;
+      }
       .thesis-caption {
-        margin: 0 0 12px;
-        font-size: 1.6em;
+        margin: 0 0 18px;
+        font-size: 2.2em;
+      }
+      .thesis-caption-spaced {
+        margin-top: 84px;
       }
       .thesis-caption .cap-de,
       .thesis-caption .cap-en {
@@ -107,6 +144,30 @@
         font-size: 0.9em;
         font-weight: 600;
       }
+      .thesis-history-list {
+        margin: 0;
+        padding: 0;
+      }
+      .thesis-history-row {
+        margin: 14px 0;
+        display: grid !important;
+        grid-template-columns: 64px 2.15fr 0.85fr;
+        column-gap: 14px;
+        align-items: start;
+        line-height: 1.65;
+      }
+      .thesis-year {
+        font-weight: 700;
+        color: #151515;
+        letter-spacing: 0.02em;
+      }
+      .thesis-entry {
+        min-width: 0;
+      }
+      .thesis-meta-col {
+        min-width: 0;
+        color: #4d4d4d;
+      }
       @media (max-width: 850px) {
         .ts-hero-inner h2 { font-size: 19px; }
         .ts-hero {
@@ -118,7 +179,14 @@
         .ts-subtitle {
           max-width: 54%;
         }
-        .thesis-caption { font-size: 1.35em; }
+        .thesis-caption { font-size: 1.9em; }
+        .thesis-history-row {
+          grid-template-columns: 56px 1fr;
+        }
+        .thesis-meta-col {
+          grid-column: 2;
+          margin-top: 2px;
+        }
       }
 
       @media (max-width: 600px) {
@@ -191,7 +259,7 @@
         <button class="ts-hero" type="button" aria-expanded="false"
           style="background-image:url('/thesis-topics/llm/llm.png')">
           <div class="ts-hero-inner">
-            <h2>LLM for Geodata Access &amp; Interaction</h2>
+            <h2>GeoAI for data access and integration</h2>
             <p class="ts-subtitle">
               <span class="ts-sub-de">Große Sprachmodelle für den Zugang zu, die Fusion von und die Interaktion mit Geodaten — von Sprachschnittstellen bis zu agentenbasierten GIS-Workflows.</span>
               <span class="ts-sub-en">Large language models for geospatial data access, fusion, and interaction — from natural language interfaces to agent-based GIS workflows.</span>
@@ -201,12 +269,12 @@
         </button>
         <ul class="ts-list" hidden>
           <li>
-            <a href="/thesis-topics/thema1/"><strong><span style="color:red">(neu)</span> Konversationsbasierte Komfort-Navigation</strong></a>
-            <div class="ts-meta">LLM-gestütztes Chatbot-Interface für fußgängerfreundliche Routen mit Komfortindikatoren und Schattensimulation.</div>
-          </li>
-          <li>
             <a href="/thesis-topics/thema2/"><strong><span style="color:red">(neu)</span> Topologische Qualitätsprüfung von OSM-Daten mit LLM-Unterstützung</strong></a>
             <div class="ts-meta">Analyse &amp; Reparatur von OSM-Topologiefehlern mit LLM-Hilfestellung.</div>
+          </li>
+          <li>
+            <a href="/thesis-topics/thema1/"><strong>Konversationsbasierte Komfort-Navigation</strong></a>
+            <div class="ts-meta">LLM-gestütztes Chatbot-Interface für fußgängerfreundliche Routen mit Komfortindikatoren und Schattensimulation.</div>
           </li>
         </ul>
       </div>
@@ -222,18 +290,24 @@
               <span class="ts-sub-de">Punktwolkenverarbeitung, LiDAR-/Street-View-Analyse und Verständnis urbaner Szenen aus der Straßenperspektive.</span>
               <span class="ts-sub-en">Point cloud processing, LiDAR/street-view analytics, and urban scene understanding from ground-level imagery.</span>
             </p>
-            <span class="ts-badge">1 open topic</span>
+            <span class="ts-badge">2 open topics</span>
           </div>
         </button>
         <ul class="ts-list" hidden>
           <li>
-            <a href="/thesis-topics/thema3/"><strong><span style="color:red">(neu)</span> Ableitung und Genauigkeitsbewertung gebäuderelevanter Strukturmerkmale</strong></a>
+            <a href="/thesis-topics/thema5/"><strong><span style="color:red">(neu)</span> VisualLLM-gestützte Analyse visueller Unterschiede zwischen Ost- und Westdeutschland</strong></a>
+            <div class="ts-meta">Untersuchung, ob 30 Jahre nach der Wiedervereinigung weiterhin versteckte visuelle Differenzen im Straßenbild bestehen.</div>
+          </li>
+          <li>
+            <a href="/thesis-topics/thema3/"><strong>Ableitung und Genauigkeitsbewertung gebäuderelevanter Strukturmerkmale</strong></a>
             <div class="ts-meta">Kooperation: Landeshauptstadt Wiesbaden – Stadtplanungsamt. Aerial Imagery &amp; LiDAR.</div>
           </li>
         </ul>
       </div>
 
     </div>
+
+    <p class="thesis-open-note"><span class="thesis-open-note-de">Wenn Sie sich für meine Forschungsthemen interessieren oder eigene Ideen für ein Abschlussarbeitsthema mitbringen, kontaktieren Sie mich gerne direkt. Wir können gemeinsam prüfen, wie sich Ihre Interessen mit aktuellen Forschungsfragen verbinden lassen, und daraus ein innovatives Proposal entwickeln. Die Betreuung und Ausarbeitung der Arbeit ist sowohl auf Deutsch als auch auf Englisch möglich.</span><span class="thesis-open-note-de thesis-open-note-block">Bachelor- und Masterarbeiten sind gleichermaßen willkommen. Umfang, methodische Tiefe und Schwierigkeitsgrad können je nach Studienphase, Vorkenntnissen und verfügbarer Zeit angepasst werden.</span><span class="thesis-open-note-highlight thesis-open-note-block">Studierende der Hochschule Mainz sowie der TUM sind herzlich eingeladen, sich mit eigenen Themenvorschlägen oder Interesse an den ausgeschriebenen Themen zu melden.</span><span class="thesis-open-note-en">Students from Hochschule Mainz and TUM are warmly invited to get in touch, either with their own topic proposals or with interest in the listed topics.</span></p>
 
     <script>
     document.querySelectorAll('#thesis-sections .ts-hero').forEach(function (btn) {
@@ -246,28 +320,32 @@
     });
     </script>
 
-    <h2 class="thesis-caption"><span class="cap-de">Laufende Abschlussarbeiten</span><span class="cap-en">Ongoing Theses</span></h2>
+    <h2 class="thesis-caption thesis-caption-spaced"><span class="cap-de">Laufende Abschlussarbeiten</span><span class="cap-en">Ongoing Theses</span></h2>
 
-    <ul>
-      <li>
-      <strong> 2026 - Ableitung und Genauigkeitsbewertung gebäuderelevanter Strukturmerkmale</strong> (Landeshauptstadt Wiesbaden – Stadtplanungsamt – Leitung Digitalisierung, Geoinformation und IT-Services). <a href="Aufgabenstellung%201%20-%20Geoinformatik.pdf" target="_blank">LiDAR solution - PDF</a> (Ongoing HS Mainz BA)
-      </li>
-    </ul>
+    <div class="thesis-history-list">
+      <div class="thesis-history-row">
+      <span class="thesis-year">2026</span>
+      <span class="thesis-entry"><strong>Ableitung und Genauigkeitsbewertung gebäuderelevanter Strukturmerkmale</strong> (<a href="Aufgabenstellung%201%20-%20Geoinformatik.pdf" target="_blank">LiDAR solution PDF</a>)</span>
+      <span class="thesis-meta-col"><strong>Landeshauptstadt Wiesbaden</strong> &amp; <strong>HS Mainz</strong>, Bachelor GuV</span>
+      </div>
+    </div>
 
-    <h2 class="thesis-caption"><span class="cap-de">Abgeschlossene Abschlussarbeiten</span><span class="cap-en">Completed Theses</span></h2>
-    <ul>
-      <li><strong>2025</strong> Keying Fan: Towards Text-conditioned Multi-scale Map Generalization using Diffusion Models (<strong>TU Munich</strong>, Master Cartography)</li>
-      <li><strong>2025</strong> Nargiz Amralina: <a href="https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf" target="_blank">Beyond Distance: Integrating Walkability Indicators for User-Centered Pedestrian Navigation</a> (<strong>TU Munich</strong>, Master Cartography)</li>
-      <li><strong>2025</strong> Gawronski, Alexander: Understanding Urban Visual Perception Variances between Eastern and Western German Cities Using Explainable AI (<strong>TU Munich</strong>, Master GuG)</li>
-      <li><strong>2025</strong> Humski, Josipa: AI-Assisted Interactive System for Analyzing and Visualizing Urban Linkages (TU Munich and 
-University of Zagreb, Master GuG Erasmus)</li>
-      <li><strong>2025</strong> Liu, Yiding: Explainable AI for OpenStreetMap Update Demand Prediction (<strong>TU Munich</strong>, Master)</li>
-      <li><strong>2025</strong> Zhang, Qianhe: Enhancing Fire Evacuation with Mixed Reality-based Situational Information Updating (<strong>TU Munich</strong>)</li>
-      <li><strong>2024</strong> Ji Huang: Scene Completion and Dynamic Object Reconstruction from LiDAR Point Clouds (<strong>TU Munich</strong>, Master RCI)</li>
-      <li><strong>2024</strong> Puzhen Zhang: Natural Language-Based Multi-source Earth Data Q&A System (<strong>TU Munich</strong>, Master RCI)</li>
-      <li><strong>2024</strong> Yanning Wang: Simplification and aggregation of vector building footprints using deep learning models (<strong>TU Munich</strong>, Master Cartography)</li>
-      <li><strong>2024</strong> Durmazbilek, Sevval: Exploring sunny and easily accessible homes: A 3D-Web-GIS platform for apartment seekers in Munich and Helsinki (<strong>TU Munich</strong>, Master GuG)</li>
-    </ul>
+    <h2 class="thesis-caption thesis-caption-spaced"><span class="cap-de">Abgeschlossene Abschlussarbeiten</span><span class="cap-en">Completed Theses</span></h2>
+    <div class="thesis-history-list">
+      <div class="thesis-history-row"><span class="thesis-year">2026</span><span class="thesis-entry"><strong>Colin Vierke</strong>: Automatisierte Georeferenzierung von Bebauungsplänen mittels bildbasierter Verfahren</span><span class="thesis-meta-col"><strong>HS Mainz</strong>, WB Master Geoinformatik</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2026</span><span class="thesis-entry"><strong>Carina Ewald</strong>: Automatisierte Identifikation potentieller Retentionsräume für den dezentralen Wasserrückhalt</span><span class="thesis-meta-col"><strong>HS Mainz</strong>, Bachelor GuV</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2026</span><span class="thesis-entry"><strong>Robert Mosbacher</strong>: Nutzung der Künstlichen Intelligenz zur automatisierten Vektorisierung von Vermessungsrissen</span><span class="thesis-meta-col"><strong>HS Mainz</strong>, WB Master Geoinformatik</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Keying Fan</strong>: Towards Text-conditioned Multi-scale Map Generalization using Diffusion Models</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master Cartography</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Nargiz Amralina</strong>: <a href="https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf" target="_blank">Beyond Distance: Integrating Walkability Indicators for User-Centered Pedestrian Navigation</a></span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master Cartography</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Gawronski, Alexander</strong>: Understanding Urban Visual Perception Variances between Eastern and Western German Cities Using Explainable AI</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master GuG</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Humski, Josipa</strong>: AI-Assisted Interactive System for Analyzing and Visualizing Urban Linkages</span><span class="thesis-meta-col"><strong>TU Munich</strong> and <strong>University of Zagreb</strong>, Master GuG Erasmus</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Liu, Yiding</strong>: Explainable AI for OpenStreetMap Update Demand Prediction</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Zhang, Qianhe</strong>: Enhancing Fire Evacuation with Mixed Reality-based Situational Information Updating</span><span class="thesis-meta-col"><strong>TU Munich</strong></span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2024</span><span class="thesis-entry"><strong>Ji Huang</strong>: Scene Completion and Dynamic Object Reconstruction from LiDAR Point Clouds</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master RCI</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2024</span><span class="thesis-entry"><strong>Puzhen Zhang</strong>: Natural Language-Based Multi-source Earth Data Q&A System</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master RCI</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2024</span><span class="thesis-entry"><strong>Yanning Wang</strong>: Simplification and aggregation of vector building footprints using deep learning models</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master Cartography</span></div>
+      <div class="thesis-history-row"><span class="thesis-year">2024</span><span class="thesis-entry"><strong>Durmazbilek, Sevval</strong>: Exploring sunny and easily accessible homes: A 3D-Web-GIS platform for apartment seekers in Munich and Helsinki</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master GuG</span></div>
+    </div>
 
     <div class="footer">
         Powered by <a href="https://gohugo.io/">Hugo</a> with
