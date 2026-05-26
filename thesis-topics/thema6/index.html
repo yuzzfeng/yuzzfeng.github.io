@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thema 6 — Automatische Erkennung und geometrische Integration von Fassadenelementen aus Street-Level-Images zur Anreicherung von LoD2-Stadtmodellen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/terminal-0.7.4.min.css">
+    <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/console.css">
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+            <header class="terminal-logo">
+                <div class="logo terminal-prompt">
+                    <a href="https://yuzzfeng.github.io/" class="no-style">Prof. Dr. Yu Feng</a>:~#
+                    <a href="https://yuzzfeng.github.io/thesis-topics/">thesis-topics</a>/thema6/
+                </div>
+            </header>
+            <nav class="terminal-menu">
+                <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                    <li><a href="https://yuzzfeng.github.io/about/" typeof="ListItem">about/</a></li>
+                    <li><a href="https://yuzzfeng.github.io/projects/" typeof="ListItem">projects/</a></li>
+                    <li><a href="https://yuzzfeng.github.io/publications/" typeof="ListItem">publications/</a></li>
+                    <li><a href="https://yuzzfeng.github.io/thesis-topics/" typeof="ListItem">thesis-topics/</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast">
+
+        <p style="margin-bottom: 6px;">
+            <a href="/thesis-topics/">← Zurück / Back to Thesis Topics</a>
+            &nbsp;·&nbsp;
+            <span style="color: red; font-weight: bold;">(neu)</span>
+            &nbsp;·&nbsp; Urban Scene Understanding
+        </p>
+
+        <h1>Automatische Erkennung und geometrische Integration von Fassadenelementen aus Street-Level-Images zur Anreicherung von LoD2-Stadtmodellen</h1>
+
+        <p>
+            Viele deutsche Städte verfügen bereits über flächendeckende 3D-Gebäudemodelle in LoD2.
+            Diese Modelle enthalten in der Regel Gebäudevolumen, Dachformen und Höheninformationen,
+            jedoch keine detaillierten Fassadeninformationen wie
+            <strong>Türen, Fenster oder Balkone</strong>.
+            Solche Informationen sind jedoch für urbane digitale Zwillinge, Stadtbildanalysen,
+            energetische Gebäudemodellierung, Simulationen und Bestandsmonitoring von großem Nutzen.
+        </p>
+
+        <p>
+            Aktuelle LoD3-Bestände in Deutschland sind in vielen Fällen primär als
+            texturierte Fassadenmodelle umgesetzt; belastbare semantische
+            Fassadeninformationen (z. B. explizit modellierte Öffnungen und Bauelemente)
+            fehlen dabei häufig.
+        </p>
+
+        <p>
+            Ziel dieser Masterarbeit ist es, einen prototypischen Workflow zu entwickeln und zu evaluieren,
+            mit dem ausgewählte Fassadenelemente, insbesondere
+            <strong>Türen, Fenster und Balkone</strong>,
+            aus Street-Level-Images erkannt und geometrisch mit bestehenden LoD2-Gebäudemodellen
+            verknüpft werden können. Als Untersuchungsgebiet kann ein ausgewählter Ausschnitt in Mainz
+            oder Wiesbaden dienen. Als Datengrundlage sollen bestehende LoD2-Gebäudemodelle,
+            Gebäudegrundrisse sowie frei verfügbare oder zugängliche Street-Level-Bilddaten,
+            z. B. Mapillary, verwendet werden.
+        </p>
+
+        <p>
+            Im Mittelpunkt steht nicht die vollständige automatische Erzeugung eines vollständigen
+            LoD3-Stadtmodells, sondern die Frage, inwieweit relevante Fassadeninformationen aus
+            Street-Level-Images extrahiert, auf LoD2-Fassadenflächen projiziert und zur semantischen
+            sowie geometrischen Anreicherung bestehender 3D-Stadtmodelle genutzt werden können.
+        </p>
+
+        <p style="margin: 18px 0;">
+            <img src="https://wenzhaotang.github.io/Texture2LoD3/static/images/teaser_v8.png"
+                 alt="Texture2LoD3 teaser"
+                 class="img-responsive gallery-image"
+                 style="max-width: 100%; border-radius: 6px;">
+            <span style="display: block; font-size: 12px; color: #666; margin-top: 6px;">
+                Image source: <a href="https://wenzhaotang.github.io/Texture2LoD3/" target="_blank" rel="noopener noreferrer">Texture2LoD3</a> (CC BY)
+            </span>
+        </p>
+
+        <h3>Erwartetes Ergebnis</h3>
+        <p>
+            Erwartet wird ein prototypischer Workflow zur Erkennung und geometrischen Integration
+            von <strong>Türen, Fenstern und Balkonen</strong>
+            in bestehende LoD2-Gebäudemodelle.
+            Das Ergebnis soll anhand eines Testgebiets in Mainz oder Wiesbaden
+            quantitativ und qualitativ evaluiert werden.
+        </p>
+
+        <h3>Zentrale Literatur</h3>
+        <ul>
+            <li>
+                Tang, W., Li, W., Liang, X., Wysocki, O., Biljecki, F., Holst, C., &amp; Jutzi, B. (2025).
+                <a href="https://wenzhaotang.github.io/Texture2LoD3/" target="_blank" rel="noopener noreferrer">
+                    Texture2LoD3: Enabling LoD3 Building Reconstruction With Panoramic Images
+                </a>.
+                CVPRW 2025, Workshop on Urban Scene Modeling.
+            </li>
+            <li>
+                Ma, R., Yang, C., Chen, J., Biljecki, F., &amp; Li, X. (2026).
+                <a href="https://doi.org/10.1016/j.autcon.2026.106842" target="_blank" rel="noopener noreferrer">
+                    Street view imagery-based method for reconstructing 3D building facade openings
+                </a>.
+                Automation in Construction, 184, 106842.
+            </li>
+        </ul>
+
+        <h3>Kontakt / Contact</h3>
+        <p>
+            <a href="mailto:yu.feng@hs-mainz.de">yu.feng@hs-mainz.de</a>
+            &nbsp;·&nbsp;
+            <a href="mailto:y.feng@tum.de">y.feng@tum.de</a>
+        </p>
+
+        <div class="footer">
+            Powered by <a href="https://gohugo.io/">Hugo</a> with
+            <a href="https://github.com/mrmierzejewski/hugo-theme-console/">Console Theme</a>.
+        </div>
+
+    </div>
+</body>
+</html>

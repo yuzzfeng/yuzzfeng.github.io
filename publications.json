@@ -1,5 +1,17 @@
 [
   {
+    "title": "Explaining the urban mechanisms behind OpenStreetMap updates: Evidence from 88 German cities",
+    "year": "2026",
+    "date": "2026-05-26",
+    "displayDate": "May. 26, 2026",
+    "authors": "Chen, C., Jiang, Y., Feng, Y., Liu, Y., & Meng, L.",
+    "image": "/images/2026_ceus_osm_updates_preview.jpg",
+    "logo": "/images/ceus_logo.gif",
+    "publication": "Computers, Environment and Urban Systems, 128, 102456.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S019897152600058X",
+    "doi": "https://doi.org/10.1016/j.compenvurbsys.2026.102456"
+  },
+  {
     "title": "Constructing coherent spatial memory in LLM agents through graph rectification",
     "year": "2026",
     "date": "2026-04-25",
