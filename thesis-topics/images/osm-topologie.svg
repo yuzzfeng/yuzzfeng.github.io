@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="520" viewBox="0 0 840 520" role="img" aria-labelledby="title desc">
+<title id="title">OSM: Topologische Datenqualität</title>
+<desc id="desc">Links endet ein Weg kurz vor einer Kreuzung ohne Verbindung. Rechts wird er mit dem gemeinsamen Knoten verbunden. Schematische Darstellung, keine echten Kartendaten.</desc>
+<rect width="840" height="520" rx="20" fill="#f8fafc"/>
+<g font-family="Arial,sans-serif" fill="#172c3b"><text x="36" y="52" font-size="28" font-weight="700">OSM: Topologische Datenqualität</text><text x="36" y="83" font-size="17" fill="#64748b">Fehler erkennen · Korrekturvorschläge prüfen</text></g>
+<rect x="30" y="110" width="370" height="330" rx="14" fill="#fff" stroke="#e2e8f0"/><rect x="440" y="110" width="370" height="330" rx="14" fill="#fff" stroke="#e2e8f0"/>
+<g fill="#e9eef1" stroke="#d6e0e6" stroke-width="2"><path d="M60 183h84v58H60z M280 185h88v73h-88z M65 330h85v70H65z M280 332h78v68h-78z M470 183h84v58h-84z M690 185h88v73h-88z M475 330h85v70h-85z M690 332h78v68h-78z"/></g>
+<g font-family="Arial,sans-serif" font-size="19" font-weight="700"><text x="54" y="148" fill="#b42336">Unterbrochener Weg</text><text x="464" y="148" fill="#0f766e">Geprüfte Verbindung</text></g>
+<g fill="none" stroke="#526b80" stroke-width="9" stroke-linecap="round"><path d="M60 288H370 M210 180V263 M210 288V407 M470 288H780 M620 180V407"/></g>
+<g fill="#fff" stroke="#526b80" stroke-width="3"><circle cx="60" cy="288" r="6"/><circle cx="370" cy="288" r="6"/><circle cx="210" cy="180" r="6"/><circle cx="210" cy="407" r="6"/><circle cx="470" cy="288" r="6"/><circle cx="780" cy="288" r="6"/><circle cx="620" cy="180" r="6"/><circle cx="620" cy="407" r="6"/></g>
+<circle cx="210" cy="263" r="7" fill="#b42336"/><circle cx="210" cy="277" r="27" fill="none" stroke="#e05265" stroke-width="3" stroke-dasharray="5 5"/>
+<circle cx="620" cy="288" r="26" fill="#ccfbf1" fill-opacity=".8" stroke="#0f766e" stroke-width="3"/><circle cx="620" cy="288" r="7" fill="#0f766e"/>
+<path d="M405 275l20 12-20 12" fill="none" stroke="#94a3b8" stroke-width="3"/>
+<g font-family="Arial,sans-serif" font-size="16" fill="#64748b"><text x="38" y="480">Schematische Darstellung · keine echten Kartendaten</text></g>
+</svg>

@@ -1,0 +1,766 @@
+{
+  "page": {
+    "title": {
+      "de": "Abschlussarbeitsthemen"
+    },
+    "intro": {
+      "de": "Hier finden Sie die angebotenen Abschlussarbeitsthemen für Bachelor und Master. Klicken Sie auf einen Titel, um Aufgaben, Voraussetzungen und den jeweiligen Umfang zu sehen."
+    },
+    "contactTitle": {
+      "de": "Interesse an einem Thema?"
+    },
+    "contact": {
+      "email": "yu.feng@hs-mainz.de",
+      "de": "Bitte nennen Sie Ihren Studiengang, Ihr Abschlussniveau, das gewünschte Thema und kurz Ihre Vorkenntnisse."
+    },
+    "note": {
+      "de": "Betreuung und Ausarbeitung sind auf Deutsch oder Englisch möglich. Studierende der Hochschule Mainz sowie der TUM können sich mit ausgeschriebenen Themen oder eigenen Vorschlägen melden."
+    },
+    "labels": {
+      "back": {
+        "de": "← Zurück zur Themenübersicht"
+      },
+      "contact": {
+        "de": "Kontakt"
+      },
+      "notFound": {
+        "de": "Dieses Thema wurde nicht gefunden."
+      }
+    },
+    "invitation": {
+      "title": {
+        "de": "Eigene Themenideen sind willkommen!"
+      },
+      "text": {
+        "de": "Sie haben eine eigene Idee oder ein Thema, das Sie besonders interessiert? Sprechen Sie mich gerne an — die Betreuung ist nicht auf die unten aufgeführten Themen beschränkt. Vorschläge zu GeoAI, zur Modellierung und Analyse von Punktwolken sowie zu großen Sprachmodellen (LLM) sind herzlich willkommen. Auch Abschlussarbeiten in Zusammenarbeit mit anderen Hochschulen, Forschungseinrichtungen, Unternehmen oder öffentlichen Institutionen sind möglich."
+      }
+    }
+  },
+  "topics": [
+    {
+      "id": "db-verspaetungsausbreitung",
+      "title": {
+        "de": "Wie breiten sich Verspätungen im Bahnnetz aus? Statistische und räumliche Analyse mehrjähriger DB-Stationsdaten"
+      },
+      "levels": [
+        "Bachelor"
+      ],
+      "tags": [
+        "spatial-analysis",
+        "visualization"
+      ],
+      "image": {
+        "file": "db-verspaetung.svg",
+        "alt": "Schematische Darstellung der zeitlichen Weitergabe von Verspätungen zwischen Bahnhöfen"
+      },
+      "scopeNote": "Bachelor — Untersuchung einer ausgewählten Region oder Bahnstrecke anhand mehrjähriger Stationsdaten.",
+      "cover": {
+        "file": "rail-delay-cover.png",
+        "alt": "KI-generierte Illustration zur Ausbreitung von Verspätungen im Bahnnetz",
+        "credit": { "text": "KI-generierte Illustration" }
+      },
+      "sections": [
+        {
+          "title": {
+            "de": "Forschungsfrage"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Wie setzen sich Verspätungen zwischen Bahnhöfen und entlang von Zugläufen fort? Auf Grundlage über mehrere Jahre aufgezeichneter Stationsdaten aus einer API der Deutschen Bahn sollen zeitliche Muster, räumliche Zusammenhänge sowie die Zunahme und der Abbau von Verspätungen untersucht werden."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Datengrundlage und Referenz"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Grundlage sind die mehrjährigen, über die Bahn-API aufgezeichneten Stationsdaten. Vor der Analyse werden verfügbare Zeiträume, räumliche Abdeckung, Zeitstempel, Zug- und Stationskennungen sowie fehlende oder doppelte Einträge geprüft. Die Zuordnung zusammenhängender Zugläufe richtet sich nach den tatsächlich vorhandenen Kennungen."
+            },
+            {
+              "type": "paragraph",
+              "text": "[Referenzanwendung und Einstieg zu den Daten: Verspätungskartierung](https://delaymapping.streamlit.app/)"
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Video zur Verspätungsentwicklung"
+          },
+          "blocks": [
+            {
+              "type": "video",
+              "file": "train_delay.mov",
+              "label": "Video zur Entwicklung der Bahnverspätungen",
+              "fallback": "Ihr Browser kann dieses Video nicht wiedergeben."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Aufgaben"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Bachelor: Für eine ausgewählte Region oder Bahnstrecke die Daten aufbereiten, Verspätungsverteilungen und zeitliche Veränderungen auswerten sowie die Weitergabe von Verspätungen zwischen ausgewählten aufeinanderfolgenden Halten kartografisch darstellen."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Methodischer Ansatz"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Daten bereinigen, Stationen räumlich zuordnen und vergleichbare Zeitabschnitte festlegen.",
+                "Verteilungen, Häufigkeiten und Änderungen der Verspätungsdauer nach Bahnhof, Tageszeit und Zeitraum statistisch beschreiben.",
+                "Soweit die Daten es erlauben, aufeinanderfolgende Halte desselben Zuglaufs verknüpfen und untersuchen, wo Verspätungen zunehmen, bestehen bleiben oder abgebaut werden.",
+                "Räumliche Häufungen und zeitversetzte Zusammenhänge zwischen verbundenen Stationen analysieren; gemeinsame Störungen und unterschiedliche Beobachtungsdichten berücksichtigen.",
+                "Ergebnisse mit Karten, Zeitreihen und Netzvisualisierungen nachvollziehbar darstellen. Statistische Zusammenhänge werden von Aussagen über ursächliche Übertragung unterschieden."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Erwartete Ergebnisse"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Reproduzierbare Datenaufbereitung und dokumentierte statistische sowie räumliche Auswertungen.",
+                "Karten und eine interaktive Visualisierung der Verspätungsmuster und ihrer zeitlichen Entwicklung.",
+                "Bewertung der Aussagekraft, Datenlücken und Grenzen der Untersuchung sowie eine schriftliche Abschlussarbeit."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Voraussetzungen"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Grundkenntnisse in Python, Statistik und räumlicher Datenanalyse.",
+                "Interesse an Bahnverkehr, Zeitreihen und Geovisualisierung."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thema4",
+      "title": {
+        "de": "Geo2Vec-gestützte Vereinfachung und Aggregation von Gebäudegrundrissen"
+      },
+      "levels": [
+        "Master"
+      ],
+      "image": {
+        "file": "geo2vec.png",
+        "alt": "Veranschaulichung von Geo2Vec",
+        "credit": {
+          "text": "GeoNeuralRepresentation – Geo2Vec-Veranschaulichung",
+          "url": "https://github.com/chuchen2017/GeoNeuralRepresentation"
+        }
+      },
+      "cover": {
+        "file": "geo2vec-cover.png",
+        "alt": "KI-generierte Illustration zur Vereinfachung und Aggregation von Gebäudegrundrissen",
+        "credit": { "text": "KI-generierte Illustration" }
+      },
+      "sections": [
+        {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "In diesem Thema untersuchen wir, wie Geo2Vec-Repräsentationen genutzt werden können, um Vektorgebäudegeometrien robust zu vereinfachen (simplification) und zu aggregieren (aggregation). Ziel ist ein datengetriebener Workflow, der geometrische Qualität und topologische Konsistenz berücksichtigt."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Motivation"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Gebäudeflächen müssen für Karten unterschiedlicher Maßstäbe vereinfacht und zusammengefasst werden, ohne ihre charakteristische Form oder räumliche Beziehungen zu verlieren. Geo2Vec bietet eine Möglichkeit, geometrische und nachbarschaftliche Eigenschaften gemeinsam zu repräsentieren und für diese Generalisierungsaufgaben zu nutzen."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Datenbasis"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Als zentrale Datengrundlage verwenden wir den Stuttgart-Datensatz, d. h. den Stuttgart-Datensatz mit mehrmaßstäblichen Kartendaten (multi-scale map data) für Gebäudedarstellungen. Referenz: [Feng et al. (2019), ISPRS IJGI 8(6):258](https://www.mdpi.com/2220-9964/8/6/258)."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Aufgaben"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Master: Eine vollständige Pipeline für Gebäudevereinfachung und Aggregation entwickeln und anhand von Formtreue, Topologie und Generalisierungsqualität evaluieren."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Erwartete Ergebnisse"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Ausführbarer Prototyp zur Vereinfachung und Aggregation von Gebäudegrundrissen",
+                "Reproduzierbarer Code und dokumentierte Experimente auf dem Stuttgart-Datensatz",
+                "Vollständige Vereinfachungs- und Aggregationspipeline mit quantitativer Evaluation",
+                "Schriftliche Abschlussarbeit"
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Literatur und Ressourcen"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Quellcode: [GeoNeuralRepresentation (Geo2Vec)](https://github.com/chuchen2017/GeoNeuralRepresentation)",
+                "Methodenbeschreibung: [Geo2Vec: Form- und distanzbewusste neuronale Repräsentation räumlicher Objekte](https://github.com/chuchen2017/GeoNeuralRepresentation#-geo2vec-shape--and-distance-aware-neural-representation-of-geospatial-entities)",
+                "Datengrundlage: mehrmaßstäbliche Kartendaten für Stuttgart.",
+                "Veröffentlichung: [https://www.mdpi.com/2220-9964/8/6/258](https://www.mdpi.com/2220-9964/8/6/258)"
+              ]
+            }
+          ]
+        }
+      ],
+      "scopeNote": "Master — Entwicklung und quantitative Evaluation einer vollständigen Vereinfachungs- und Aggregationspipeline.",
+      "tags": [
+        "geometric-dl"
+      ]
+    },
+    {
+      "id": "thema2",
+      "title": {
+        "de": "Topologische Qualitätsprüfung von OSM-Daten mit LLM-Unterstützung"
+      },
+      "levels": [
+        "Bachelor"
+      ],
+      "image": {
+        "file": "osm-topologie-llm.png",
+        "alt": "KI-generierte Illustration eines OSM-Wegenetzes mit fehlender Verbindung und einem topologisch verbundenen Korrekturvorschlag",
+        "credit": {
+          "text": "KI-generierte Illustration"
+        }
+      },
+      "sections": [
+        {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Untersuchung einer ausgewählten Art von OSM-Topologiefehlern, beispielsweise unverbundener Wege, in einem begrenzten Gebiet mit Werkzeugen wie [OSMose](https://osmose.openstreetmap.fr/en/map/#loc=16/50.003121/8.248233). Ziel ist ein nachvollziehbarer Prototyp, der Fehler mit LLM-Unterstützung erklärt oder Korrekturvorschläge prüft. Die Ergebnisse werden anhand dokumentierter Testfälle validiert."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Motivation"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Topologische Fehler können die Verlässlichkeit von OpenStreetMap für Analyse und Routing beeinträchtigen. Prüfwerkzeuge wie OSMose finden viele Probleme, doch ihre Einordnung und Korrektur erfordern häufig manuelle Arbeit. Sprachmodelle könnten Fehler verständlich erklären und Korrekturvorschläge vorbereiten; diese Vorschläge müssen jedoch nachvollziehbar validiert werden."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Aufgaben"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Bachelor: Eine ausgewählte OSM-Fehlerklasse in einem begrenzten Gebiet untersuchen und einen nachvollziehbaren Prototyp zur Erklärung oder Prüfung von Korrekturvorschlägen entwickeln."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Erwartete Ergebnisse"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Ausführbarer Prototyp oder Workflow zur Analyse ausgewählter OSM-Topologiefehler",
+                "Dokumentierte Testfälle mit nachvollziehbaren Vorschlägen und Validierungsergebnissen",
+                "Reproduzierbarer Code und eine Evaluation der Korrektheit sowie Grenzen der LLM-Unterstützung",
+                "Schriftliche Abschlussarbeit"
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Werkzeuge und Daten"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "[OSMose](https://osmose.openstreetmap.fr/) — automatisierte OSM-Fehleranalyse",
+                "OpenStreetMap Overpass API",
+                "LLM API (z. B. OpenAI GPT, lokales Modell)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Anforderungen"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Kenntnisse in OpenStreetMap und GIS",
+                "Programmierkenntnisse (Python)",
+                "Interesse an Datenqualität und LLMs"
+              ]
+            }
+          ]
+        }
+      ],
+      "scopeNote": "Bachelor — Untersuchung einer ausgewählten OSM-Fehlerklasse in einem begrenzten Gebiet.",
+      "tags": [
+        "llm",
+        "data-quality"
+      ]
+    },
+    {
+      "id": "thema1",
+      "title": {
+        "de": "Konversationsbasierte Komfort-Navigation"
+      },
+      "levels": [
+        "Bachelor"
+      ],
+      "image": {
+        "file": "comfort-navigation.png",
+        "alt": "KI-generierte Illustration einer dialogbasierten Fußgängernavigation mit einer schattigen Route durch ein Stadtviertel",
+        "credit": {
+          "text": "KI-generierte Illustration"
+        }
+      },
+      "sections": [
+        {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Aufbauend auf bestehenden Arbeiten wird ein LLM-gestützter Dialog für komfortorientierte Fußgängerrouten prototypisch umgesetzt. Im Mittelpunkt steht ein ausgewählter Komfortindikator, etwa Schatten oder Zugänglichkeit, oder ein klar abgegrenzter Teil der interaktiven Routenabfrage."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Motivation"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Fußgänger wählen Routen nicht nur nach der kürzesten Distanz. Schatten, Zugänglichkeit und weitere Komfortindikatoren beeinflussen die Entscheidung, sind aber oft über verschiedene Datensätze und Werkzeuge verteilt. Eine konversationelle Schnittstelle kann diese Präferenzen verständlich erfassen und in nachvollziehbare Routenvorschläge übersetzen."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Aufgaben"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Bachelor: Einen ausgewählten Komfortindikator oder einen klar abgegrenzten Teil des Dialog- und Routenworkflows prototypisch umsetzen und an Beispielrouten prüfen."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Erwartete Ergebnisse"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Ausführbarer Prototyp für eine komfortorientierte Routenabfrage",
+                "Dokumentierter Workflow, ausgewählte Testfälle und reproduzierbarer Code",
+                "Evaluation der Routenergebnisse anhand ausgewählter Testfälle",
+                "Schriftliche Abschlussarbeit"
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Relevante Vorarbeiten"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "[Integration von Begehbarkeitsindikatoren für eine nutzerorientierte Fußgängernavigation](https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf)",
+                "[Gehen im Schatten: Schattenorientierte Fußgängernavigation](https://doi.org/10.1145/3678717.3691287)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Anforderungen"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Programmierkenntnisse (Python oder JavaScript)",
+                "Interesse an GeoAI und LLM-Integration"
+              ]
+            }
+          ]
+        }
+      ],
+      "scopeNote": "Bachelor — Prototypische Umsetzung eines ausgewählten Komfortindikators oder eines klar abgegrenzten Teils des Dialog- und Routenablaufs.",
+      "tags": [
+        "spatial-analysis",
+        "llm"
+      ]
+    },
+    {
+      "id": "thema6",
+      "title": {
+        "de": "VLM-gestützte Erkennung von Fassadenmerkmalen aus Straßenbildern als Datengrundlage für die Modellierung thermischer Exposition"
+      },
+      "levels": [
+        "Master"
+      ],
+      "tags": [
+        "vlm"
+      ],
+      "image": {
+        "file": "facade-vlm.png",
+        "alt": "KI-generierte Illustration zur Erkennung von Fassadenmaterialien, Fenstern und Verschattungselementen aus Straßenbildern",
+        "credit": {
+          "text": "KI-generierte Illustration"
+        }
+      },
+      "scopeNote": "Master — Erkennung und Validierung sichtbarer Fassadenmerkmale mit Bild-Sprach-Modellen als Grundlage für die zukünftige Modellierung thermischer Exposition.",
+      "sections": [
+        {
+          "title": {
+            "de": "Forschungsziel"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Wie zuverlässig können Bild-Sprach-Modelle (VLM) sichtbare Eigenschaften von Gebäudeaußenwänden aus Straßenbildern erkennen? Untersucht werden insbesondere Fassadenmaterialien und weitere visuell erfassbare Merkmale. Die validierten Ergebnisse sollen eine Datengrundlage für die zukünftige Modellierung der thermischen Exposition im urbanen Raum schaffen."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Datengrundlage"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Verwendet werden verfügbare Straßenbilder, beispielsweise aus Mapillary, sowie Gebäudegrundrisse zur räumlichen Zuordnung. Für ein abgegrenztes Testgebiet wird eine Referenzstichprobe mit manuell geprüften Fassadenmerkmalen erstellt. Untersuchungsgebiet, Bildabdeckung und verfügbare Referenzinformationen werden zu Beginn abgestimmt."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Zu untersuchende Fassadenmerkmale"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Sichtbare Oberflächenmaterialien, beispielsweise Ziegel, Putz, Beton, Glas, Holz oder Metall.",
+                "Ergänzende Merkmale wie Fassadenfarbe, Verglasungsanteil und sichtbare Fassadenbegrünung, soweit sie aus den Bildern zuverlässig bestimmbar sind.",
+                "Unsichere, verdeckte oder nicht erkennbare Merkmale werden ausdrücklich gekennzeichnet. Aus Bilddaten allein werden keine gesicherten Aussagen über verborgene Wandaufbauten oder thermische Materialkennwerte abgeleitet."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Aufgaben"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Ein geeignetes Testgebiet auswählen, Bilddaten aufbereiten und sichtbare Fassaden den Gebäuden zuordnen.",
+                "Ein eindeutiges Merkmals- und Klassifikationsschema einschließlich Regeln für Unsicherheit und Mehrfachmaterialien entwickeln.",
+                "Geeignete VLM und Abfragestrategien zur strukturierten Erkennung der Fassadenmerkmale vergleichen.",
+                "Eine unabhängige Referenzstichprobe manuell annotieren und die Erkennungsqualität je Merkmalsklasse bewerten.",
+                "Fehler und Robustheit hinsichtlich Blickwinkel, Beleuchtung, Verdeckung und Bildqualität untersuchen.",
+                "Die validierten Merkmale als räumlichen Datensatz mit Herkunfts- und Qualitätsangaben für spätere Anwendungen bereitstellen."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Validierung und Bezug zur thermischen Exposition"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Die Evaluation umfasst je nach Merkmal klassenbezogene Präzision, Trefferquote, F1-Maß und Verwechslungsmatrizen sowie eine Analyse unsicherer Vorhersagen. Referenzdaten für die abschließende Evaluation werden von der Entwicklung der Abfragestrategien getrennt. Abschließend wird bewertet, welche Merkmale für spätere thermische Expositionsmodelle nutzbar sind und welche zusätzlichen Messungen oder Materialinformationen erforderlich bleiben. Die eigentliche Simulation der thermischen Exposition ist eine nachfolgende Anwendung."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Erwartete Ergebnisse"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Reproduzierbarer VLM-basierter Ablauf zur Erkennung ausgewählter Fassadenmerkmale.",
+                "Dokumentierte Referenzstichprobe und quantitative Evaluation mit Fehler- und Unsicherheitsanalyse.",
+                "Räumlich zugeordneter Merkmalsdatensatz mit Qualitätsangaben und Empfehlungen zur Nutzung in zukünftigen thermischen Expositionsmodellen.",
+                "Dokumentierter Quellcode und schriftliche Masterarbeit."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Voraussetzungen"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Programmierkenntnisse in Python sowie Grundlagen in GIS und Bildverarbeitung.",
+                "Interesse an Bild-Sprach-Modellen, urbanen Geodaten und thermischen Umweltbedingungen."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "history": [
+    {
+      "title": {
+        "de": "Abgeschlossene Abschlussarbeiten"
+      },
+      "entries": [
+        {
+          "year": "2026",
+          "text": "Sarah Vogel: Subjektive und objektive Erreichbarkeit im ländlichen Raum – Eine altersbezogene Analyse am Beispiel von Schaidt",
+          "meta": "HS Mainz, Bachelor GuV"
+        },
+        {
+          "year": "2026",
+          "text": "Colin Vierke: Automatisierte Georeferenzierung von Bebauungsplänen mittels bildbasierter Verfahren",
+          "meta": "HS Mainz, WB Master Geoinformatik"
+        },
+        {
+          "year": "2026",
+          "text": "Carina Ewald: Automatisierte Identifikation potentieller Retentionsräume für den dezentralen Wasserrückhalt",
+          "meta": "HS Mainz, Bachelor GuV"
+        },
+        {
+          "year": "2026",
+          "text": "Robert Mosbacher: Nutzung der Künstlichen Intelligenz zur automatisierten Vektorisierung von Vermessungsrissen",
+          "award": "DVW Next Generation Award",
+          "meta": "HS Mainz, WB Master Geoinformatik"
+        },
+        {
+          "year": "2025",
+          "text": "Keying Fan: [Textgesteuerte mehrmaßstäbliche Kartengeneralisierung mit Diffusionsmodellen](https://cartographymaster.eu/wp-content/theses/2025_Fan_Poster.pdf)",
+          "meta": "TU München, Master Cartography",
+          "publication": {
+            "label": "Veröffentlichung",
+            "authors": "Fan, K., Qian, N., Zhou, Z., Sester, M., & Feng, Y.",
+            "year": "2026",
+            "title": "A Scale-Adaptive Framework for Building Generalization via Instruction-Guided Diffusion and Geometry-Aware Vectorization",
+            "journal": "Journal of Geovisualization and Spatial Analysis",
+            "volume": "10",
+            "issue": "2",
+            "article": "44",
+            "doi": "10.1007/s41651-026-00282-3",
+            "icon": "📄"
+          }
+        },
+        {
+          "year": "2025",
+          "text": "Nargiz Amralina: [Integration von Begehbarkeitsindikatoren für eine nutzerorientierte Fußgängernavigation](https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf)",
+          "meta": "TU München, Master Cartography"
+        },
+        {
+          "year": "2025",
+          "text": "Gawronski, Alexander: Unterschiede in der visuellen Wahrnehmung ost- und westdeutscher Städte mit erklärbarer KI untersuchen",
+          "meta": "TU München, Master GuG"
+        },
+        {
+          "year": "2025",
+          "text": "Humski, Josipa: KI-gestütztes interaktives System zur Analyse und Visualisierung städtischer Verflechtungen",
+          "meta": "TU München und Universität Zagreb, Master GuG Erasmus"
+        },
+        {
+          "year": "2025",
+          "text": "Liu, Yiding: Erklärbare KI zur Vorhersage des Aktualisierungsbedarfs von OpenStreetMap",
+          "meta": "TU München, Master",
+          "publication": {
+            "icon": "📄",
+            "label": "Veröffentlichung",
+            "authors": "Chen, C., Jiang, Y., Feng, Y., Liu, Y., & Meng, L.",
+            "year": "2026",
+            "title": "Explaining the urban mechanisms behind OpenStreetMap updates: Evidence from 88 German cities",
+            "journal": "Computers, Environment and Urban Systems",
+            "volume": "128",
+            "article": "102456",
+            "doi": "10.1016/j.compenvurbsys.2026.102456"
+          }
+        },
+        {
+          "year": "2025",
+          "text": "Zhang, Qianhe: Unterstützung der Brandevakuierung durch situationsbezogene Informationsaktualisierung mit gemischter Realität",
+          "meta": "TU München"
+        },
+        {
+          "year": "2024",
+          "text": "Ji Huang: Szenenvervollständigung und Rekonstruktion dynamischer Objekte aus LiDAR-Punktwolken",
+          "meta": "TU München, Master RCI"
+        },
+        {
+          "year": "2024",
+          "text": "Puzhen Zhang: Natürlichsprachliches Frage-Antwort-System für Geodaten aus mehreren Quellen",
+          "meta": "TU München, Master RCI",
+          "publication": {
+            "icon": "📄",
+            "label": "Veröffentlichung",
+            "authors": "Feng, Y., Zhang, P., Xiao, G., Ding, L., & Meng, L.",
+            "year": "2025",
+            "title": "Towards a barrier-free GeoQA portal: Natural language interaction with geospatial data using multi-agent LLMs and semantic search",
+            "journal": "International Journal of Applied Earth Observation and Geoinformation",
+            "volume": "144",
+            "article": "104825",
+            "doi": "10.1016/j.jag.2025.104825"
+          }
+        },
+        {
+          "year": "2024",
+          "text": "Yanning Wang: [Vereinfachung und Aggregation vektorieller Gebäudegrundrisse mit tiefen neuronalen Netzen](https://cartographymaster.eu/wp-content/theses/2024_Wang_Poster.pdf)",
+          "meta": "TU München, Master Cartography"
+        },
+        {
+          "year": "2024",
+          "text": "Durmazbilek, Sevval: Sonnige und gut erreichbare Wohnungen: Eine 3D-Web-GIS-Plattform für Wohnungssuchende in München und Helsinki",
+          "meta": "TU München, Master GuG"
+        }
+      ]
+    }
+  ],
+  "legacyPaths": {
+    "/thesis-topics/geometry/": "",
+    "/thesis-topics/llm/": "",
+    "/thesis-topics/3d/": "",
+    "/thesis-topics/thema4/": "thema4",
+    "/thesis-topics/thema2/": "thema2",
+    "/thesis-topics/thema1/": "thema1",
+    "/thesis-topics/thema6/": "thema6",
+    "/thesis-topics/thema5/": "",
+    "/thesis-topics/thema3/": ""
+  },
+  "filters": {
+    "degreeLabel": {
+      "de": "Abschluss"
+    },
+    "tagLabel": {
+      "de": "Forschungsgebiet"
+    },
+    "reset": {
+      "de": "Zurücksetzen"
+    },
+    "empty": {
+      "de": "Keine passenden Themen gefunden. Bitte ändern Sie die Auswahl oder setzen Sie die Filter zurück."
+    },
+    "count": {
+      "de": "Themen gefunden"
+    },
+    "hint": {
+      "de": "Mehrere ausgewählte Tags innerhalb einer Zeile werden als Alternativen berücksichtigt. Abschluss und Forschungsgebiet werden kombiniert."
+    }
+  },
+  "tags": [
+    {
+      "id": "spatial-analysis",
+      "de": "Räumliche Analyse",
+      "color": "teal"
+    },
+    {
+      "id": "llm",
+      "de": "LLM",
+      "color": "violet"
+    },
+    {
+      "id": "geometric-dl",
+      "de": "Geometrisches tiefes Lernen",
+      "color": "indigo"
+    },
+    {
+      "id": "data-quality",
+      "de": "Geodatenqualität",
+      "color": "amber"
+    },
+    {
+      "id": "visualization",
+      "de": "Visualisierung",
+      "color": "rose"
+    },
+    {
+      "id": "vlm",
+      "de": "Bild-Sprach-Modelle (VLM)",
+      "color": "violet"
+    }
+  ],
+  "degreeColors": {
+    "Bachelor": "blue",
+    "Master": "indigo"
+  }
+}
