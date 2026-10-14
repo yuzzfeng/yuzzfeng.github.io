@@ -430,6 +430,21 @@
         },
         {
           "title": {
+            "de": "Anwendungsbeispiel"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "[Comfort Routing – interaktive Beispielanwendung](https://comfort-routing.netlify.app/)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Hinweis: Falls die Karte nicht korrekt angezeigt wird, wechseln Sie die Hintergrundkarte (Basiskarte), um die Darstellung korrekt zu laden."
+            }
+          ]
+        },
+        {
+          "title": {
             "de": "Relevante Vorarbeiten"
           },
           "blocks": [
