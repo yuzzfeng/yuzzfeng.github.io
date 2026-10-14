@@ -1,378 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Prof. Dr.-Ing. Yu Feng — Thesis Topics</title>
-    
+    <title>Prof. Dr.-Ing. Yu Feng — Abschlussarbeitsthemen</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <meta name="googlebot" content="index,follow,snippet,archive">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/terminal-0.7.4.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/console.css">
-    <style>
-      #thesis-sections { display: flex; flex-direction: column; gap: 16px; margin: 24px 0 44px; }
-      .ts-card { border: 1px solid var(--secondary-color); border-radius: 8px; overflow: hidden; }
-      .ts-card-open { border-left: 6px solid #151515; }
-      .ts-hero {
-        position: relative; width: 100%; min-height: 160px;
-        display: block; text-align: left; cursor: pointer; padding: 0;
-        background-size: auto 90%; background-position: right center;
-        background-repeat: no-repeat; background-color: #ffffff;
-        border: none;
-      }
-      .ts-hero-third {
-        display: flex;
-        align-items: center;
-      }
-      .ts-hero-third .ts-hero-inner {
-        width: 100%;
-      }
-      .ts-image-credit {
-        position: absolute;
-        right: 12px;
-        bottom: 10px;
-        z-index: 2;
-        font-size: 10px;
-        line-height: 1.25;
-        color: #6a6a6a;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 2px 6px;
-        border-radius: 4px;
-      }
-      .ts-image-credit a {
-        color: inherit;
-        text-decoration: underline;
-      }
-      .ts-hero::after { display: none !important; }
-      .ts-hero::before {
-        content: ""; position: absolute; inset: 0;
-        background: transparent;
-      }
-      .ts-hero-inner { position: relative; z-index: 1; padding: 20px 20px 16px; color: #151515; }
-      .ts-hero-inner h2 {
-        margin: 0;
-        font-size: 22px;
-        line-height: 1.2;
-      }
-      .ts-hero-inner p  { margin: 7px 0 0; font-size: 13px; opacity: .85; max-width: 58%; line-height: 1.35; }
-      .ts-subtitle { margin: 9px 0 0; max-width: 58%; }
-      .ts-subtitle .ts-sub-en,
-      .ts-subtitle .ts-sub-de {
-        display: block;
-        font-size: 13px;
-        line-height: 1.35;
-      }
-      .ts-subtitle .ts-sub-de {
-        color: #151515;
-        padding-top: 0;
-      }
-      .ts-subtitle .ts-sub-en {
-        color: #5a5a5a;
-        margin-top: 4px;
-        font-size: 0.94em;
-        font-style: italic;
-        font-weight: 400;
-        opacity: 0.88;
-      }
-      .ts-badge {
-        margin-top: 11px; display: inline-block; font-size: 12px;
-        border: 1px solid #151515; color: #ffffff; background: #151515;
-        border-radius: 999px; padding: 3px 11px; font-weight: 700;
-        letter-spacing: 0.02em;
-      }
-      .ts-badge-empty {
-        color: #151515;
-        background: transparent;
-        font-weight: 600;
-      }
-      .ts-list { list-style: none; margin: 0; padding: 10px 18px 16px; }
-      .ts-list li { margin: 10px 0; line-height: 1.45; }
-      .ts-list .ts-meta { font-size: 12px; color: var(--secondary-color); margin-top: 3px; }
-      .thesis-intro { margin-bottom: 14px; }
-      .thesis-intro .intro-de,
-      .thesis-intro .intro-en {
-        display: block;
-        line-height: 1.45;
-      }
-      .thesis-intro .intro-de { color: #1f1f1f; }
-      .thesis-intro .intro-en {
-        color: #5a5a5a;
-        margin-top: 4px;
-        font-size: 0.92em;
-        font-style: italic;
-        font-weight: 400;
-      }
-      .thesis-open-note {
-        margin: 24px 0 64px;
-        line-height: 1.5;
-        color: #1f1f1f;
-      }
-      .thesis-open-note-de,
-      .thesis-open-note-en {
-        display: block;
-      }
-      .thesis-open-note-block {
-        display: block;
-        margin-top: 14px;
-      }
-      .thesis-open-note-en {
-        margin-top: 4px;
-        color: #5a5a5a;
-        font-size: 0.92em;
-        font-style: italic;
-        font-weight: 400;
-      }
-      .thesis-open-note-highlight {
-        display: block;
-        margin-top: 28px;
-        font-weight: 700;
-        color: #1f1f1f;
-      }
-      .thesis-open-note-highlight-en {
-        display: block;
-        margin-top: 8px;
-        color: #1f1f1f;
-        font-size: 0.92em;
-        font-style: normal;
-        font-weight: 700;
-      }
-      .thesis-caption {
-        margin: 0 0 18px;
-        font-size: 2.2em;
-      }
-      .thesis-caption-spaced {
-        margin-top: 84px;
-      }
-      .thesis-caption .cap-de,
-      .thesis-caption .cap-en {
-        display: block;
-        line-height: 1.25;
-      }
-      .thesis-caption .cap-en {
-        display: block;
-        color: #5a5a5a;
-        margin-top: 6px;
-        padding-top: 7px;
-        border-top: 1px solid var(--secondary-color);
-        width: 33.333%;
-        font-size: 0.9em;
-        font-weight: 600;
-      }
-      .thesis-history-list {
-        margin: 0;
-        padding: 0;
-      }
-      .thesis-history-row {
-        margin: 14px 0;
-        display: grid !important;
-        grid-template-columns: 64px 2.15fr 0.85fr;
-        column-gap: 14px;
-        align-items: start;
-        line-height: 1.65;
-      }
-      .thesis-year {
-        font-weight: 700;
-        color: #151515;
-        letter-spacing: 0.02em;
-      }
-      .thesis-entry {
-        min-width: 0;
-      }
-      .thesis-meta-col {
-        min-width: 0;
-        color: #4d4d4d;
-      }
-      @media (max-width: 850px) {
-        .ts-hero-inner h2 { font-size: 19px; }
-        .ts-hero {
-          min-height: 160px;
-          background-size: 42% auto;
-          background-position: right 8px center;
-        }
-        .ts-hero-inner p,
-        .ts-subtitle {
-          max-width: 54%;
-        }
-        .thesis-caption { font-size: 1.9em; }
-        .thesis-history-row {
-          grid-template-columns: 56px 1fr;
-        }
-        .thesis-meta-col {
-          grid-column: 2;
-          margin-top: 2px;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .ts-hero {
-          min-height: 170px;
-          background-size: 40% auto;
-          background-position: right 6px center;
-        }
-        .ts-hero-inner { padding: 16px 14px 14px; }
-        .ts-hero-inner p,
-        .ts-subtitle {
-          max-width: 56%;
-        }
-        .ts-hero-third img {
-          right: -70px !important;
-          width: 66% !important;
-          clip-path: inset(20% 14% 20% 34%) !important;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="/thesis-topics/topics.css">
 </head>
 <body class="terminal">
     <div class="container">
         <div class="terminal-nav">
           <header class="terminal-logo">
             <div class="logo terminal-prompt">
-              <a href="https://yuzzfeng.github.io/" class="no-style">Prof. Dr.-Ing. Yu Feng</a>:~# 
-              <a href="https://yuzzfeng.github.io/thesis-topics">thesis-topics</a>/</div></header>
+              <a href="https://yuzzfeng.github.io/" class="no-style">Prof. Dr.-Ing. Yu Feng</a>:~#
+              <a href="https://yuzzfeng.github.io/thesis-topics">Abschlussarbeiten</a>/</div></header>
           <nav class="terminal-menu">
             <ul vocab="https://schema.org/" typeof="BreadcrumbList">
-                <li><a href="https://yuzzfeng.github.io/about/" typeof="ListItem">about/</a></li>
-                <li><a href="https://yuzzfeng.github.io/projects/" typeof="ListItem">projects/</a></li>
-                <li><a href="https://yuzzfeng.github.io/publications/" typeof="ListItem">publications/</a></li>
-                <li><a href="https://yuzzfeng.github.io/thesis-topics/" typeof="ListItem">thesis-topics/</a></li>
+                <li><a href="https://yuzzfeng.github.io/about/" typeof="ListItem">Über mich/</a></li>
+                <li><a href="https://yuzzfeng.github.io/projects/" typeof="ListItem">Projekte/</a></li>
+                <li><a href="https://yuzzfeng.github.io/publications/" typeof="ListItem">Publikationen/</a></li>
+                <li><a href="https://yuzzfeng.github.io/thesis-topics/" typeof="ListItem">Abschlussarbeiten/</a></li>
             </ul>
           </nav>
         </div>
     </div>
 
     <div class="container animated zoomIn fast" >
-        
-    <h2 class="thesis-caption"><span class="cap-de">Abschlussarbeitsthemen</span><span class="cap-en">Thesis Topics</span></h2>
-    <p class="thesis-intro"><span class="intro-de">Nachfolgend finden Sie eine (fortlaufend wachsende) Liste von Bachelor- und Masterarbeitsthemen. Bei Interesse kontaktieren Sie mich bitte unter <a href="mailto:yu.feng@hs-mainz.de">yu.feng@hs-mainz.de</a>.</span><span class="intro-en">Below is a (growing) list of Bachelor and Master thesis topics. If you are interested, please contact me at <a href="mailto:yu.feng@hs-mainz.de">yu.feng@hs-mainz.de</a>.</span></p>
 
-    <div id="thesis-sections">
-
-      <!-- Geometry Learning -->
-      <div class="ts-card ts-card-open">
-        <button class="ts-hero" type="button" aria-expanded="false"
-          style="background-image:url('/thesis-topics/geometry/geometry_learning.png');">
-          <div class="ts-hero-inner">
-            <h2>Geometry Learning</h2>
-            <p class="ts-subtitle">
-              <span class="ts-sub-de">Kartographische Generalisierung, geometriesensitives Deep Learning und Analyse räumlicher Muster.</span>
-              <span class="ts-sub-en">Cartographic generalization, geometry-aware deep learning, and spatial pattern analysis.</span>
-            </p>
-            <span class="ts-badge">1 open topic</span>
-          </div>
-        </button>
-        <ul class="ts-list" hidden>
-          <li>
-            <a href="/thesis-topics/thema4/"><strong><span style="color:red">(neu)</span> Geo2Vec-gestützte Simplification und Aggregation von Vektor-Gebäuden</strong></a>
-            <div class="ts-meta">Master: vollständige Simplification + Aggregation Pipeline. Bachelor: Formrekonstruktion mit Geo2Vec.</div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- LLM for Geodata -->
-      <div class="ts-card ts-card-open">
-        <button class="ts-hero" type="button" aria-expanded="false"
-          style="background-image:url('/thesis-topics/llm/llm.png')">
-          <div class="ts-hero-inner">
-            <h2>GeoAI for data access and integration</h2>
-            <p class="ts-subtitle">
-              <span class="ts-sub-de">Große Sprachmodelle für den Zugang zu, die Fusion von und die Interaktion mit Geodaten — von Sprachschnittstellen bis zu agentenbasierten GIS-Workflows.</span>
-              <span class="ts-sub-en">Large language models for geospatial data access, fusion, and interaction — from natural language interfaces to agent-based GIS workflows.</span>
-            </p>
-            <span class="ts-badge">2 open topics</span>
-          </div>
-        </button>
-        <ul class="ts-list" hidden>
-          <li>
-            <a href="/thesis-topics/thema2/"><strong><span style="color:red">(neu)</span> Topologische Qualitätsprüfung von OSM-Daten mit LLM-Unterstützung</strong></a>
-            <div class="ts-meta">Analyse &amp; Reparatur von OSM-Topologiefehlern mit LLM-Hilfestellung.</div>
-          </li>
-          <li>
-            <a href="/thesis-topics/thema1/"><strong>Konversationsbasierte Komfort-Navigation</strong></a>
-            <div class="ts-meta">LLM-gestütztes Chatbot-Interface für fußgängerfreundliche Routen mit Komfortindikatoren und Schattensimulation.</div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- 3D Data Modeling -->
-      <div class="ts-card ts-card-open">
-        <button class="ts-hero ts-hero-third" type="button" aria-expanded="false" style="background-image:none; overflow:hidden;">
-          <img src="/thesis-topics/3d/image1.gif" alt=""
-            style="position:absolute;right:-165px;top:50%;width:52%;height:auto;transform:translateY(-50%) rotate(90deg);clip-path:inset(20% 20% 20% 40%);pointer-events:none;border-radius:0;">
-          <div class="ts-hero-inner">
-            <h2>Urban Scene Understanding</h2>
-            <p class="ts-subtitle">
-              <span class="ts-sub-de">Punktwolkenverarbeitung, LiDAR-/Street-View-Analyse und Verständnis urbaner Szenen aus der Straßenperspektive.</span>
-              <span class="ts-sub-en">Point cloud processing, LiDAR/street-view analytics, and urban scene understanding from ground-level imagery.</span>
-            </p>
-            <span class="ts-badge">3 open topics</span>
-          </div>
-          <span class="ts-image-credit">Image source: <a href="https://wenzhaotang.github.io/Texture2LoD3/" target="_blank" rel="noopener noreferrer">Texture2LoD3</a> (CC BY)</span>
-        </button>
-        <ul class="ts-list" hidden>
-          <li>
-            <a href="/thesis-topics/thema6/"><strong><span style="color:red">(neu)</span> Erkennung von Türen, Fenstern und Balkonen aus Street-Level-Images für LoD2-Modelle</strong></a>
-            <div class="ts-meta">Masterarbeit: Prototypische Erkennung von <strong>Türen, Fenstern und Balkonen</strong> aus Street-Level-Images mit geometrisch-semantischer Integration in LoD2 (Testgebiet Mainz/Wiesbaden).</div>
-          </li>
-          <li>
-            <a href="/thesis-topics/thema5/"><strong><span style="color:red">(neu)</span> VisualLLM-gestützte Analyse visueller Unterschiede zwischen Ost- und Westdeutschland</strong></a>
-            <div class="ts-meta">Untersuchung, ob 30 Jahre nach der Wiedervereinigung weiterhin versteckte visuelle Differenzen im Straßenbild bestehen.</div>
-          </li>
-          <li>
-            <a href="/thesis-topics/thema3/"><strong>Ableitung und Genauigkeitsbewertung gebäuderelevanter Strukturmerkmale</strong></a>
-            <div class="ts-meta">Kooperation: Landeshauptstadt Wiesbaden – Stadtplanungsamt. Aerial Imagery &amp; LiDAR.</div>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <p class="thesis-open-note"><span class="thesis-open-note-de">Wenn Sie sich für meine Forschungsthemen interessieren oder eigene Ideen für ein Abschlussarbeitsthema mitbringen, kontaktieren Sie mich gerne direkt. Wir können gemeinsam prüfen, wie sich Ihre Interessen mit aktuellen Forschungsfragen verbinden lassen, und daraus ein innovatives Proposal entwickeln. Die Betreuung und Ausarbeitung der Arbeit ist sowohl auf Deutsch als auch auf Englisch möglich.</span><span class="thesis-open-note-de thesis-open-note-block">Bachelor- und Masterarbeiten sind gleichermaßen willkommen. Umfang, methodische Tiefe und Schwierigkeitsgrad können je nach Studienphase, Vorkenntnissen und verfügbarer Zeit angepasst werden.</span><span class="thesis-open-note-highlight thesis-open-note-block">Studierende der Hochschule Mainz sowie der TUM sind herzlich eingeladen, sich mit eigenen Themenvorschlägen oder Interesse an den ausgeschriebenen Themen zu melden.</span><span class="thesis-open-note-en">Students from Hochschule Mainz and TUM are warmly invited to get in touch, either with their own topic proposals or with interest in the listed topics.</span></p>
-
-    <script>
-    document.querySelectorAll('#thesis-sections .ts-hero').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var list = btn.parentElement.querySelector('.ts-list');
-        var open = list.hidden;
-        list.hidden = !open;
-        btn.setAttribute('aria-expanded', String(open));
-      });
-    });
-    </script>
-
-    <h2 class="thesis-caption thesis-caption-spaced"><span class="cap-de">Laufende Abschlussarbeiten</span><span class="cap-en">Ongoing Theses</span></h2>
-
-    <div class="thesis-history-list">
-      <div class="thesis-history-row">
-      <span class="thesis-year">2026</span>
-      <span class="thesis-entry"><strong>Ableitung und Genauigkeitsbewertung gebäuderelevanter Strukturmerkmale</strong> (<a href="Aufgabenstellung%201%20-%20Geoinformatik.pdf" target="_blank">LiDAR solution PDF</a>)</span>
-      <span class="thesis-meta-col"><strong>Landeshauptstadt Wiesbaden</strong> &amp; <strong>HS Mainz</strong>, Bachelor GuV</span>
-      </div>
-    </div>
-
-    <h2 class="thesis-caption thesis-caption-spaced"><span class="cap-de">Abgeschlossene Abschlussarbeiten</span><span class="cap-en">Completed Theses</span></h2>
-    <div class="thesis-history-list">
-      <div class="thesis-history-row"><span class="thesis-year">2026</span><span class="thesis-entry"><strong>Colin Vierke</strong>: Automatisierte Georeferenzierung von Bebauungsplänen mittels bildbasierter Verfahren</span><span class="thesis-meta-col"><strong>HS Mainz</strong>, WB Master Geoinformatik</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2026</span><span class="thesis-entry"><strong>Carina Ewald</strong>: Automatisierte Identifikation potentieller Retentionsräume für den dezentralen Wasserrückhalt</span><span class="thesis-meta-col"><strong>HS Mainz</strong>, Bachelor GuV</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2026</span><span class="thesis-entry"><strong>Robert Mosbacher</strong>: Nutzung der Künstlichen Intelligenz zur automatisierten Vektorisierung von Vermessungsrissen</span><span class="thesis-meta-col"><strong>HS Mainz</strong>, WB Master Geoinformatik</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Keying Fan</strong>: Towards Text-conditioned Multi-scale Map Generalization using Diffusion Models</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master Cartography</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Nargiz Amralina</strong>: <a href="https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf" target="_blank">Beyond Distance: Integrating Walkability Indicators for User-Centered Pedestrian Navigation</a></span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master Cartography</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Gawronski, Alexander</strong>: Understanding Urban Visual Perception Variances between Eastern and Western German Cities Using Explainable AI</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master GuG</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Humski, Josipa</strong>: AI-Assisted Interactive System for Analyzing and Visualizing Urban Linkages</span><span class="thesis-meta-col"><strong>TU Munich</strong> and <strong>University of Zagreb</strong>, Master GuG Erasmus</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Liu, Yiding</strong>: Explainable AI for OpenStreetMap Update Demand Prediction</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2025</span><span class="thesis-entry"><strong>Zhang, Qianhe</strong>: Enhancing Fire Evacuation with Mixed Reality-based Situational Information Updating</span><span class="thesis-meta-col"><strong>TU Munich</strong></span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2024</span><span class="thesis-entry"><strong>Ji Huang</strong>: Scene Completion and Dynamic Object Reconstruction from LiDAR Point Clouds</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master RCI</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2024</span><span class="thesis-entry"><strong>Puzhen Zhang</strong>: Natural Language-Based Multi-source Earth Data Q&A System</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master RCI</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2024</span><span class="thesis-entry"><strong>Yanning Wang</strong>: Simplification and aggregation of vector building footprints using deep learning models</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master Cartography</span></div>
-      <div class="thesis-history-row"><span class="thesis-year">2024</span><span class="thesis-entry"><strong>Durmazbilek, Sevval</strong>: Exploring sunny and easily accessible homes: A 3D-Web-GIS platform for apartment seekers in Munich and Helsinki</span><span class="thesis-meta-col"><strong>TU Munich</strong>, Master GuG</span></div>
-    </div>
+    <main id="thesis-content" aria-live="polite">
+      <p role="status">Themen werden geladen …</p>
+    </main>
+    <noscript>Bitte aktivieren Sie JavaScript, um die Themen anzuzeigen.</noscript>
 
     <div class="footer">
-        Powered by <a href="https://gohugo.io/">Hugo</a> with
-        <a href="https://github.com/mrmierzejewski/hugo-theme-console/">Console Theme</a>. 
+        Erstellt mit <a href="https://gohugo.io/">Hugo</a> und dem
+        <a href="https://github.com/mrmierzejewski/hugo-theme-console/">Console-Design</a>.
     </div>
 
     </div>
-  </body>
+  <script src="/thesis-topics/topics.js" defer></script>
+</body>
 </html>
