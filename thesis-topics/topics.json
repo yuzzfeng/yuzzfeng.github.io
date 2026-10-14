@@ -430,6 +430,21 @@
         },
         {
           "title": {
+            "de": "Anwendungsbeispiel"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "[Comfort Routing – interaktive Beispielanwendung](https://comfort-routing.netlify.app/)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Hinweis: Falls die Karte nicht korrekt angezeigt wird, wechseln Sie die Hintergrundkarte (Basiskarte), um die Darstellung korrekt zu laden."
+            }
+          ]
+        },
+        {
+          "title": {
             "de": "Relevante Vorarbeiten"
           },
           "blocks": [
@@ -469,7 +484,7 @@
         "de": "VLM-gestützte Erkennung von Fassadenmerkmalen aus Straßenbildern als Datengrundlage für die Modellierung thermischer Exposition"
       },
       "levels": [
-        "Master"
+        "Bachelor"
       ],
       "tags": [
         "vlm"
@@ -481,7 +496,7 @@
           "text": "KI-generierte Illustration"
         }
       },
-      "scopeNote": "Master — Erkennung und Validierung sichtbarer Fassadenmerkmale mit Bild-Sprach-Modellen als Grundlage für die zukünftige Modellierung thermischer Exposition.",
+      "scopeNote": "Bachelor — Prototypische Erkennung und Validierung ausgewählter sichtbarer Fassadenmerkmale in einem begrenzten Testgebiet mit Bild-Sprach-Modellen als Grundlage für die zukünftige Modellierung thermischer Exposition.",
       "sections": [
         {
           "title": {
@@ -560,7 +575,7 @@
                 "Reproduzierbarer VLM-basierter Ablauf zur Erkennung ausgewählter Fassadenmerkmale.",
                 "Dokumentierte Referenzstichprobe und quantitative Evaluation mit Fehler- und Unsicherheitsanalyse.",
                 "Räumlich zugeordneter Merkmalsdatensatz mit Qualitätsangaben und Empfehlungen zur Nutzung in zukünftigen thermischen Expositionsmodellen.",
-                "Dokumentierter Quellcode und schriftliche Masterarbeit."
+                "Dokumentierter Quellcode und schriftliche Bachelorarbeit."
               ]
             }
           ]
