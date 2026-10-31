@@ -148,5 +148,29 @@
     "reference": "",
     "link": "https://www.sciencedirect.com/science/article/pii/S1569843225004728",
     "doi": "https://doi.org/10.1016/j.jag.2025.104825"
+  },
+  {
+    "title": "A Scale-Adaptive Framework for Building Generalization via Instruction-Guided Diffusion and Geometry-Aware Vectorization",
+    "year": "2026",
+    "date": "2026-09-09",
+    "displayDate": "Sep. 9, 2026",
+    "authors": "Fan, K., Qian, N., Zhou, Z., Sester, M., & Feng, Y.",
+    "image": "/images/2026_diffusion_generalization_fig4.png",
+    "imageFit": "contain",
+    "publication": "Journal of Geovisualization and Spatial Analysis, 10, 44.",
+    "link": "https://link.springer.com/article/10.1007/s41651-026-00282-3",
+    "doi": "https://doi.org/10.1007/s41651-026-00282-3"
+  },
+  {
+    "title": "How pedestrians actually jaywalk: Fine-grained adaptive strategies revealed by roadside LiDAR",
+    "year": "2026",
+    "date": "2026-09",
+    "displayDate": "Sep. 2026",
+    "authors": "Xue, J., Liu, Z., Feng, Y., Huang, C., & Meng, L.",
+    "image": "/images/2026_jaywalking_fig4.jpg",
+    "imageFit": "contain",
+    "publication": "Transportation Research Interdisciplinary Perspectives, 39, 102234.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S2590198226003994",
+    "doi": "https://doi.org/10.1016/j.trip.2026.102234"
   }
 ]
