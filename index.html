@@ -5,19 +5,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Prof. Dr.-Ing. Yu Feng</title>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <meta name="googlebot" content="index,follow,snippet,archive">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/terminal-0.7.4.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/console.css">
-    
+
       <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-       
+
       <link href="https://yuzzfeng.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Prof. Dr.-Ing. Yu Feng" />
     <meta property="og:title" content="Prof. Dr.-Ing. Yu Feng" />
 <meta property="og:description" content="" />
@@ -42,13 +42,14 @@
                 <li><a href="https://yuzzfeng.github.io/projects/" typeof="ListItem">projects/</a></li>
                 <li><a href="https://yuzzfeng.github.io/publications/" typeof="ListItem">publications/</a></li>
                 <li><a href="https://yuzzfeng.github.io/thesis-topics/" typeof="ListItem">thesis-topics/</a></li>
+                <li><a href="https://yuzzfeng.github.io/software-data/" typeof="ListItem">software &amp; data/</a></li>
             </ul>
           </nav>
         </div>
     </div>
 
     <div class="container animated zoomIn fast" >
-        
+
 <p style="display: flex; justify-content: flex-end; align-items: center;"> 
     <img src="/images/ikg_homepage_feng.jpg" style="max-width: 25%; height: auto;">
 </p>
@@ -79,7 +80,7 @@ I am Professor of Applied Geoinformatics at Hochschule Mainz - University of App
 <li>Mobile Laser Scanning (MLS) data processing and modeling</li>
 </ul>
 
-<h4>I am looking for highly self-motivated and talented Bachelor and Master students. Please feel free to contact me via email at <a href="mailto:yufeng@hs-mainz.de">yufeng@hs-mainz.de</a> or <a href="mailto:y.feng@tum.de">y.feng@tum.de</a>.</h4>
+<h4>I am looking for highly self-motivated and talented Bachelor and Master students. Please feel free to contact me via email at <a href="mailto:yu.feng@hs-mainz.de">yu.feng@hs-mainz.de</a>.</h4>
 
 <h1>Latest news</h1>
 
@@ -345,6 +346,7 @@ I am Professor of Applied Geoinformatics at Hochschule Mainz - University of App
               var a = document.createElement('a');
               a.href = item.link;
               a.title = item.title || '';
+              if (!item.logo) a.style.gridTemplateColumns = '24% 1fr';
               a.textContent = item.title || '';
               titleEl.appendChild(a);
 
@@ -406,11 +408,13 @@ I am Professor of Applied Geoinformatics at Hochschule Mainz - University of App
               a.target = '_blank';
               a.rel = 'noopener noreferrer';
               a.title = item.title || '';
+              if (!item.logo) a.style.gridTemplateColumns = '24% 1fr';
 
               var thumb = document.createElement('div');
               thumb.className = 'home-pub-thumb';
               var img = document.createElement('img');
               img.src = item.image;
+              img.style.objectFit = item.imageFit || 'cover';
               img.alt = item.title || '';
               thumb.appendChild(img);
               a.appendChild(thumb);
@@ -449,7 +453,7 @@ I am Professor of Applied Geoinformatics at Hochschule Mainz - University of App
                 logoImg.alt = item.publication || 'Journal logo';
                 logoWrapper.appendChild(logoImg);
               }
-              a.appendChild(logoWrapper);
+              if (item.logo) a.appendChild(logoWrapper);
 
               container.appendChild(a);
             });

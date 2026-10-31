@@ -447,3 +447,7 @@ figure {
         padding-top: 5px;
     }
 }
+
+/* Navigation remains usable with the Software & Data section. */
+.terminal-nav { flex-wrap: wrap; gap: 8px 24px; }
+.terminal-menu ul { flex-wrap: wrap; }
