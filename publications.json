@@ -20,8 +20,8 @@
     "image": "/images/acl_2026_spatial_memory.png",
     "publication": "Association for Computational Linguistics (ACL) 2026 Main Conference",
     "logo": "/images/acl_2026_logo.png",
-    "link": "https://arxiv.org/abs/2510.04195",
-    "doi": "https://arxiv.org/abs/2510.04195"
+    "link": "https://aclanthology.org/2026.acl-long.2222/",
+    "doi": "https://aclanthology.org/2026.acl-long.2222/"
   },
   {
     "title": "GeoAI for map generalization in multi-scale cartography: foundations, a research agenda, and interdisciplinary perspectives",
@@ -159,7 +159,8 @@
     "imageFit": "contain",
     "publication": "Journal of Geovisualization and Spatial Analysis, 10, 44.",
     "link": "https://link.springer.com/article/10.1007/s41651-026-00282-3",
-    "doi": "https://doi.org/10.1007/s41651-026-00282-3"
+    "doi": "https://doi.org/10.1007/s41651-026-00282-3",
+    "logo": "/images/jgsa_cover.webp"
   },
   {
     "title": "How pedestrians actually jaywalk: Fine-grained adaptive strategies revealed by roadside LiDAR",
@@ -171,6 +172,7 @@
     "imageFit": "contain",
     "publication": "Transportation Research Interdisciplinary Perspectives, 39, 102234.",
     "link": "https://www.sciencedirect.com/science/article/pii/S2590198226003994",
-    "doi": "https://doi.org/10.1016/j.trip.2026.102234"
+    "doi": "https://doi.org/10.1016/j.trip.2026.102234",
+    "logo": "/images/trip_cover.png"
   }
 ]

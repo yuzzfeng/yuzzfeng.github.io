@@ -448,6 +448,31 @@ figure {
     }
 }
 
-/* Navigation remains usable with the Software & Data section. */
-.terminal-nav { flex-wrap: wrap; gap: 8px 24px; }
-.terminal-menu ul { flex-wrap: wrap; }
+/* Keep the name and all tabs on one shared navigation row. */
+.terminal-nav { display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center; gap:16px; }
+.terminal-logo { flex:0 0 auto; min-width:0; }
+.terminal-logo .logo { white-space:nowrap; }
+.terminal-menu { flex:1 1 auto; min-width:0; }
+.terminal-menu ul { display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center; justify-content:flex-end; gap:14px; margin:0; }
+.terminal-menu li { flex:0 1 auto; min-width:0; margin:0; text-align:center; line-height:1.25; }
+.terminal-menu li a { white-space:normal; overflow-wrap:anywhere; }
+@media(max-width:850px) {
+  .terminal-nav { flex-direction:row; align-items:center; gap:10px; }
+  .terminal-menu ul { justify-content:flex-end; gap:8px; }
+  .terminal-menu li { margin:0; font-size:12px; }
+}
+@media(max-width:600px) {
+  .terminal-logo { flex-shrink:1; max-width:42%; }
+  .terminal-logo .logo { font-size:11px; white-space:normal; overflow-wrap:anywhere; }
+  .terminal-menu ul { gap:5px; }
+  .terminal-menu li { font-size:10px; }
+}
+/* White figure panels keep scientific images readable in either colour scheme. */
+#home-pub-grid .home-pub-thumb, #pub-grid .pub-thumb { background:#fff; }
+#home-pub-grid .home-pub-thumb, #pub-grid .pub-thumb { aspect-ratio:auto; }
+#home-pub-grid .home-pub-thumb img, #pub-grid .pub-thumb img { height:auto; background:#fff; }
+@media(max-width:600px) {
+  .terminal-logo { flex:0 0 auto; max-width:none; }
+  .terminal-logo .logo { font-size:10px; white-space:nowrap; }
+  .terminal-menu li { font-size:9px; }
+}

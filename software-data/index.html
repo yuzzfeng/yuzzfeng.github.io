@@ -12,12 +12,16 @@
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
     <link rel="stylesheet" href="https://yuzzfeng.github.io/hugo-theme-console/css/console.css">
 <style>
-.resource { margin: 2rem 0 3rem; }
-.resource-preview { display: block; margin: 1rem 0; }
-.resource-preview::after { display: none !important; }
-.resource-preview img { display: block; width: 100%; height: auto; border: 1px solid var(--secondary-color); border-radius: 6px; }
-.terminal-nav { flex-wrap: wrap; gap: 8px 24px; }
-.terminal-menu ul { flex-wrap: wrap; }
+.resource-list { display:flex; flex-direction:column; gap:14px; }
+.resource-card { display:grid; grid-template-columns:30% 1fr; align-items:center; gap:16px; padding:14px 16px; border:1px solid var(--secondary-color); border-radius:8px; }
+.resource-thumb { display:block; background:#fff; border-radius:6px; overflow:hidden; }
+.resource-thumb::after { display:none !important; }
+.resource-thumb img { display:block; width:100%; height:auto; }
+.resource-meta { min-width:0; }
+.resource-meta h2 { margin:0; font-size:16px; line-height:1.4; }
+.resource-meta p { font-size:13px; line-height:1.5; margin:8px 0 0; }
+.resource-links { margin-top:10px !important; }
+@media(max-width:600px) { .resource-card { grid-template-columns:38% 1fr; gap:10px; padding:12px; } }
 </style>
 </head>
 <body class="terminal">
@@ -27,38 +31,37 @@
             <div class="logo terminal-prompt">
               <a href="https://yuzzfeng.github.io/" class="no-style">Prof. Dr.-Ing. Yu Feng</a>:~# 
               <a href="https://yuzzfeng.github.io/software-data">software &amp; data</a>/</div></header>
-          <nav class="terminal-menu">
-            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
-                <li><a href="https://yuzzfeng.github.io/about/" typeof="ListItem">about/</a></li>
-                <li><a href="https://yuzzfeng.github.io/projects/" typeof="ListItem">projects/</a></li>
-                <li><a href="https://yuzzfeng.github.io/publications/" typeof="ListItem">publications/</a></li>
-                <li><a href="https://yuzzfeng.github.io/thesis-topics/" typeof="ListItem">thesis-topics/</a></li>
-                <li><a href="https://yuzzfeng.github.io/software-data/" typeof="ListItem">software &amp; data/</a></li>
-            </ul>
-          </nav>
+          <nav class="terminal-menu"><ul vocab="https://schema.org/" typeof="BreadcrumbList">
+<li><a href="https://yuzzfeng.github.io/about/" typeof="ListItem">about/</a></li>
+<li><a href="https://yuzzfeng.github.io/projects/" typeof="ListItem">projects/</a></li>
+<li><a href="https://yuzzfeng.github.io/publications/" typeof="ListItem">publications/</a></li>
+<li><a href="https://yuzzfeng.github.io/software-data/" typeof="ListItem">software &amp; data/</a></li>
+<li><a href="https://yuzzfeng.github.io/thesis-topics/" typeof="ListItem">thesis-topics/</a></li>
+</ul></nav>
         </div>
     </div>
 
     <div class="container animated zoomIn fast" >
 
 <h1>Software &amp; Data</h1>
-<p>Software and datasets for geospatial visualisation and cartographic generalisation.</p>
-
-<section class="resource">
-  <h2>Basemap3D</h2>
-  <a class="resource-preview" href="https://yfeng-hsm.github.io/Basemap3D/examples/" target="_blank" rel="noopener noreferrer">
-    <img src="/images/basemap3d-preview.jpg" alt="Basemap3D homepage preview: build interactive 3D maps with a few lines of Python" width="1320" height="350">
-  </a>
-  <p>Create interactive 3D city maps with a few lines of Python. Combine city meshes, buildings, terrain, imagery, trees and your own geospatial data, then display the map in Jupyter or Colab or export it as HTML.</p>
-  <p><a href="https://yfeng-hsm.github.io/Basemap3D/examples/" target="_blank" rel="noopener noreferrer">Explore interactive examples →</a> &nbsp;·&nbsp; <a href="https://github.com/yfeng-hsm/Basemap3D" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
-</section>
-
-<section class="resource">
-  <h2>MapGen — Building generalisation data</h2>
-  <p>Raster and vector datasets for learning cartographic building generalisation, accompanying “Learning cartographic building generalization with deep convolutional neural networks” (Feng, Thiemann &amp; Sester, 2019).</p>
-  <p>The repository provides dataset links, access instructions and the recommended citation.</p>
-  <p><a href="https://github.com/yuzzfeng/MapGen" target="_blank" rel="noopener noreferrer">Dataset and repository →</a></p>
-</section>
+<div class="resource-list">
+  <article class="resource-card">
+    <a class="resource-thumb" href="https://yfeng-hsm.github.io/Basemap3D/examples/" target="_blank" rel="noopener noreferrer"><img src="/images/basemap3d-preview.png" alt="Basemap3D examples with Python code and an interactive Mainz 3D city map" width="1181" height="787"></a>
+    <div class="resource-meta">
+      <h2><a href="https://yfeng-hsm.github.io/Basemap3D/examples/" target="_blank" rel="noopener noreferrer">Basemap3D</a></h2>
+      <p>Create interactive 3D city maps with a few lines of Python. Combine city models, imagery, trees and your own geospatial data; display in Jupyter or Colab, or export as HTML.</p>
+      <p class="resource-links"><a href="https://yfeng-hsm.github.io/Basemap3D/examples/" target="_blank" rel="noopener noreferrer">Examples →</a> · <a href="https://github.com/yfeng-hsm/Basemap3D" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+  </article>
+  <article class="resource-card">
+    <a class="resource-thumb" href="https://github.com/yuzzfeng/MapGen" target="_blank" rel="noopener noreferrer"><img src="/images/mapgen_dataset_fig10.png" alt="Building generalisation dataset: study area, training and test regions, and maps at different scales"></a>
+    <div class="resource-meta">
+      <h2><a href="https://github.com/yuzzfeng/MapGen" target="_blank" rel="noopener noreferrer">MapGen</a></h2>
+      <p>Raster and vector datasets for learning cartographic building generalisation. The repository includes data access instructions and citation details.</p>
+      <p class="resource-links"><a href="https://github.com/yuzzfeng/MapGen" target="_blank" rel="noopener noreferrer">Dataset &amp; repository →</a></p>
+    </div>
+  </article>
+</div>
 
 <div class="footer">
     Powered by <a href="https://gohugo.io/">Hugo</a> with
