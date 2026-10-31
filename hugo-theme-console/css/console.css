@@ -480,4 +480,4 @@ figure {
 /* Wrap labels at spaces only; keep each word intact. */
 .terminal-menu li { min-width:min-content; }
 .terminal-menu li a { word-break:keep-all; overflow-wrap:normal; hyphens:none; }
-.terminal-menu li a:not([href$="/software-data/"]) { white-space:nowrap; }
+.terminal-menu li a:not([href$="/software-data/"]):not([href$="/thesis-topics/"]) { white-space:nowrap; }
