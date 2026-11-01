@@ -5,7 +5,7 @@ body.terminal .container { width:100%; max-width:1120px; padding-left:24px; padd
 body.terminal .terminal-nav {
   display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center;
   justify-content:space-between; gap:24px; padding:24px 0 20px; margin-bottom:32px;
-  border-bottom:1px solid color-mix(in srgb,var(--secondary-color) 45%,transparent);
+  border-bottom:0;
 }
 body.terminal .terminal-logo { flex:0 0 auto; max-width:none; min-width:0; }
 body.terminal .terminal-logo .logo { margin:0; padding:0; font-size:16px; line-height:1.5; white-space:nowrap; letter-spacing:normal; }
