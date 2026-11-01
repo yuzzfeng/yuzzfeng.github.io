@@ -1,0 +1,114 @@
+/* Shared typography, navigation and responsive content layout. */
+:root { --global-font-size:16px; --global-line-height:1.6em; }
+body.terminal { font-size:16px; line-height:1.6; }
+body.terminal .container { width:100%; max-width:1120px; padding-left:24px; padding-right:24px; }
+body.terminal .terminal-nav {
+  display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center;
+  justify-content:space-between; gap:24px; padding:24px 0 20px; margin-bottom:32px;
+  border-bottom:1px solid color-mix(in srgb,var(--secondary-color) 45%,transparent);
+}
+body.terminal .terminal-logo { flex:0 0 auto; max-width:none; min-width:0; }
+body.terminal .terminal-logo .logo { margin:0; padding:0; font-size:16px; line-height:1.5; white-space:nowrap; letter-spacing:normal; }
+body.terminal .terminal-prompt::after { content:none; display:none; animation:none; }
+body.terminal .terminal-menu { flex:0 1 auto; min-width:0; }
+body.terminal .terminal-menu ul { display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center; justify-content:flex-end; gap:12px 20px; padding:0; margin:0; }
+body.terminal .terminal-menu li { flex:0 1 auto; min-width:min-content; margin:0; padding:0; font-size:14px; line-height:1.5; text-align:left; }
+body.terminal .terminal-menu li a { display:block; padding:6px 0; font-size:14px; white-space:normal; word-break:keep-all; overflow-wrap:normal; hyphens:none; }
+body.terminal .terminal-menu li a[aria-current="page"] { color:var(--font-color); text-decoration:underline; text-underline-offset:5px; }
+body.terminal h1 { margin:0 0 24px; font-size:24px; line-height:1.4; overflow-wrap:break-word; }
+body.terminal h1::after { display:none; content:none; }
+body.terminal h2 { font-size:20px; line-height:1.45; }
+body.terminal p, body.terminal li { line-height:1.6; }
+body.terminal img { max-width:100%; }
+body.terminal .gallery-image { background:#fff; }
+body.terminal .footer { position:static; width:auto; margin-top:48px; padding-top:16px; font-size:13px; line-height:1.6; }
+
+/* The home and publications pages use the same publication row. */
+body.terminal #home-pub-grid, body.terminal #pub-grid { display:flex; flex-direction:column; gap:18px; }
+body.terminal #home-pub-grid .home-pub,
+body.terminal #pub-grid .pub-tile {
+  display:grid; grid-template-columns:30% minmax(0,1fr) 9%; align-items:center;
+  gap:16px; padding:16px; border-radius:8px; overflow:visible;
+  border:1px solid color-mix(in srgb,var(--secondary-color) 45%,transparent);
+  background:var(--background-color); color:var(--font-color);
+}
+body.terminal #pub-grid .pub-tile-row { display:contents; padding:0; }
+body.terminal #home-pub-grid .home-pub-thumb,
+body.terminal #pub-grid .pub-thumb { aspect-ratio:auto; width:100%; border-radius:6px; overflow:hidden; background:#fff; }
+body.terminal #home-pub-grid .home-pub-thumb img,
+body.terminal #pub-grid .pub-thumb img { display:block; width:100%; height:auto; object-fit:contain; background:#fff; }
+body.terminal #home-pub-grid .home-pub-meta,
+body.terminal #pub-grid .pub-tile-meta { min-width:0; padding:0; }
+body.terminal #home-pub-grid .home-pub-title,
+body.terminal #pub-grid .pub-tile-title {
+  display:block; font-size:18px; line-height:1.45; overflow:visible;
+  -webkit-line-clamp:unset; margin:0; color:var(--font-color);
+}
+body.terminal #home-pub-grid .home-pub-authors,
+body.terminal #pub-grid .pub-tile-authors { font-size:14px; line-height:1.6; margin-top:10px; color:var(--secondary-color); }
+body.terminal #home-pub-grid .home-pub-publine,
+body.terminal #pub-grid .pub-tile-publine { font-size:14px; line-height:1.5; margin-top:6px; color:var(--secondary-color); }
+body.terminal #home-pub-grid .home-pub-logo,
+body.terminal #pub-grid .pub-tile-logo { width:100%; height:auto; aspect-ratio:auto; padding:3px; background:#fff; box-shadow:none; }
+body.terminal #home-pub-grid .home-pub-logo img,
+body.terminal #pub-grid .pub-tile-logo img { width:100%; height:auto; max-height:none; object-fit:contain; }
+body.terminal #home-pub-grid .home-pub.no-journal-logo,
+body.terminal #pub-grid .pub-tile.no-journal-logo { grid-template-columns:30% minmax(0,1fr); }
+
+/* Software and data follow the same spacing and image treatment. */
+body.terminal .resource-list { display:flex; flex-direction:column; gap:18px; }
+body.terminal .resource-card {
+  display:grid; grid-template-columns:30% minmax(0,1fr); gap:16px; align-items:center;
+  padding:16px; border:1px solid color-mix(in srgb,var(--secondary-color) 45%,transparent); border-radius:8px;
+}
+body.terminal .resource-thumb { background:#fff; overflow:hidden; border-radius:6px; }
+body.terminal .resource-thumb img { display:block; width:100%; height:auto; background:#fff; }
+body.terminal .resource-meta h2 { font-size:18px; line-height:1.45; margin:0; }
+body.terminal .resource-meta p { font-size:14px; line-height:1.6; margin:10px 0 0; }
+
+@media(max-width:850px) {
+  body.terminal .terminal-nav { flex-direction:column; align-items:flex-start; gap:16px; }
+  body.terminal .terminal-menu { width:100%; }
+  body.terminal .terminal-menu ul { flex-wrap:wrap; justify-content:flex-start; gap:6px 20px; }
+  body.terminal .terminal-menu li { flex:0 0 auto; font-size:14px; }
+  body.terminal .terminal-menu li a { font-size:14px; white-space:nowrap; min-height:36px; }
+}
+@media(max-width:600px) {
+  body.terminal .container { padding-left:20px; padding-right:20px; }
+  body.terminal .terminal-nav { padding:24px 0 20px; margin-bottom:28px; gap:12px; }
+  body.terminal .terminal-logo .logo { font-size:16px; white-space:nowrap; }
+  body.terminal h1 { font-size:21px; margin-bottom:24px; }
+  body.terminal h2 { font-size:18px; }
+  body.terminal figure { margin:16px 0; }
+  body.terminal #home-pub-grid .home-pub,
+  body.terminal #pub-grid .pub-tile {
+    grid-template-columns:48px minmax(0,1fr) !important;
+    align-items:start; gap:0 14px; padding:16px;
+  }
+  body.terminal #home-pub-grid .home-pub-meta,
+  body.terminal #pub-grid .pub-tile-meta { display:contents; }
+  body.terminal #home-pub-grid .home-pub-thumb,
+  body.terminal #pub-grid .pub-thumb { grid-column:1 / -1; grid-row:1; margin-bottom:20px; }
+  body.terminal #home-pub-grid .home-pub-title,
+  body.terminal #pub-grid .pub-tile-title { grid-column:1 / -1; grid-row:2; font-size:18px; line-height:1.5; margin:0 0 12px; }
+  body.terminal #home-pub-grid .home-pub-authors,
+  body.terminal #pub-grid .pub-tile-authors { grid-column:1 / -1; grid-row:3; font-size:14px; line-height:1.6; margin:0 0 16px; }
+  body.terminal #home-pub-grid .home-pub-logo,
+  body.terminal #pub-grid .pub-tile-logo { grid-column:1; grid-row:4; align-self:center; width:48px; padding:0; }
+  body.terminal #home-pub-grid .home-pub-logo img,
+  body.terminal #pub-grid .pub-tile-logo img { max-height:70px; width:48px; height:auto; }
+  body.terminal #home-pub-grid .home-pub-publine,
+  body.terminal #pub-grid .pub-tile-publine { grid-column:2; grid-row:4; align-self:center; font-size:14px; line-height:1.6; margin:0; }
+  body.terminal #home-pub-grid .no-journal-logo .home-pub-publine,
+  body.terminal #pub-grid .no-journal-logo .pub-tile-publine { grid-column:1 / -1; }
+  body.terminal .resource-card { grid-template-columns:minmax(0,1fr); gap:20px; padding:16px; }
+  body.terminal .resource-meta h2 { font-size:18px; }
+  body.terminal .resource-meta p { font-size:16px; line-height:1.6; }
+  body.terminal .project-card,
+  body.terminal #home-news-list .home-news-card { display:flex; flex-direction:column; gap:6px; }
+  body.terminal .project-date,
+  body.terminal #home-news-list .home-news-date { margin:0; font-size:14px; }
+  body.terminal .project-body,
+  body.terminal #home-news-list .home-news-body { min-width:0; }
+  body.terminal .project-summary { font-size:16px; }
+}
