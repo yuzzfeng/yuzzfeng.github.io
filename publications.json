@@ -160,7 +160,8 @@
     "publication": "Journal of Geovisualization and Spatial Analysis, 10, 44.",
     "link": "https://link.springer.com/article/10.1007/s41651-026-00282-3",
     "doi": "https://doi.org/10.1007/s41651-026-00282-3",
-    "logo": "/images/jgsa_cover.webp"
+    "logo": "/images/jgsa_cover.webp",
+    "imageCropTop": 13.2
   },
   {
     "title": "How pedestrians actually jaywalk: Fine-grained adaptive strategies revealed by roadside LiDAR",
