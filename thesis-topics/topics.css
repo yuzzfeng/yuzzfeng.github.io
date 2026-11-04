@@ -46,7 +46,14 @@
 .thesis-number { font-weight: 700; margin-right: 8px; }
 .thesis-detail-image { margin: 24px 0; }
 .thesis-detail-image img { display: block; max-width: 100%; max-height: 420px; object-fit: contain; }
+.thesis-detail-image-large { overflow: hidden; }
+.thesis-detail-image-large img { max-height: 640px; transform: scale(1.35); }
 .thesis-detail-image figcaption { font-size: 12px; color: #595959; margin-top: 6px; }
+.thesis-comparison-gallery { margin: 28px 0; }
+.thesis-comparison-image { margin: 18px 0; }
+.thesis-interactive-demo { margin: 32px 0; }
+.thesis-demo-frame { display: block; width: 100%; height: clamp(420px, 70vh, 760px); border: 0; border-radius: 8px; background: #f1f5f9; }
+.thesis-demo-link { display: inline-block; margin-top: 8px; }
 .thesis-detail-section[lang="en"] { font-size: .85em; color: #595959; }
 .thesis-filters { margin: 24px 0 16px; }
 .thesis-filters fieldset { border: 0; margin: 0 0 16px; padding: 0; min-width: 0; }
@@ -98,6 +105,13 @@
 .thesis-thumbnail img { border-radius: 10px; }
 .thesis-number { color: #64748b; font-variant-numeric: tabular-nums; }
 .thesis-topic-body > a { line-height: 1.6; }
+.thesis-status-badge {
+  display: inline-flex; align-items: center; gap: 6px; margin-left: 10px; padding: 2px 9px 2px 7px;
+  border: 1px solid #86a987; border-left-width: 4px; border-radius: 3px 12px 12px 3px;
+  background: #eff8ef; color: #245b2a; font: 700 11px/1.5 system-ui, sans-serif;
+  vertical-align: middle; white-space: nowrap;
+}
+.thesis-status-badge::before { width: 6px; height: 6px; border-radius: 50%; background: currentColor; content: ""; }
 @media (max-width: 600px) {
   .thesis-filters { padding: 16px; border-radius: 12px; }
   .thesis-topic-list .thesis-topic-row { gap: 14px; }

@@ -78,6 +78,11 @@
     });
     return tags;
   }
+  function statusBadge(status) {
+    const badge = el('span', 'thesis-status-badge', status);
+    badge.setAttribute('aria-label', 'Status: ' + status);
+    return badge;
+  }
   function overview(data) {
     main.append(german('h1', data.page.title, 'thesis-caption'));
     if (data.page.invitation) {
@@ -149,6 +154,7 @@
         const title = el('a');
         title.href = topicUrl(topic.id);
         title.append(el('span', 'thesis-number', `${index + 1}.`), el('strong', '', topic.title.de));
+        if (topic.status) title.append(statusBadge(topic.status));
         body.append(title);
 
         body.append(topicTags(data, topic));
@@ -213,12 +219,45 @@
     document.title = topic.title.de + ' — Yu Feng';
     const title = german('h1', topic.title);
     title.prepend(el('span', 'thesis-number', `${index + 1}.`));
+    if (topic.status) title.append(statusBadge(topic.status));
     main.append(title, el('p', '', topic.scopeNote || topic.levels.join(' / ')));
     main.append(topicTags(data, topic));
     if (topic.image) {
-      const figure = el('figure', 'thesis-detail-image');
+      const figure = el('figure', topic.largeImage ? 'thesis-detail-image thesis-detail-image-large' : 'thesis-detail-image');
       figure.append(picture(topic, false), credit(topic.image));
       main.append(figure);
+    }
+    if (topic.comparisonImages && topic.comparisonImages.length) {
+      const gallery = el('section', 'thesis-comparison-gallery');
+      gallery.append(german('h3', { de: 'Vergleichsansichten' }));
+      topic.comparisonImages.forEach(image => {
+        const figure = el('figure', 'thesis-detail-image thesis-comparison-image');
+        const img = el('img');
+        img.src = base + 'images/' + image.file;
+        img.alt = image.alt;
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        figure.append(img, el('figcaption', '', image.caption));
+        gallery.append(figure);
+      });
+      main.append(gallery);
+    }
+    if (topic.interactiveDemo) {
+      const demo = el('section', 'thesis-interactive-demo');
+      demo.append(german('h3', { de: 'Interaktive 3D-Ansicht' }));
+      demo.append(el('p', '', topic.interactiveDemo.description));
+      const frame = el('iframe', 'thesis-demo-frame');
+      frame.src = safeUrl(topic.interactiveDemo.url);
+      frame.title = topic.interactiveDemo.title;
+      frame.loading = 'lazy';
+      frame.allowFullscreen = true;
+      demo.append(frame);
+      const link = el('a', 'thesis-demo-link', '3D-Ansicht in einem neuen Tab öffnen');
+      link.href = safeUrl(topic.interactiveDemo.url);
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      demo.append(link);
+      main.append(demo);
     }
     topic.sections.forEach(section => {
       const box = el('section', 'thesis-detail-section');

@@ -55,7 +55,7 @@
       },
       "scopeNote": "Bachelor — Untersuchung einer ausgewählten Region oder Bahnstrecke anhand mehrjähriger Stationsdaten.",
       "cover": {
-        "file": "rail-delay-cover.png",
+        "file": "rail-delay-cover.jpg",
         "alt": "KI-generierte Illustration zur Ausbreitung von Verspätungen im Bahnnetz",
         "credit": { "text": "KI-generierte Illustration" }
       },
@@ -177,7 +177,7 @@
         }
       },
       "cover": {
-        "file": "geo2vec-cover.png",
+        "file": "geo2vec-cover.jpg",
         "alt": "KI-generierte Illustration zur Vereinfachung und Aggregation von Gebäudegrundrissen",
         "credit": { "text": "KI-generierte Illustration" }
       },
@@ -272,7 +272,7 @@
         "Bachelor"
       ],
       "image": {
-        "file": "osm-topologie-llm.png",
+        "file": "osm-topologie-llm.jpg",
         "alt": "KI-generierte Illustration eines OSM-Wegenetzes mit fehlender Verbindung und einem topologisch verbundenen Korrekturvorschlag",
         "credit": {
           "text": "KI-generierte Illustration"
@@ -365,37 +365,50 @@
       ]
     },
     {
-      "id": "thema1",
+      "id": "lidar-fussgaengerinteraktionen",
       "title": {
-        "de": "Konversationsbasierte Komfort-Navigation"
+        "de": "Analyse und Visualisierung von Fußgängerinteraktionen an einer Kreuzung anhand stationärer LiDAR-Beobachtungen"
       },
-      "levels": [
-        "Bachelor"
-      ],
-      "image": {
-        "file": "comfort-navigation.png",
-        "alt": "KI-generierte Illustration einer dialogbasierten Fußgängernavigation mit einer schattigen Route durch ein Stadtviertel",
+      "cover": {
+        "file": "lidar-interactions-cover.jpg",
+        "alt": "Feste LiDAR-Station beobachtet Fußgängerinteraktionen und Bewegungsbahnen an einer Straßenkreuzung",
         "credit": {
           "text": "KI-generierte Illustration"
         }
       },
+      "levels": [
+        "Bachelor"
+      ],
+      "tags": [
+        "spatial-analysis",
+        "visualization"
+      ],
+      "image": {
+        "file": "lidar-intersection.gif",
+        "alt": "Stationäre LiDAR-Punktwolke einer Straßenkreuzung"
+      },
+      "largeImage": true,
+      "scopeNote": "Bachelorarbeit — Umfang und Komplexität werden passend abgestimmt; untersucht wird ein ausgewählter Zeitraum und eine begrenzte Zahl von Interaktionsmustern an einer stationär mit LiDAR beobachteten Kreuzung.",
       "sections": [
         {
+          "title": {
+            "de": "Forschungsfrage"
+          },
           "blocks": [
             {
               "type": "paragraph",
-              "text": "Aufbauend auf bestehenden Arbeiten wird ein LLM-gestützter Dialog für komfortorientierte Fußgängerrouten prototypisch umgesetzt. Im Mittelpunkt steht ein ausgewählter Komfortindikator, etwa Schatten oder Zugänglichkeit, oder ein klar abgegrenzter Teil der interaktiven Routenabfrage."
+              "text": "Wie bewegen sich Fußgängerinnen und Fußgänger an einer Kreuzung, und welche wiederkehrenden Interaktionen lassen sich aus längerfristigen Beobachtungen eines festen LiDAR-Standorts erkennen? Untersucht werden ausgewählte Situationen, etwa gemeinsames Queren, Begegnungen oder kurzes Warten."
             }
           ]
         },
         {
           "title": {
-            "de": "Motivation"
+            "de": "Datengrundlage"
           },
           "blocks": [
             {
               "type": "paragraph",
-              "text": "Fußgänger wählen Routen nicht nur nach der kürzesten Distanz. Schatten, Zugänglichkeit und weitere Komfortindikatoren beeinflussen die Entscheidung, sind aber oft über verschiedene Datensätze und Werkzeuge verteilt. Eine konversationelle Schnittstelle kann diese Präferenzen verständlich erfassen und in nachvollziehbare Routenvorschläge übersetzen."
+              "text": "Verwendet werden verfügbare LiDAR-Beobachtungen eines dauerhaft installierten Sensors an einer Kreuzung. Zu Beginn werden Zeitraum, Datenformat, Erfassungsabdeckung, Zeitstempel und vorhandene Objekt- oder Trajektorienkennungen geprüft. Die Untersuchung wird auf einen geeigneten Ausschnitt und eine kleine, anhand der Daten realisierbare Auswahl von Interaktionsmustern begrenzt."
             }
           ]
         },
@@ -407,7 +420,11 @@
             {
               "type": "list",
               "items": [
-                "Bachelor: Einen ausgewählten Komfortindikator oder einen klar abgegrenzten Teil des Dialog- und Routenworkflows prototypisch umsetzen und an Beispielrouten prüfen."
+                "LiDAR-Daten oder bereitgestellte Trajektorien einlesen, zeitlich und räumlich aufbereiten und Datenqualität sowie Abdeckung dokumentieren.",
+                "Fußgängertrajektorien und ausgewählte Interaktionen anhand nachvollziehbarer räumlicher und zeitlicher Kriterien untersuchen.",
+                "Bewegungsmuster für ausgewählte Tageszeiten oder Beobachtungszeiträume vergleichen, sofern die Datenabdeckung dies zulässt.",
+                "Eine verständliche Visualisierung entwickeln, beispielsweise mit Trajektorien, Bewegungsdichten, Begegnungspunkten und zeitlichen Kennzahlen.",
+                "Aussagekraft, Unsicherheiten und Grenzen der Erkennung sowie den datenschutzgerechten Umgang mit den bereitgestellten Daten dokumentieren."
               ]
             }
           ]
@@ -420,62 +437,146 @@
             {
               "type": "list",
               "items": [
-                "Ausführbarer Prototyp für eine komfortorientierte Routenabfrage",
-                "Dokumentierter Workflow, ausgewählte Testfälle und reproduzierbarer Code",
-                "Evaluation der Routenergebnisse anhand ausgewählter Testfälle",
-                "Schriftliche Abschlussarbeit"
+                "Reproduzierbarer Workflow zur Aufbereitung und Analyse eines begrenzten LiDAR-Datenausschnitts.",
+                "Karten und interaktive oder statische Visualisierungen ausgewählter Fußgängerbewegungen und Interaktionen.",
+                "Dokumentierte Fallbeispiele, Kennzahlen und Einschätzung der Datenqualität und Aussagegrenzen.",
+                "Schriftliche Abschlussarbeit."
               ]
             }
           ]
         },
         {
           "title": {
-            "de": "Anwendungsbeispiel"
-          },
-          "blocks": [
-            {
-              "type": "paragraph",
-              "text": "[Comfort Routing – interaktive Beispielanwendung](https://comfort-routing.netlify.app/)"
-            },
-            {
-              "type": "paragraph",
-              "text": "Hinweis: Falls die Karte nicht korrekt angezeigt wird, wechseln Sie die Hintergrundkarte (Basiskarte), um die Darstellung korrekt zu laden."
-            }
-          ]
-        },
-        {
-          "title": {
-            "de": "Relevante Vorarbeiten"
+            "de": "Voraussetzungen"
           },
           "blocks": [
             {
               "type": "list",
               "items": [
-                "[Integration von Begehbarkeitsindikatoren für eine nutzerorientierte Fußgängernavigation](https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf)",
-                "[Gehen im Schatten: Schattenorientierte Fußgängernavigation](https://doi.org/10.1145/3678717.3691287)"
-              ]
-            }
-          ]
-        },
-        {
-          "title": {
-            "de": "Anforderungen"
-          },
-          "blocks": [
-            {
-              "type": "list",
-              "items": [
-                "Programmierkenntnisse (Python oder JavaScript)",
-                "Interesse an GeoAI und LLM-Integration"
+                "Grundkenntnisse in Python und räumlicher Datenanalyse.",
+                "Interesse an LiDAR, Bewegungsdaten, Fußverkehr und Geovisualisierung."
               ]
             }
           ]
         }
+      ]
+    },
+    {
+      "id": "lod2-mesh-abgleich",
+      "title": {
+        "de": "Abgleich texturierter 3D-Meshes mit LoD2-Gebäudemodellen: Volumenabweichungen erkennen und Geometrien ergänzen"
+      },
+      "levels": [
+        "Bachelor"
       ],
-      "scopeNote": "Bachelor — Prototypische Umsetzung eines ausgewählten Komfortindikators oder eines klar abgegrenzten Teils des Dialog- und Routenablaufs.",
       "tags": [
         "spatial-analysis",
-        "llm"
+        "visualization",
+        "geometric-dl"
+      ],
+      "image": {
+        "file": "lod2-mesh-overlay.jpg",
+        "alt": "Trier: texturiertes 3D-Stadtmesh und LoD2-Gebäudemodelle gemeinsam in einer 3D-Ansicht",
+        "credit": {
+          "text": "Beispielhafte Überlagerung von Stadtmesh und LoD2-Gebäudemodellen in Trier."
+        }
+      },
+      "cover": {
+        "file": "lod2-mesh-cover.jpg",
+        "alt": "Vergleich einer texturierten 3D-Mesh-Gebäudefassade mit einem vereinfachten LoD2-Modell und hervorgehobenen Geometrieabweichungen",
+        "credit": {
+          "text": "KI-generierte Illustration"
+        }
+      },
+      "comparisonImages": [
+        {
+          "file": "lod2-mesh-only.jpg",
+          "alt": "Texturiertes 3D-Stadtmesh in Trier ohne LoD2-Überlagerung",
+          "caption": "Texturiertes 3D-Mesh ohne LoD2-Modell."
+        },
+        {
+          "file": "lod2-model-only.jpg",
+          "alt": "LoD2-Gebäudemodelle in Trier ohne das texturierte Stadtmesh",
+          "caption": "LoD2-Gebäudemodelle ohne Mesh."
+        }
+      ],
+      "interactiveDemo": {
+        "url": "https://yfeng-hsm.github.io/Basemap3D/examples/city_trier.html?v=views20261030b",
+        "title": "Interaktive 3D-Ansicht von Trier mit texturiertem Stadtmesh und LoD2-Gebäudemodellen",
+        "description": "Die 3D-Ansicht kann direkt hier erkundet oder in einem eigenen Tab geöffnet werden."
+      },
+      "scopeNote": "Bachelorarbeit — Vergleich eines begrenzten Stadtgebiets und ausgewählter Gebäude; Umfang, Datenzugang, Aktualität und Nutzungsrechte werden zu Beginn abgestimmt.",
+      "sections": [
+        {
+          "title": {
+            "de": "Forschungsziel"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Wie können texturierte 3D-Stadtmesh-Daten und vereinfachte LoD2-Gebäudemodelle systematisch verglichen werden, um fehlende oder überzählige Gebäudeteile zu erkennen? Am Beispiel ausgewählter Gebäude sollen Unterschiede wie fehlende Dachbereiche, übermodellierte Außenwände oder in LoD2 nicht erfasste Dachaufbauten und Gauben untersucht und für eine gezielte geometrische Ergänzung aufbereitet werden."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Datengrundlage und Abgrenzung"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Die Beispielbilder zeigen ein texturiertes Stadtmesh und LoD2-Gebäudemodelle für Trier. Verwendet werden die verfügbaren Mesh- und LoD2-Daten für ein gemeinsam ausgewähltes Teilgebiet. Datenzugang, Lizenz, Koordinatenbezug, Erfassungszeitpunkte, Genauigkeit und Abdeckung werden vor der Analyse geprüft. Die Arbeit konzentriert sich auf eine überschaubare Zahl geeigneter Gebäude und wenige klar definierte Abweichungstypen."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Aufgaben"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Mesh- und LoD2-Daten räumlich ausrichten und Unterschiede in Koordinatensystem, Maßstab, Aktualität und geometrischer Genauigkeit dokumentieren.",
+                "Für eine Stichprobe von Gebäuden die Mesh-Oberflächen mit den LoD2-Volumenkörpern vergleichen und fehlende, zusätzliche oder abweichende Volumen lokalisieren.",
+                "Ausgewählte Details wie fehlende Dachflächen, zusätzliche Außenwandbereiche, Gauben oder Dachfenster anhand des Meshes und seiner Textur untersuchen.",
+                "Abweichungen klassifizieren und ihren Umfang mit geeigneten geometrischen Kennzahlen beschreiben. Volumenschätzungen nur bei dafür geeigneter, ausreichend geschlossener Mesh-Geometrie verwenden; andernfalls Oberflächenabstände oder Querschnitte auswerten. Registrierungsfehler und Mesh-Artefakte getrennt berücksichtigen.",
+                "Für ausgewählte Gebäude Geometrieergänzungen oder Korrekturvorschläge erstellen und als 3D-Vergleich visualisieren.",
+                "Die Ergebnisse anhand manuell geprüfter Beispielgebäude bewerten und Grenzen der automatischen Abweichungserkennung dokumentieren."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Erwartete Ergebnisse"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Reproduzierbarer Workflow zur Ausrichtung und zum geometrischen Vergleich von 3D-Mesh und LoD2.",
+                "Dokumentierte Stichprobe mit lokalisierten und klassifizierten Volumen- und Detailabweichungen.",
+                "Korrigierte oder ergänzte Geometrien für ausgewählte Gebäude sowie eine nachvollziehbare Vorher-Nachher-Visualisierung.",
+                "Einschätzung von Datenqualität, Unsicherheit und Übertragbarkeit sowie schriftliche Abschlussarbeit."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Voraussetzungen"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Grundkenntnisse in Python und GIS.",
+                "Interesse an 3D-Geodaten, Gebäudemodellen, Geometrieverarbeitung und Visualisierung."
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -490,7 +591,7 @@
         "vlm"
       ],
       "image": {
-        "file": "facade-vlm.png",
+        "file": "facade-vlm.jpg",
         "alt": "KI-generierte Illustration zur Erkennung von Fassadenmaterialien, Fenstern und Verschattungselementen aus Straßenbildern",
         "credit": {
           "text": "KI-generierte Illustration"
@@ -595,6 +696,121 @@
           ]
         }
       ]
+    },
+    {
+      "id": "thema1",
+      "title": {
+        "de": "Konversationsbasierte Komfort-Navigation"
+      },
+      "status": "Ongoing",
+      "levels": [
+        "Bachelor"
+      ],
+      "image": {
+        "file": "comfort-navigation.jpg",
+        "alt": "KI-generierte Illustration einer dialogbasierten Fußgängernavigation mit einer schattigen Route durch ein Stadtviertel",
+        "credit": {
+          "text": "KI-generierte Illustration"
+        }
+      },
+      "sections": [
+        {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Aufbauend auf bestehenden Arbeiten wird ein LLM-gestützter Dialog für komfortorientierte Fußgängerrouten prototypisch umgesetzt. Im Mittelpunkt steht ein ausgewählter Komfortindikator, etwa Schatten oder Zugänglichkeit, oder ein klar abgegrenzter Teil der interaktiven Routenabfrage."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Motivation"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Fußgänger wählen Routen nicht nur nach der kürzesten Distanz. Schatten, Zugänglichkeit und weitere Komfortindikatoren beeinflussen die Entscheidung, sind aber oft über verschiedene Datensätze und Werkzeuge verteilt. Eine konversationelle Schnittstelle kann diese Präferenzen verständlich erfassen und in nachvollziehbare Routenvorschläge übersetzen."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Aufgaben"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Bachelor: Einen ausgewählten Komfortindikator oder einen klar abgegrenzten Teil des Dialog- und Routenworkflows prototypisch umsetzen und an Beispielrouten prüfen."
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Erwartete Ergebnisse"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Ausführbarer Prototyp für eine komfortorientierte Routenabfrage",
+                "Dokumentierter Workflow, ausgewählte Testfälle und reproduzierbarer Code",
+                "Evaluation der Routenergebnisse anhand ausgewählter Testfälle",
+                "Schriftliche Abschlussarbeit"
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Anwendungsbeispiel"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "[Comfort Routing – interaktive Beispielanwendung](https://comfort-routing.netlify.app/)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Hinweis: Falls die Karte nicht korrekt angezeigt wird, wechseln Sie die Hintergrundkarte (Basiskarte), um die Darstellung korrekt zu laden."
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Relevante Vorarbeiten"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "[Integration von Begehbarkeitsindikatoren für eine nutzerorientierte Fußgängernavigation](https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf)",
+                "[Gehen im Schatten: Schattenorientierte Fußgängernavigation](https://doi.org/10.1145/3678717.3691287)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "de": "Anforderungen"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Programmierkenntnisse (Python oder JavaScript)",
+                "Interesse an GeoAI und LLM-Integration"
+              ]
+            }
+          ]
+        }
+      ],
+      "scopeNote": "Bachelor — Prototypische Umsetzung eines ausgewählten Komfortindikators oder eines klar abgegrenzten Teils des Dialog- und Routenablaufs.",
+      "tags": [
+        "spatial-analysis",
+        "llm"
+      ]
     }
   ],
   "history": [
@@ -626,8 +842,8 @@
         },
         {
           "year": "2025",
-          "text": "Keying Fan: [Textgesteuerte mehrmaßstäbliche Kartengeneralisierung mit Diffusionsmodellen](https://cartographymaster.eu/wp-content/theses/2025_Fan_Poster.pdf)",
-          "meta": "TU München, Master Cartography",
+          "text": "Keying Fan: [Towards Text-conditioned Multi-scale Map Generalization using Diffusion Models](https://cartographymaster.eu/wp-content/theses/2025_Fan_Poster.pdf)",
+          "meta": "Technical University of Munich (TUM), M.Sc. Cartography",
           "publication": {
             "label": "Veröffentlichung",
             "authors": "Fan, K., Qian, N., Zhou, Z., Sester, M., & Feng, Y.",
@@ -643,23 +859,23 @@
         },
         {
           "year": "2025",
-          "text": "Nargiz Amralina: [Integration von Begehbarkeitsindikatoren für eine nutzerorientierte Fußgängernavigation](https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf)",
-          "meta": "TU München, Master Cartography"
+          "text": "Nargiz Amralina: [Beyond Distance: Integrating Walkability Indicators for User-Centered Pedestrian Navigation](https://cartographymaster.eu/wp-content/theses/2025_Amralina_Poster.pdf)",
+          "meta": "Technical University of Munich (TUM), M.Sc. Cartography"
         },
         {
           "year": "2025",
-          "text": "Gawronski, Alexander: Unterschiede in der visuellen Wahrnehmung ost- und westdeutscher Städte mit erklärbarer KI untersuchen",
-          "meta": "TU München, Master GuG"
+          "text": "Gawronski, Alexander: Understanding Urban Visual Perception Variances between Eastern and Western German Cities Using Explainable AI",
+          "meta": "Technical University of Munich (TUM), M.Sc. Geodesy and Geoinformation"
         },
         {
           "year": "2025",
-          "text": "Humski, Josipa: KI-gestütztes interaktives System zur Analyse und Visualisierung städtischer Verflechtungen",
-          "meta": "TU München und Universität Zagreb, Master GuG Erasmus"
+          "text": "Humski, Josipa: AI-Assisted Interactive System for Analyzing and Visualizing Urban Linkages",
+          "meta": "Technical University of Munich (TUM) and University of Zagreb, M.Sc. Geodesy and Geoinformation (Erasmus)"
         },
         {
           "year": "2025",
-          "text": "Liu, Yiding: Erklärbare KI zur Vorhersage des Aktualisierungsbedarfs von OpenStreetMap",
-          "meta": "TU München, Master",
+          "text": "Liu, Yiding: Explainable AI for OpenStreetMap Update Demand Prediction",
+          "meta": "Technical University of Munich (TUM), M.Sc.",
           "publication": {
             "icon": "📄",
             "label": "Veröffentlichung",
@@ -674,18 +890,23 @@
         },
         {
           "year": "2025",
-          "text": "Zhang, Qianhe: Unterstützung der Brandevakuierung durch situationsbezogene Informationsaktualisierung mit gemischter Realität",
-          "meta": "TU München"
+          "text": "Zhang, Qianhe: Enhancing Fire Evacuation with Mixed Reality-based Situational Information Updating",
+          "meta": "Technical University of Munich (TUM)"
+        },
+        {
+          "year": "2025",
+          "text": "Liu, Xingyu: Multi-Scale Analysis of Urban Heat Island Effect Based on Multisource Geographic Driving Factors and Causal Inference",
+          "meta": "Technical University of Munich (TUM)"
         },
         {
           "year": "2024",
           "text": "Ji Huang: Szenenvervollständigung und Rekonstruktion dynamischer Objekte aus LiDAR-Punktwolken",
-          "meta": "TU München, Master RCI"
+          "meta": "Technical University of Munich (TUM), M.Sc. RCI"
         },
         {
           "year": "2024",
           "text": "Puzhen Zhang: Natürlichsprachliches Frage-Antwort-System für Geodaten aus mehreren Quellen",
-          "meta": "TU München, Master RCI",
+          "meta": "Technical University of Munich (TUM), M.Sc. RCI",
           "publication": {
             "icon": "📄",
             "label": "Veröffentlichung",
@@ -700,13 +921,13 @@
         },
         {
           "year": "2024",
-          "text": "Yanning Wang: [Vereinfachung und Aggregation vektorieller Gebäudegrundrisse mit tiefen neuronalen Netzen](https://cartographymaster.eu/wp-content/theses/2024_Wang_Poster.pdf)",
-          "meta": "TU München, Master Cartography"
+          "text": "Yanning Wang: [Simplification and aggregation of vector building footprints using deep learning models](https://cartographymaster.eu/wp-content/theses/2024_Wang_Poster.pdf)",
+          "meta": "Technical University of Munich (TUM), M.Sc. Cartography"
         },
         {
           "year": "2024",
-          "text": "Durmazbilek, Sevval: Sonnige und gut erreichbare Wohnungen: Eine 3D-Web-GIS-Plattform für Wohnungssuchende in München und Helsinki",
-          "meta": "TU München, Master GuG"
+          "text": "Sevval Durmazbilek: [Exploring Sunny and Easily Accessible Homes: A 3D-Web-GIS Platform for Apartment Seekers in Munich and Helsinki](https://github.com/sevvaldurmazbilek/3d-web-gis)",
+          "meta": "Technical University of Munich (TUM), M.Sc. Geodesy and Geoinformation"
         }
       ]
     }

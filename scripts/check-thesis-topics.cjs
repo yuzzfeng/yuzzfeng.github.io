@@ -15,6 +15,10 @@ for (const topic of data.topics) {
   assert.ok(topic.tags.every(tag => tags.has(tag)), `Unknown tag in ${topic.id}`);
   if (topic.image) assert.ok(fs.existsSync(path.join(root, 'thesis-topics/images', topic.image.file)), topic.image.file);
   if (topic.cover) assert.ok(fs.existsSync(path.join(root, 'thesis-topics/images', topic.cover.file)), topic.cover.file);
+  for (const image of topic.comparisonImages || []) {
+    assert.ok(fs.existsSync(path.join(root, 'thesis-topics/images', image.file)), image.file);
+    assert.ok(image.alt && image.caption);
+  }
   for (const section of topic.sections) {
     assert.ok(section.blocks.length);
     for (const block of section.blocks) {
@@ -61,6 +65,9 @@ const byClass = (main, name) => main.all(node => node.className.split(' ').inclu
   data.topics.forEach((topic, index) => {
     assert.equal(thumbnails[index].children[0].src, '/thesis-topics/images/' + (topic.cover || topic.image).file);
   });
+  assert.equal(data.topics[data.topics.length - 1].id, 'thema1', 'Comfort Navigation must be the last topic');
+  const comfortTitle = main.all(n => n.tagName === 'a' && n.href === '/thesis-topics/?topic=thema1')[0];
+  assert.equal(byClass(comfortTitle, 'thesis-status-badge')[0].textContent, 'Ongoing');
   const awards = byClass(main, 'thesis-award');
   assert.equal(awards.length, 1);
   assert.equal(awards[0].children[1].textContent, 'DVW Next Generation Award');
@@ -85,7 +92,28 @@ const byClass = (main, name) => main.all(node => node.className.split(' ').inclu
       const figure = byClass(result.main, 'thesis-detail-image')[0];
       assert.equal(figure.children[0].src, '/thesis-topics/images/' + topic.image.file, 'Detail must preserve original image');
     }
+    const lidar = data.topics.find(topic => topic.id === 'lidar-fussgaengerinteraktionen');
+    assert.ok(fs.existsSync(path.join(root, 'thesis-topics/images', lidar.cover.file)));
+    assert.equal(thumbnails[data.topics.indexOf(lidar)].children[0].src, '/thesis-topics/images/' + lidar.cover.file);
+    const lidarPage = await render('?topic=lidar-fussgaengerinteraktionen');
+    assert.equal(byClass(lidarPage.main, 'thesis-detail-image')[0].children[0].src, '/thesis-topics/images/' + lidar.image.file);
+    assert.equal(byClass(lidarPage.main, 'thesis-status-badge').length, 0);
   }
+  const lod2 = data.topics.find(topic => topic.id === 'lod2-mesh-abgleich');
+  const lod2Page = await render('?topic=lod2-mesh-abgleich');
+  const comparisonImages = byClass(lod2Page.main, 'thesis-comparison-image');
+  assert.equal(comparisonImages.length, lod2.comparisonImages.length);
+  lod2.comparisonImages.forEach((image, index) => {
+    assert.equal(comparisonImages[index].children[0].src, '/thesis-topics/images/' + image.file);
+    assert.equal(comparisonImages[index].children[0].alt, image.alt);
+  });
+  const demo = byClass(lod2Page.main, 'thesis-demo-frame')[0];
+  assert.equal(demo.src, lod2.interactiveDemo.url);
+  assert.equal(demo.title, lod2.interactiveDemo.title);
+  assert.ok(demo.loading === 'lazy' && demo.allowFullscreen);
+  assert.equal(byClass(lod2Page.main, 'thesis-demo-link')[0].href, lod2.interactiveDemo.url);
+  const comfortPage = await render('?topic=thema1');
+  assert.equal(byClass(comfortPage.main, 'thesis-status-badge')[0].textContent, 'Ongoing');
   const railway = await render('?topic=db-verspaetungsausbreitung');
   const video = byClass(railway.main, 'thesis-video')[0];
   assert.ok(video.controls);
@@ -123,5 +151,5 @@ const byClass = (main, name) => main.all(node => node.className.split(' ').inclu
       assert.equal(target, '/thesis-topics/' + (id ? '?topic=' + id : ''));
     }
   }
-  console.log('Passed: data/assets, all detail pages, degree/tag filters, multi-select, reset, empty results, stable numbering, JSON-only topic addition, load failure, missing topic and legacy redirects.');
+  console.log('Passed: data/assets, topic ordering/status, interactive demo, all detail pages, degree/tag filters, multi-select, reset, empty results, stable numbering, JSON-only topic addition, load failure, missing topic and legacy redirects.');
 })().catch(error => { console.error(error); process.exitCode = 1; });
